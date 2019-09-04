@@ -414,6 +414,22 @@
                                 Halaman Utama
                             </span>
                         </a>
+                    </li> 
+                    <li class="nav-item">
+                        <a href="{{route('login')}}" class="nav-link">
+                            <i class="icon-users"></i>
+                            <span>
+                                Login
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('signin')}}" class="nav-link">
+                            <i class="icon-users"></i>
+                            <span>
+                                Tambah Akun
+                            </span>
+                        </a>
                     </li>
                     <li class="nav-item nav-item-submenu">
                         <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Layouts</span></a>
