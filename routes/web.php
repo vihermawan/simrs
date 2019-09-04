@@ -13,4 +13,15 @@
 
 Route::get('/', function () {
     return view('welcome');
+
+})->name('home');
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
+Route::get('/signin', function () {
+    return view('signin');
+})->name('signin');
+Route::get('/pendaftaran', function () {
+    return view('pendaftaran');
 });
+
