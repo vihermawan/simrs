@@ -14,7 +14,8 @@ class CreatePasienRole extends Migration
     public function up()
     {
         Schema::create('pasien_role', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_pasien_role');
+            $table->string('role_pasien');
             $table->timestamps();
         });
     }

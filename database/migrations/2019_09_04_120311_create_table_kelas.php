@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTransaksiInap extends Migration
+class CreateTableKelas extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateTransaksiInap extends Migration
      */
     public function up()
     {
-        Schema::create('transaksi_inap', function (Blueprint $table) {
-            $table->bigIncrements('id_transaksi_inap');
-            $table->integer('petugas');
-            $table->integer('id_rawat_inap');
-            $table->string('total_pembayaran');
+        Schema::create('table_kelas', function (Blueprint $table) {
+            $table->bigIncrements('id_kelas');
+            $table->string('nama_kelas');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateTransaksiInap extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transaksi_inap');
+        Schema::dropIfExists('table_kelas');
     }
 }

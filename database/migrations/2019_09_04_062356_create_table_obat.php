@@ -14,7 +14,11 @@ class CreateTableObat extends Migration
     public function up()
     {
         Schema::create('table_obat', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_obat');
+            $table->string('nama');
+            $table->string('dosis');
+            $table->string('harga');
+            $table->string('jenis_obat');
             $table->timestamps();
         });
     }

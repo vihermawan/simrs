@@ -14,7 +14,10 @@ class CreateTableTransaksiPoli extends Migration
     public function up()
     {
         Schema::create('table_transaksi_poli', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_transaksi_poli');
+            $table->integer('id_petugas');
+            $table->integer('id_pemeriksaan');
+            $table->string('total_pembayaran');
             $table->timestamps();
         });
     }

@@ -14,7 +14,9 @@ class CreateTableResep extends Migration
     public function up()
     {
         Schema::create('table_resep', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_resep');
+            $table->integer('id_obat');
+            $table->string('jumlah');
             $table->timestamps();
         });
     }

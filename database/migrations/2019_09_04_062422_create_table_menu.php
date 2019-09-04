@@ -14,7 +14,11 @@ class CreateTableMenu extends Migration
     public function up()
     {
         Schema::create('table_menu', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_menu');
+            $table->string('pendaftaran');
+            $table->string('rawat_inap');
+            $table->string('rawat_jalan');
+            $table->string('keuangan');
             $table->timestamps();
         });
     }

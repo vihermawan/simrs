@@ -16,7 +16,7 @@ class CreateTablePoli extends Migration
         Schema::create('table_poli', function (Blueprint $table) {
             $table->bigIncrements('id_poli');
             $table->string('nama_poli');
-            $table->Increments('id_user');
+            $table->integer('id_user');
             $table->timestamps();
         });
     }

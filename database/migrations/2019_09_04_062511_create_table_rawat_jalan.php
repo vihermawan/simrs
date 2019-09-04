@@ -14,7 +14,12 @@ class CreateTableRawatJalan extends Migration
     public function up()
     {
         Schema::create('table_rawat_jalan', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_rawat_jalan');
+            $table->integer('id_pasien');
+            $table->integer('id_user');
+            $table->dateTime('tanggal_keluar');
+            $table->dateTime('tanggal_masuk');
+            $table->integer('id_pemeriksaan');
             $table->timestamps();
         });
     }
