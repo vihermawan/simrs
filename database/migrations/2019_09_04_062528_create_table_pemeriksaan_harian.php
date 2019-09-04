@@ -14,7 +14,10 @@ class CreateTablePemeriksaanHarian extends Migration
     public function up()
     {
         Schema::create('table_pemeriksaan_harian', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_periksaharian');
+            $table->integer('id_rawat_inap');
+            $table->string('deskripsi');
+            $table->dateTime('tanggal');
             $table->timestamps();
         });
     }

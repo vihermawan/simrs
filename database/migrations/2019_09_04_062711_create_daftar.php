@@ -14,7 +14,11 @@ class CreateDaftar extends Migration
     public function up()
     {
         Schema::create('daftar', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_pendaftaran');
+            $table->integer('id_pasien');
+            $table->integer('id_poli');
+            $table->integer('id_role_pembayaran');
+            $table->string('kategori');
             $table->timestamps();
         });
     }

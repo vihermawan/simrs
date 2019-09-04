@@ -14,7 +14,9 @@ class CreateTablePenyakit extends Migration
     public function up()
     {
         Schema::create('table_penyakit', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_penyakit');
+            $table->string('nama');
+            $table->string('jenis');
             $table->timestamps();
         });
     }

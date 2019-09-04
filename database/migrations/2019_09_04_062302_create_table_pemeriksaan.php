@@ -15,11 +15,12 @@ class CreateTablePemeriksaan extends Migration
     {
         Schema::create('table_pemeriksaan', function (Blueprint $table) {
             $table->bigIncrements('id_pemeriksaan');
-            $table->Increments('id_pasien');
-            $table->Increments('id_user');
-            $table->Increments('id_poli');
-            $table->Increments('id_resep');
-            $table->timestamps('id_tindakan');
+            $table->integer('id_pasien');
+            $table->integer('id_user');
+            $table->integer('id_poli');
+            $table->integer('id_resep');
+            $table->integer('id_tindakan');
+            $table->timestamps();
         });
     }
 

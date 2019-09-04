@@ -14,7 +14,8 @@ class CreateTableRolePembayaran extends Migration
     public function up()
     {
         Schema::create('table_role_pembayaran', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_role_pembayaran');
+            $table->string('jenis_pembayaran');
             $table->timestamps();
         });
     }

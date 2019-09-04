@@ -15,8 +15,8 @@ class CreateTableRuang extends Migration
     {
         Schema::create('table_ruang', function (Blueprint $table) {
             $table->bigIncrements('id_ruang');
-            $table->Increments('id_kelas');
-            $table->string('id_role_ruang');
+            $table->integer('id_kelas');
+            $table->integer('id_role_ruang');
             $table->timestamps();
         });
     }
