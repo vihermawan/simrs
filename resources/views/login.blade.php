@@ -1,5 +1,5 @@
-@extends('layouts.main.app')
-@section('content')
+@extends('layouts.main')
+@section('wrapper')
 <div class="card-body">
 		<!-- Form inputs -->
 			<center>
