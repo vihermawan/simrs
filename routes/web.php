@@ -23,5 +23,5 @@ Route::get('/signin', function () {
 })->name('signin');
 Route::get('/pendaftaran', function () {
     return view('pendaftaran');
-});
+})->name('pendaftaran');
 

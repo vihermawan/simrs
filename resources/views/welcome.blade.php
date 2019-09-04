@@ -1,5 +1,5 @@
 @extends('layouts.home')
-@section('wrapper')
+@section('content')
 <div class="content-wrapper">
 
     <!-- Page header -->

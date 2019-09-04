@@ -1,5 +1,5 @@
 @extends('layouts.main.app')
-@section('content')
+@section('wrapper')
 <!-- Main navbar -->
 <div class="navbar navbar-expand-md navbar-dark">
     <div class="navbar-brand">
@@ -432,7 +432,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">
+                        <a href="{{route('pendaftaran')}}" class="nav-link">
                             <i class="icon-pencil5"></i>
                             <span>
                                 Pendaftaran
@@ -492,7 +492,7 @@
 
 
     <!-- Main content -->
-    @yield('wrapper')
+    @yield('content')
     <!-- Footer -->
     <div class="navbar navbar-expand-lg navbar-light">
         <div class="text-center d-lg-none w-100">

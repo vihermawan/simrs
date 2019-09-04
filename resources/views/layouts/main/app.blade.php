@@ -39,6 +39,6 @@
 
 </head>
 <body>
-    @yield('content')
+    @yield('wrapper')
 </body>
 </html>
