@@ -14,7 +14,8 @@ class CreateTableRoleUser extends Migration
     public function up()
     {
         Schema::create('table_role_user', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_role');
+            $table->string('nama_role');
             $table->timestamps();
         });
     }

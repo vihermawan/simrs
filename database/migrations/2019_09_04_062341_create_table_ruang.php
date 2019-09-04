@@ -14,7 +14,9 @@ class CreateTableRuang extends Migration
     public function up()
     {
         Schema::create('table_ruang', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_ruang');
+            $table->Increments('id_kelas');
+            $table->string('id_role_ruang');
             $table->timestamps();
         });
     }

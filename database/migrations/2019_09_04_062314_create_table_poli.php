@@ -14,7 +14,9 @@ class CreateTablePoli extends Migration
     public function up()
     {
         Schema::create('table_poli', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_poli');
+            $table->string('nama_poli');
+            $table->Increments('id_user');
             $table->timestamps();
         });
     }
