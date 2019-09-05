@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableObat extends Migration
+class CreateTindakanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateTableObat extends Migration
      */
     public function up()
     {
-        Schema::create('table_obat', function (Blueprint $table) {
-            $table->bigIncrements('id_obat');
+        Schema::create('tindakan', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->string('nama');
-            $table->string('dosis');
             $table->string('harga');
-            $table->string('jenis_obat');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateTableObat extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_obat');
+        Schema::dropIfExists('tindakan');
     }
 }

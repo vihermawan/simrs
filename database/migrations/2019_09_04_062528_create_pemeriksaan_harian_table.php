@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableRoleUser extends Migration
+class CreatePemeriksaanHarianTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateTableRoleUser extends Migration
      */
     public function up()
     {
-        Schema::create('table_role_user', function (Blueprint $table) {
-            $table->bigIncrements('id_role');
-            $table->string('nama_role');
+        Schema::create('pemeriksaan_harian', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->bigInteger('id_rawat_inap')->unsigned();
+            $table->string('deskripsi');
+            $table->dateTime('tanggal');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateTableRoleUser extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_role_user');
+        Schema::dropIfExists('pemeriksaan_harian');
     }
 }

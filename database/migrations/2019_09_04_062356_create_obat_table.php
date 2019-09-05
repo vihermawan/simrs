@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableMenu extends Migration
+class CreateObatTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateTableMenu extends Migration
      */
     public function up()
     {
-        Schema::create('table_menu', function (Blueprint $table) {
-            $table->bigIncrements('id_menu');
-            $table->string('pendaftaran');
-            $table->string('rawat_inap');
-            $table->string('rawat_jalan');
-            $table->string('keuangan');
+        Schema::create('obat', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nama');
+            $table->string('dosis');
+            $table->string('harga');
+            $table->string('jenis_obat');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateTableMenu extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_menu');
+        Schema::dropIfExists('obat');
     }
 }

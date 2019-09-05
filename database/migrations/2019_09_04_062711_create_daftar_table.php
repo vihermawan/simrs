@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableResep extends Migration
+class CreateDaftarTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateTableResep extends Migration
      */
     public function up()
     {
-        Schema::create('table_resep', function (Blueprint $table) {
-            $table->bigIncrements('id_resep');
-            $table->integer('id_obat');
-            $table->string('jumlah');
+        Schema::create('daftar', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->bigInteger('id_pasien')->unsigned();
+            $table->bigInteger('id_poli')->unsigned();
+            $table->bigInteger('id_role_pembayaran')->unsigned();
+            $table->string('kategori');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateTableResep extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_resep');
+        Schema::dropIfExists('daftar');
     }
 }

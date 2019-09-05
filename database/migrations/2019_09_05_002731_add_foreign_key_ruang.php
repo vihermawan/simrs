@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePasienRole extends Migration
+class AddForeignKeyRuang extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreatePasienRole extends Migration
      */
     public function up()
     {
-        Schema::create('pasien_role', function (Blueprint $table) {
-            $table->bigIncrements('id_pasien_role');
-            $table->string('role_pasien');
-            $table->timestamps();
+        Schema::table('ruang', function (Blueprint $table) {
+            $table->foreign('id_kelas')->references('id')->on('kelas');
         });
     }
 
@@ -27,6 +25,6 @@ class CreatePasienRole extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pasien_role');
+        //
     }
 }

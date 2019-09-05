@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableRolePembayaran extends Migration
+class AddForeignKeyRawatJalan extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateTableRolePembayaran extends Migration
      */
     public function up()
     {
-        Schema::create('table_role_pembayaran', function (Blueprint $table) {
-            $table->bigIncrements('id_role_pembayaran');
-            $table->string('jenis_pembayaran');
-            $table->timestamps();
+        Schema::table('rawat_jalan', function (Blueprint $table) {
+            $table->foreign('id_pasien')->references('id')->on('pasien');
+            $table->foreign('id_user')->references('id')->on('users');
+            $table->foreign('id_pemeriksaan')->references('id')->on('pemeriksaan');
         });
     }
 
@@ -27,6 +27,6 @@ class CreateTableRolePembayaran extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_role_pembayaran');
+        //
     }
 }

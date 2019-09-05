@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableRuang extends Migration
+class AddForeignKeyPemeriksaanHarian extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateTableRuang extends Migration
      */
     public function up()
     {
-        Schema::create('table_ruang', function (Blueprint $table) {
-            $table->bigIncrements('id_ruang');
-            $table->integer('id_kelas');
-            $table->integer('id_role_ruang');
-            $table->timestamps();
+        Schema::table('pemeriksaan_harian', function (Blueprint $table) {
+            $table->foreign('id_rawat_inap')->references('id')->on('rawat_inap');
         });
     }
 
@@ -28,6 +25,6 @@ class CreateTableRuang extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_ruang');
+        //
     }
 }

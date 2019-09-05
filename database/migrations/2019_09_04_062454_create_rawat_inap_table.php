@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableRawatInap extends Migration
+class CreateRawatInapTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreateTableRawatInap extends Migration
      */
     public function up()
     {
-        Schema::create('table_rawat_inap', function (Blueprint $table) {
-            $table->bigIncrements('id_rawat_inap');
-            $table->integer('id_pasien');
-            $table->integer('id_user');
+        Schema::create('rawat_inap', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->bigInteger('id_pasien')->unsigned();
+            $table->bigInteger('id_user')->unsigned();
             $table->dateTime('tanggal_masuk');
             $table->dateTime('tanggal_keluar');
-            $table->integer('id_ruang'); 
-            $table->integer('id_pemeriksaan');  
-            $table->integer('id_periksaharian');  
+            $table->bigInteger('id_ruang')->unsigned();
+            $table->bigInteger('id_pemeriksaan')->unsigned();
+            $table->bigInteger('id_periksaharian')->unsigned();
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class CreateTableRawatInap extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_rawat_inap');
+        Schema::dropIfExists('rawat_inap');
     }
 }

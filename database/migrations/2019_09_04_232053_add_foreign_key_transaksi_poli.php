@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableKelas extends Migration
+class AddForeignKeyTransaksiPoli extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateTableKelas extends Migration
      */
     public function up()
     {
-        Schema::create('table_kelas', function (Blueprint $table) {
-            $table->bigIncrements('id_kelas');
-            $table->string('nama_kelas');
-            $table->timestamps();
+        Schema::table('transaksi_poli', function (Blueprint $table) {
+            $table->foreign('id_petugas')->references('id')->on('users');
+            $table->foreign('id_pemeriksaan')->references('id')->on('pemeriksaan');
         });
     }
 
@@ -27,6 +26,6 @@ class CreateTableKelas extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_kelas');
+        //
     }
 }

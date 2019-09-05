@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTablePemeriksaanHarian extends Migration
+class CreateKelasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateTablePemeriksaanHarian extends Migration
      */
     public function up()
     {
-        Schema::create('table_pemeriksaan_harian', function (Blueprint $table) {
-            $table->bigIncrements('id_periksaharian');
-            $table->integer('id_rawat_inap');
-            $table->string('deskripsi');
-            $table->dateTime('tanggal');
+        Schema::create('kelas', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nama_kelas');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateTablePemeriksaanHarian extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_pemeriksaan_harian');
+        Schema::dropIfExists('kelas');
     }
 }

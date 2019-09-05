@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDaftar extends Migration
+class CreatePenyakitTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateDaftar extends Migration
      */
     public function up()
     {
-        Schema::create('daftar', function (Blueprint $table) {
-            $table->bigIncrements('id_pendaftaran');
-            $table->integer('id_pasien');
-            $table->integer('id_poli');
-            $table->integer('id_role_pembayaran');
-            $table->string('kategori');
+        Schema::create('penyakit', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nama');
+            $table->string('jenis');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateDaftar extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('daftar');
+        Schema::dropIfExists('penyakit');
     }
 }

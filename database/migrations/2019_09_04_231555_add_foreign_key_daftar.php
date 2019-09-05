@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTablePoli extends Migration
+class AddForeignKeyDaftar extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateTablePoli extends Migration
      */
     public function up()
     {
-        Schema::create('table_poli', function (Blueprint $table) {
-            $table->bigIncrements('id_poli');
-            $table->string('nama_poli');
-            $table->integer('id_user');
-            $table->timestamps();
+        Schema::table('daftar', function (Blueprint $table) {
+            $table->foreign('id_pasien')->references('id')->on('pasien');
+            $table->foreign('id_poli')->references('id')->on('poli');
+            $table->foreign('id_role_pembayaran')->references('id')->on('role_pembayaran');
         });
     }
 
@@ -28,6 +27,6 @@ class CreateTablePoli extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_poli');
+        //
     }
 }

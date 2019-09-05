@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTablePenyakit extends Migration
+class AddForeignKeyResep extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateTablePenyakit extends Migration
      */
     public function up()
     {
-        Schema::create('table_penyakit', function (Blueprint $table) {
-            $table->bigIncrements('id_penyakit');
-            $table->string('nama');
-            $table->string('jenis');
-            $table->timestamps();
+        Schema::table('resep', function (Blueprint $table) {
+            $table->foreign('id_obat')->references('id')->on('obat');
         });
     }
 
@@ -28,6 +25,6 @@ class CreateTablePenyakit extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_penyakit');
+        //
     }
 }
