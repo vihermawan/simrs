@@ -371,8 +371,8 @@
 
         <div class="navbar-collapse collapse" id="navbar-footer">
             <span class="navbar-text">
-                &copy; 2015 - 2018. <a href="#">Limitless Web App Kit</a> by <a
-                    href="http://themeforest.net/user/Kopyov" target="_blank">Eugene Kopyov</a>
+                &copy; 2019 <a href="#">Template Make by Komsi B 2017</a> by <a
+                    href="http://themeforest.net/user/Kopyov" target="_blank">Universitas Gadjah Mada</a>
             </span>
 
             <ul class="navbar-nav ml-lg-auto">
