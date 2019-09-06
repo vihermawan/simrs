@@ -88,7 +88,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">
+                        <a href="{{route('jalan')}}" class="nav-link">
                             <i class="icon-accessibility2"></i>
                             <span>
                                 Rawat Jalan
@@ -96,7 +96,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">
+                        <a href="{{route('inap')}}" class="nav-link">
                             <i class="icon-bed2"></i>
                             <span>
                                 Rawat Inap

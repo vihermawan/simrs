@@ -25,7 +25,17 @@ Route::get('/pendaftaran', function () {
     return view('pendaftaran');
 })->name('pendaftaran');
 
+<<<<<<< HEAD
 Route::get('/keuangan',function(){
     return view('keuangan');
 })->name('keuangan');
 
+=======
+Route::get('/inap', function () {
+    return view('inap');
+})->name('inap');
+
+Route::get('/jalan', function () {
+    return view('jalan');
+})->name('jalan');
+>>>>>>> f6642cd199109f98cea1137e7684b0f5af6be7ca
