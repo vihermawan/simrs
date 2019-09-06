@@ -294,17 +294,12 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
-                                                        <label class="col-lg-3 col-form-label">Dosis Penyakit:</label>
+                                                        <label class="col-lg-3 col-form-label">Jenis Penyakit:</label>
                                                         <div class="col-lg-9">
                                                             <input type="text" class="form-control" placeholder="Dosis Penyakit">
                                                         </div>
                                                     </div>
-                                                    <div class="form-group row">
-                                                        <label class="col-lg-3 col-form-label">Harga:</label>
-                                                        <div class="col-lg-9">
-                                                            <input type="number" class="form-control" placeholder="Harga">
-                                                        </div>
-                                                    </div>
+                                                    
                                                 
                                     <!-- /Form -->
                                 </div>
