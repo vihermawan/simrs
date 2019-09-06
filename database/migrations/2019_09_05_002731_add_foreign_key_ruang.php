@@ -14,7 +14,7 @@ class AddForeignKeyRuang extends Migration
     public function up()
     {
         Schema::table('ruang', function (Blueprint $table) {
-            $table->foreign('id_kelas')->references('id')->on('kelas');
+            $table->foreign('id_kelas')->references('id')->on('kelas')->onDelete('cascade');
         });
     }
 

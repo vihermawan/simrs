@@ -14,7 +14,7 @@ class AddForeignKeyPasienRole extends Migration
     public function up()
     {
         Schema::table('pasien', function (Blueprint $table) {
-            $table->foreign('id_rolepasien')->references('id')->on('role');
+            $table->foreign('id_rolepasien')->references('id')->on('role')->onDelete('cascade');
         });
     }
 

@@ -14,9 +14,9 @@ class AddForeignKeyDaftar extends Migration
     public function up()
     {
         Schema::table('daftar', function (Blueprint $table) {
-            $table->foreign('id_pasien')->references('id')->on('pasien');
-            $table->foreign('id_poli')->references('id')->on('poli');
-            $table->foreign('id_role_pembayaran')->references('id')->on('role_pembayaran');
+            $table->foreign('id_pasien')->references('id')->on('pasien')->onDelete('cascade');
+            $table->foreign('id_poli')->references('id')->on('poli')->onDelete('cascade');
+            $table->foreign('id_role_pembayaran')->references('id')->on('role_pembayaran')->onDelete('cascade');
         });
     }
 

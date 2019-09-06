@@ -14,8 +14,8 @@ class AddForeignKeyTransaksiInap extends Migration
     public function up()
     {
         Schema::table('transaksi_inap', function (Blueprint $table) {
-            $table->foreign('id_petugas')->references('id')->on('users');
-            $table->foreign('id_rawat_inap')->references('id')->on('rawat_inap');
+            $table->foreign('id_petugas')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_rawat_inap')->references('id')->on('rawat_inap')->onDelete('cascade');
         });
     }
 

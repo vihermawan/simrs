@@ -14,7 +14,7 @@ class AddForeignKeyPemeriksaanHarian extends Migration
     public function up()
     {
         Schema::table('pemeriksaan_harian', function (Blueprint $table) {
-            $table->foreign('id_rawat_inap')->references('id')->on('rawat_inap');
+            $table->foreign('id_rawat_inap')->references('id')->on('rawat_inap')->onDelete('cascade');
         });
     }
 

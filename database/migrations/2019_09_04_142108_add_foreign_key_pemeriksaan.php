@@ -14,11 +14,11 @@ class AddForeignKeyPemeriksaan extends Migration
     public function up()
     {
         Schema::table('pemeriksaan', function (Blueprint $table) {
-            $table->foreign('id_pasien')->references('id')->on('pasien');
-            $table->foreign('id_user')->references('id')->on('users');
-            $table->foreign('id_poli')->references('id')->on('poli');
-            $table->foreign('id_resep')->references('id')->on('resep');
-            $table->foreign('id_tindakan')->references('id')->on('tindakan');
+            $table->foreign('id_pasien')->references('id')->on('pasien')->onDelete('cascade');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_poli')->references('id')->on('poli')->onDelete('cascade');
+            $table->foreign('id_resep')->references('id')->on('resep')->onDelete('cascade');
+            $table->foreign('id_tindakan')->references('id')->on('tindakan')->onDelete('cascade');
         });
     }
 

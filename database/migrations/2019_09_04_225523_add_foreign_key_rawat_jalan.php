@@ -14,9 +14,9 @@ class AddForeignKeyRawatJalan extends Migration
     public function up()
     {
         Schema::table('rawat_jalan', function (Blueprint $table) {
-            $table->foreign('id_pasien')->references('id')->on('pasien');
-            $table->foreign('id_user')->references('id')->on('users');
-            $table->foreign('id_pemeriksaan')->references('id')->on('pemeriksaan');
+            $table->foreign('id_pasien')->references('id')->on('pasien')->onDelete('cascade');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_pemeriksaan')->references('id')->on('pemeriksaan')->onDelete('cascade');
         });
     }
 

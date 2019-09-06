@@ -14,7 +14,7 @@ class AddForeignKeyResep extends Migration
     public function up()
     {
         Schema::table('resep', function (Blueprint $table) {
-            $table->foreign('id_obat')->references('id')->on('obat');
+            $table->foreign('id_obat')->references('id')->on('obat')->onDelete('cascade');
         });
     }
 

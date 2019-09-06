@@ -14,8 +14,8 @@ class AddForeignKeyTransaksiPoli extends Migration
     public function up()
     {
         Schema::table('transaksi_poli', function (Blueprint $table) {
-            $table->foreign('id_petugas')->references('id')->on('users');
-            $table->foreign('id_pemeriksaan')->references('id')->on('pemeriksaan');
+            $table->foreign('id_petugas')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_pemeriksaan')->references('id')->on('pemeriksaan')->onDelete('cascade');
         });
     }
 

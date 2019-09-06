@@ -14,11 +14,11 @@ class AddForeignKeyRawatInap extends Migration
     public function up()
     {
         Schema::table('rawat_inap', function (Blueprint $table) {
-            $table->foreign('id_pasien')->references('id')->on('pasien');
-            $table->foreign('id_user')->references('id')->on('users');
-            $table->foreign('id_ruang')->references('id')->on('ruang');
-            $table->foreign('id_pemeriksaan')->references('id')->on('pemeriksaan');
-            $table->foreign('id_periksaharian')->references('id')->on('pemeriksaan_harian');
+            $table->foreign('id_pasien')->references('id')->on('pasien')->onDelete('cascade');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_ruang')->references('id')->on('ruang')->onDelete('cascade');
+            $table->foreign('id_pemeriksaan')->references('id')->on('pemeriksaan')->onDelete('cascade');
+            $table->foreign('id_periksaharian')->references('id')->on('pemeriksaan_harian')->onDelete('cascade');
         });
     }
 
