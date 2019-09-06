@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTransaksiInap extends Migration
+class AddForeignKeyPemeriksaanHarian extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateTransaksiInap extends Migration
      */
     public function up()
     {
-        Schema::create('transaksi_inap', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::table('pemeriksaan_harian', function (Blueprint $table) {
+            $table->foreign('id_rawat_inap')->references('id')->on('rawat_inap')->onDelete('cascade');
         });
     }
 
@@ -26,6 +25,6 @@ class CreateTransaksiInap extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transaksi_inap');
+        //
     }
 }

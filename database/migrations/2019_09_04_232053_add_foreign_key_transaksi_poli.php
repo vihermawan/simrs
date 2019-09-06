@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTablePasien extends Migration
+class AddForeignKeyTransaksiPoli extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateTablePasien extends Migration
      */
     public function up()
     {
-        Schema::create('table_pasien', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::table('transaksi_poli', function (Blueprint $table) {
+            $table->foreign('id_petugas')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_pemeriksaan')->references('id')->on('pemeriksaan')->onDelete('cascade');
         });
     }
 
@@ -26,6 +26,6 @@ class CreateTablePasien extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_pasien');
+        //
     }
 }

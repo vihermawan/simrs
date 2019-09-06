@@ -284,9 +284,9 @@
                                             <div class="card-body">
                                                 <form action="#">
                                                     <div class="form-group row">
-                                                        <label class="col-lg-3 col-form-label">Name:</label>
+                                                        <label class="col-lg-3 col-form-label">Nama:</label>
                                                         <div class="col-lg-9">
-                                                            <input type="text" class="form-control" placeholder="Eugene Kopyov">
+                                                            <input type="text" class="form-control" placeholder="Nama Pasien">
                                                         </div>
                                                     </div>
 
@@ -330,19 +330,19 @@
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label class="col-lg-3 col-form-label">Gender:</label>
+                                                        <label class="col-lg-3 col-form-label">Jenis Kelamin:</label>
                                                         <div class="col-lg-9">
                                                             <div class="form-check form-check-inline">
                                                                 <label class="form-check-label">
                                                                     <div class="uniform-choice"><span class="checked"><input type="radio" class="form-input-styled" name="gender" checked="" data-fouc=""></span></div>
-                                                                    Male
+                                                                    Laki - laki
                                                                 </label>
                                                             </div>
 
                                                             <div class="form-check form-check-inline">
                                                                 <label class="form-check-label">
                                                                     <div class="uniform-choice"><span><input type="radio" class="form-input-styled" name="gender" data-fouc=""></span></div>
-                                                                    Female
+                                                                    Perempuan
                                                                 </label>
                                                             </div>
                                                         </div>

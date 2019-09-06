@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableMenu extends Migration
+class AddForeignKeyUserRole extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateTableMenu extends Migration
      */
     public function up()
     {
-        Schema::create('table_menu', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table){
+            $table->foreign('id_role')->references('id')->on('role')->onDelete('cascade');
         });
     }
 
@@ -26,6 +25,6 @@ class CreateTableMenu extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_menu');
+        //
     }
 }

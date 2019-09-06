@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableRolePembayaran extends Migration
+class CreatePemeriksaanHarianTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateTableRolePembayaran extends Migration
      */
     public function up()
     {
-        Schema::create('table_role_pembayaran', function (Blueprint $table) {
+        Schema::create('pemeriksaan_harian', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('id_rawat_inap')->unsigned();
+            $table->string('deskripsi');
+            $table->dateTime('tanggal');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateTableRolePembayaran extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_role_pembayaran');
+        Schema::dropIfExists('pemeriksaan_harian');
     }
 }

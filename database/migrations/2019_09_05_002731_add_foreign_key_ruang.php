@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDaftar extends Migration
+class AddForeignKeyRuang extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateDaftar extends Migration
      */
     public function up()
     {
-        Schema::create('daftar', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::table('ruang', function (Blueprint $table) {
+            $table->foreign('id_kelas')->references('id')->on('kelas')->onDelete('cascade');
         });
     }
 
@@ -26,6 +25,6 @@ class CreateDaftar extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('daftar');
+        //
     }
 }
