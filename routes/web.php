@@ -25,3 +25,10 @@ Route::get('/pendaftaran', function () {
     return view('pendaftaran');
 })->name('pendaftaran');
 
+Route::get('/inap', function () {
+    return view('inap');
+})->name('inap');
+
+Route::get('/jalan', function () {
+    return view('jalan');
+})->name('jalan');
