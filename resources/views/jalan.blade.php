@@ -90,7 +90,7 @@
                         <div class="col-lg-4">
                             <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-left"
                                 data-toggle="modal" data-target="#modal_theme_success"><b><i
-                                        class="icon-reading"></i></b> Tambah Rawat Inap</button>
+                                        class="icon-reading"></i></b> Tambah Rawat Jalan</button>
                         </div>
                     </div>
 
