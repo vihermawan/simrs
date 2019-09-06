@@ -85,8 +85,8 @@
 
                 <div class="card-body">
                 <div class="col-sm-4">
-						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><span>Tambah Pegawai Baru</span></a>
-						<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><span>Hapus</span></a>						
+                <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Pegawai</button>
+                <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Hapus</button>						
                     </div>
                 </div>
 

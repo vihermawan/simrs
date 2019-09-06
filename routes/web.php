@@ -32,3 +32,9 @@ Route::get('/inap', function () {
 Route::get('/jalan', function () {
     return view('jalan');
 })->name('jalan');
+Route::get('/obat', function () {
+    return view('obat');
+})->name('obat');
+Route::get('/penyakit', function () {
+    return view('penyakit');
+})->name('penyakit');

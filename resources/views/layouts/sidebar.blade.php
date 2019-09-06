@@ -112,7 +112,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">
+                        <a href="{{route('obat')}}" class="nav-link">
                             <i class="icon-plus-circle2"></i>
                             <span>
                                 Obat
@@ -120,7 +120,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">
+                        <a href="{{route('penyakit')}}" class="nav-link">
                             <i class="icon-snowflake"></i>
                             <span>
                                 Penyakit
