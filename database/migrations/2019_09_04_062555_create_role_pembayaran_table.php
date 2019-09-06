@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePasienRole extends Migration
+class CreateRolePembayaranTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreatePasienRole extends Migration
      */
     public function up()
     {
-        Schema::create('pasien_role', function (Blueprint $table) {
+        Schema::create('role_pembayaran', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('jenis_pembayaran');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreatePasienRole extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pasien_role');
+        Schema::dropIfExists('role_pembayaran');
     }
 }

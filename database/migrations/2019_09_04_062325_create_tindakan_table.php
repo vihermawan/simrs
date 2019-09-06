@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTablePemeriksaanHarian extends Migration
+class CreateTindakanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateTablePemeriksaanHarian extends Migration
      */
     public function up()
     {
-        Schema::create('table_pemeriksaan_harian', function (Blueprint $table) {
+        Schema::create('tindakan', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nama');
+            $table->string('harga');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateTablePemeriksaanHarian extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_pemeriksaan_harian');
+        Schema::dropIfExists('tindakan');
     }
 }

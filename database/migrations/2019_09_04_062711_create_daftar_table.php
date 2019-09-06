@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableTindakan extends Migration
+class CreateDaftarTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreateTableTindakan extends Migration
      */
     public function up()
     {
-        Schema::create('table_tindakan', function (Blueprint $table) {
-            $table->bigIncrements('id_tindakan');
-            $table->string('nama_tindakan');
+        Schema::create('daftar', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->bigInteger('id_pasien')->unsigned();
+            $table->bigInteger('id_poli')->unsigned();
+            $table->bigInteger('id_role_pembayaran')->unsigned();
+            $table->string('kategori');
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ class CreateTableTindakan extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_tindakan');
+        Schema::dropIfExists('daftar');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableRawatInap extends Migration
+class AddForeignKeyTransaksiInap extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateTableRawatInap extends Migration
      */
     public function up()
     {
-        Schema::create('table_rawat_inap', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::table('transaksi_inap', function (Blueprint $table) {
+            $table->foreign('id_petugas')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_rawat_inap')->references('id')->on('rawat_inap')->onDelete('cascade');
         });
     }
 
@@ -26,6 +26,6 @@ class CreateTableRawatInap extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_rawat_inap');
+        //
     }
 }

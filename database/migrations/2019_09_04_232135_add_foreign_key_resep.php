@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableTransaksiPoli extends Migration
+class AddForeignKeyResep extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateTableTransaksiPoli extends Migration
      */
     public function up()
     {
-        Schema::create('table_transaksi_poli', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::table('resep', function (Blueprint $table) {
+            $table->foreign('id_obat')->references('id')->on('obat')->onDelete('cascade');
         });
     }
 
@@ -26,6 +25,6 @@ class CreateTableTransaksiPoli extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_transaksi_poli');
+        //
     }
 }
