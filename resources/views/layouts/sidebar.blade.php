@@ -103,8 +103,17 @@
                             </span>
                         </a>
                     </li>
+
+                    <li class="nav-item nav-item-submenu">
+							<a href="{{route('keuangan')}}" class="nav-link"><i class="icon-coins"></i> <span>Keuangan</span></a>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="index.html" class="nav-link active">Transaksi Inap</a></li>
+                                <li class="nav-item"><a href="index.html" class="nav-link active">Transaksi Poli</a></li>
+                            </ul>
+                    </li>
+
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">
+                        <a href="{{route('keuangan')}}" class="nav-link">
                             <i class="icon-coins"></i>
                             <span>
                                 Keuangan

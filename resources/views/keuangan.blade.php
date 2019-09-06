@@ -6,7 +6,7 @@
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
             <div class="page-title d-flex">
-                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Home</span> - Pendaftaran
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Home</span> - Keuangan
                 </h4>
                 <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
             </div>
@@ -27,7 +27,7 @@
             <div class="d-flex">
                 <div class="breadcrumb">
                     <a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
-                    <span class="breadcrumb-item active">Pendaftaran</span>
+                    <span class="breadcrumb-item active">Keuangan</span>
                 </div>
 
                 <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -76,7 +76,7 @@
                 <!--Tabel -->
                 <div class="card">
                         <div class="card-header header-elements-inline">
-                            <h5 class="card-title">Tabel Pendaftaran</h5>
+                            <h5 class="card-title">Tabel Keuangan</h5>
                             <div class="header-elements">
                                 <div class="list-icons">
                                     <a class="list-icons-item" data-action="collapse"></a>
@@ -95,13 +95,9 @@
                         <table class="table table-togglable table-hover footable-loaded footable default">
                             <thead>
                                 <tr>
-                                    <th data-hide="phone" class="footable-visible">Tanggal Kunjungan</th>
                                     <th data-toggle="true" class="footable-visible footable-first-column">Nama Pasien</th>
-                                    <th data-hide="phone,tablet" class="footable-visible">Alamat</th>
-                                    <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Desa</th>
-                                    <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Kecamatan</th>
-                                    <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Jenis Kelamin</th>
-                                    <th data-hide="phone" data-ignore="true" class="footable-visible">Status</th>
+                                    <th data-hide="phone" class="footable-visible">Transaksi</th>
+                                    <th data-hide="phone,tablet" class="footable-visible">Dokter yang menangani</th>
                                     <th class="text-center footable-visible footable-last-column" style="width: 30px;"><i class="icon-menu-open2"></i></th>
                                 </tr>
                             </thead>
@@ -111,22 +107,6 @@
                                     <td class="footable-visible"><a href="#">Enright</a></td>
                                     <td class="footable-visible">Traffic Court Referee</td>
                                     <td class="footable-visible">22 Jun 1972</td>
-                                    <td class="footable-visible"><span class="badge badge-success">Active</span></td>
-                                    <td class="text-center footable-visible footable-last-column">
-                                        <div class="list-icons">
-                                            <div class="dropdown">
-                                                <a href="#" class="list-icons-item" data-toggle="dropdown">
-                                                    <i class="icon-menu9"></i>
-                                                </a>
-    
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
-                                                    <a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
-                                                    <a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -276,7 +256,7 @@
 					<div class="modal-dialog modal-full">
 						<div class="modal-content">
 							<div class="modal-header bg-success">
-								<h6 class="modal-title">Form Pendaftaran</h6>
+								<h6 class="modal-title">Form Keuangan</h6>
 								<button type="button" class="close" data-dismiss="modal">&times;</button>
 							</div>
 
@@ -286,9 +266,9 @@
                                             <div class="card-body">
                                                 <form action="#">
                                                     <div class="form-group row">
-                                                        <label class="col-lg-3 col-form-label">Nama:</label>
+                                                        <label class="col-lg-3 col-form-label">Name:</label>
                                                         <div class="col-lg-9">
-                                                            <input type="text" class="form-control" placeholder="Nama Pasien">
+                                                            <input type="text" class="form-control" placeholder="Eugene Kopyov">
                                                         </div>
                                                     </div>
 
@@ -332,19 +312,19 @@
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label class="col-lg-3 col-form-label">Jenis Kelamin:</label>
+                                                        <label class="col-lg-3 col-form-label">Gender:</label>
                                                         <div class="col-lg-9">
                                                             <div class="form-check form-check-inline">
                                                                 <label class="form-check-label">
                                                                     <div class="uniform-choice"><span class="checked"><input type="radio" class="form-input-styled" name="gender" checked="" data-fouc=""></span></div>
-                                                                    Laki - laki
+                                                                    Male
                                                                 </label>
                                                             </div>
 
                                                             <div class="form-check form-check-inline">
                                                                 <label class="form-check-label">
                                                                     <div class="uniform-choice"><span><input type="radio" class="form-input-styled" name="gender" data-fouc=""></span></div>
-                                                                    Perempuan
+                                                                    Female
                                                                 </label>
                                                             </div>
                                                         </div>

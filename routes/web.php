@@ -25,6 +25,12 @@ Route::get('/pendaftaran', function () {
     return view('pendaftaran');
 })->name('pendaftaran');
 
+<<<<<<< HEAD
+Route::get('/keuangan',function(){
+    return view('keuangan');
+})->name('keuangan');
+
+=======
 Route::get('/inap', function () {
     return view('inap');
 })->name('inap');
@@ -32,9 +38,13 @@ Route::get('/inap', function () {
 Route::get('/jalan', function () {
     return view('jalan');
 })->name('jalan');
+<<<<<<< HEAD
 Route::get('/obat', function () {
     return view('obat');
 })->name('obat');
 Route::get('/penyakit', function () {
     return view('penyakit');
 })->name('penyakit');
+=======
+>>>>>>> f6642cd199109f98cea1137e7684b0f5af6be7ca
+>>>>>>> 52524dc964dc5d33dc86d023b10a05fc3177eb9a
