@@ -20,7 +20,8 @@ class CreatePemeriksaanTable extends Migration
             $table->bigInteger('id_poli')->unsigned();
             $table->bigInteger('id_resep')->unsigned();
             $table->bigInteger('id_tindakan')->unsigned();
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 

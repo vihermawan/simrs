@@ -17,7 +17,8 @@ class CreatePoliTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama');
             $table->bigInteger('id_user');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 

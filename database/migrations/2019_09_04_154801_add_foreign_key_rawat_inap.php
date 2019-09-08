@@ -18,7 +18,7 @@ class AddForeignKeyRawatInap extends Migration
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('id_ruang')->references('id')->on('ruang')->onDelete('cascade');
             $table->foreign('id_pemeriksaan')->references('id')->on('pemeriksaan')->onDelete('cascade');
-            $table->foreign('id_periksaharian')->references('id')->on('pemeriksaan_harian')->onDelete('cascade');
+            $table->foreign('id_pemeriksaanharian')->references('id')->on('pemeriksaan_harian')->onDelete('cascade');
         });
     }
 

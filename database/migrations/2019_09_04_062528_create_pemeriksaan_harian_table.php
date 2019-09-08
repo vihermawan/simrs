@@ -15,10 +15,10 @@ class CreatePemeriksaanHarianTable extends Migration
     {
         Schema::create('pemeriksaan_harian', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_rawat_inap')->unsigned();
             $table->string('deskripsi');
             $table->dateTime('tanggal');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 

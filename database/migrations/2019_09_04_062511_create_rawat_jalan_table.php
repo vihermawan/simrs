@@ -20,7 +20,8 @@ class CreateRawatJalanTable extends Migration
             $table->dateTime('tanggal_keluar');
             $table->dateTime('tanggal_masuk');
             $table->bigInteger('id_pemeriksaan')->unsigned();
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 

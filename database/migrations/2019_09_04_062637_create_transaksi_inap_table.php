@@ -18,7 +18,8 @@ class CreateTransaksiInapTable extends Migration
             $table->bigInteger('id_petugas')->unsigned();
             $table->bigInteger('id_rawat_inap')->unsigned();
             $table->string('total_pembayaran');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 

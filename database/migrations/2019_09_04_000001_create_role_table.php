@@ -16,7 +16,8 @@ class CreateRoleTable extends Migration
         Schema::create('role', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 

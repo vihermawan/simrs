@@ -17,7 +17,8 @@ class CreatePenyakitTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama');
             $table->string('jenis');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 

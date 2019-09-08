@@ -15,10 +15,10 @@ class CreatePasienTable extends Migration
     {
         Schema::create('pasien', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama_pasien');
+            $table->string('nama');
             $table->date('tanggal_kunjungan');
             $table->time('jam');
-            $table->bigInteger('id_rolepasien')->unsigned();
+            $table->bigInteger('id_role')->unsigned();
             $table->string('jenis_kelamin');
             $table->string('alamat');
             $table->string('desa');
@@ -28,9 +28,10 @@ class CreatePasienTable extends Migration
             $table->string('agama');
             $table->string('golongan_darah');
             $table->string('pendidikan');
-            $table->string('asuransi');
+            $table->string('asuransi')->nullable();
             $table->string('tempat_lahir');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 

@@ -22,5 +22,13 @@ class RoleTableSeeder extends Seeder
         DB::table('role')->insert([
             'nama' => 'Perawat',
         ]);
+
+        DB::table('role')->insert([
+            'nama' => 'Petugas',
+        ]);
+
+        DB::table('role')->insert([
+            'nama' => 'Pasien',
+        ]);
     }
 }

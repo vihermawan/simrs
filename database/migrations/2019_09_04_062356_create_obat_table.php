@@ -19,7 +19,8 @@ class CreateObatTable extends Migration
             $table->string('dosis');
             $table->string('harga');
             $table->string('jenis_obat');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 

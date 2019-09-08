@@ -18,7 +18,8 @@ class CreateMenuTable extends Migration
             $table->integer('parent_id');
             $table->string('name');
             $table->string('url');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 
