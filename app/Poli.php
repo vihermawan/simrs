@@ -8,7 +8,7 @@ class Poli extends Model
 {
     protected $table = 'poli';
 
-    public function users
+    public function users()
     {
         return $this->belongsTo(Users::class, 'id_user');
     }

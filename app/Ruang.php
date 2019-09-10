@@ -8,7 +8,7 @@ class Ruang extends Model
 {
     protected $table = 'ruang';
 
-    public function kelas
+    public function kelas()
     {
         return $this->hasOne(Kelas::class, 'id', 'id_kelas');
     }

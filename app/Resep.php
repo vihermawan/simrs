@@ -8,7 +8,7 @@ class Resep extends Model
 {
     protected $table = 'resep';
 
-    public function obat
+    public function obat()
     {
         return $this->hasOne(Obat::class, 'id', 'id_obat');
     }

@@ -18,7 +18,6 @@ class CreatePasienTable extends Migration
             $table->string('nama');
             $table->date('tanggal_kunjungan');
             $table->time('jam');
-            $table->bigInteger('id_role')->unsigned();
             $table->string('jenis_kelamin');
             $table->string('alamat');
             $table->string('desa');

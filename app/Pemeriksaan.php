@@ -8,22 +8,22 @@ class Pemeriksaan extends Model
 {
     protected $table = 'pemeriksaan';
 
-    public function pasien
+    public function pasien()
     {
         return $this->hasOne(Pasien::class, 'id', 'id_pasien');
     }
 
-    public function user
+    public function user()
     {
         return $this->hasOne(User::class, 'id', 'id_user');
     }
 
-    public function poli
+    public function poli()
     {
         return $this->hasOne(Poli::class, 'id', 'id_poli');
     }
 
-    public function resep
+    public function resep()
     {
         return $this->hasOne(Resep::class, 'id', 'id_resep');
     }

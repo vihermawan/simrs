@@ -8,7 +8,7 @@ class Tindakan extends Model
 {
     protected $table = 'tindakan';
 
-    public function pemeriksaan
+    public function pemeriksaan()
     {
         return $this->belongsTo(Pemeriksaan::class, 'id_tindakan');
     }

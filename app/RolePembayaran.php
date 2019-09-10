@@ -8,7 +8,7 @@ class RolePembayaran extends Model
 {
     protected $table = 'role_pembayaran';
 
-    public function daftar
+    public function daftar()
     {
         return $this->belongsTo(Daftar::class, 'id_rolepembayaran');
     }

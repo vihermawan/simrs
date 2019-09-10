@@ -8,17 +8,17 @@ class Daftar extends Model
 {
     protected $table = 'daftar';
 
-    public function pasien
+    public function pasien()
     {
         return $this->hasOne(Pasien::class, 'id', 'id_pasien');
     }
 
-    public function poli
+    public function poli()
     {
         return $this->hasOne(Poli::class, 'id', 'id_poli');
     }
 
-    public function rolePembayaran
+    public function rolePembayaran()
     {
         return $this->hasOne(RolePembayaran::class, 'id', 'id_rolepembayaran');
     }
