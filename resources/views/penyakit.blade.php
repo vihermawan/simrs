@@ -294,9 +294,16 @@
                                                     <div class="form-group row">
                                                         <label class="col-lg-3 col-form-label">Jenis Penyakit:</label>
                                                         <div class="col-lg-9">
+<<<<<<< HEAD
                                                             <input type="text" class="form-control" placeholder="Jenis Penyakit">
                                                         </div>
                                                     </div>
+=======
+                                                            <input type="text" class="form-control" placeholder="Dosis Penyakit">
+                                                        </div>
+                                                    </div>
+                                                    
+>>>>>>> 9bc3cf4fb97911471eb0722d2462c682bc3d34d5
                                                 
                                     <!-- /Form -->
                                 </div>
