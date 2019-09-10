@@ -85,8 +85,7 @@
 
                 <div class="card-body">
                 <div class="col-sm-4">
-                <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Pegawai</button>
-                <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Hapus</button>						
+                <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Pegawai</button>					
                     </div>
                 </div>
 
@@ -97,6 +96,7 @@
                             <th data-hide="phone" class="footable-visible">Email</th>
                             <th data-hide="phone,tablet" class="footable-visible">Jabatan</th>
                             <th data-hide="phone" data-ignore="true" class="footable-visible">Status</th>
+                            <th data-hide="phone,tablet" class="footable-visible">Action</th>
                             <th class="text-center footable-visible footable-last-column" style="width: 30px;"><i class="icon-menu-open2"></i></th>
                         </tr>
                     </thead>
@@ -106,6 +106,16 @@
                             <td class="footable-visible"><a href="#">Enright</a></td>
                             <td class="footable-visible">Traffic Court Referee</td>
                             <td class="footable-visible"><span class="badge badge-success">Active</span></td>
+                            <td class="footable-visible">
+                                <a href="#" class="btn btn-primary a-btn-slide-text">
+                                    <span class="icon-pencil5" aria-hidden="true"></span>
+                                    <span><strong>Edit</strong></span>            
+                                </a>
+                                <a href="#" class="btn btn-danger a-btn-slide-text">
+                                <span class="icon-cross2" aria-hidden="true"></span>
+                                    <span><strong>Delete</strong></span>            
+                                </a>
+                                </div>
                             <td class="text-center footable-visible footable-last-column">
                                 <div class="list-icons">
                                     <div class="dropdown">
@@ -133,6 +143,52 @@
     
 </div>
 <!-- /dashboard content -->
+
+<!--Modal Form Pendaftaran -->
+<div id="modal_theme_success" class="modal fade" tabindex="-1">
+					<div class="modal-dialog modal-full">
+						<div class="modal-content">
+							<div class="modal-header bg-success">
+								<h6 class="modal-title">Form Penyakit</h6>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+
+							<div class="modal-body">
+								 <div class="col-xl-12">
+                                    <!-- Form -->
+                                            <div class="card-body">
+                                                <form action="#">
+                                                    <div class="form-group row">
+                                                        <label class="col-lg-3 col-form-label">Nama Pegawai:</label>
+                                                        <div class="col-lg-9">
+                                                            <input type="text" class="form-control" placeholder="Nama Pegawai">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-lg-3 col-form-label">Email:</label>
+                                                        <div class="col-lg-9">
+                                                            <input type="email" class="form-control" placeholder="Email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-lg-3 col-form-label">Jabatan:</label>
+                                                        <div class="col-lg-9">
+                                                            <input type="text" class="form-control" placeholder="Jabatan">
+                                                        </div>
+                                                    </div>
+                                                
+                                    <!-- /Form -->
+                                </div>
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+								<button type="button" class="btn bg-success">Save changes</button>
+							</div>
+						</div>
+					</div>
+				</div>
+        <!--End Modal Pendaftaran-->
 
 </div>
 <!-- /content area -->

@@ -6,7 +6,7 @@
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
             <div class="page-title d-flex">
-                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Home</span> - Rawat Inap
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Home</span> - Penyakit
                 </h4>
                 <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
             </div>
@@ -27,7 +27,7 @@
             <div class="d-flex">
                 <div class="breadcrumb">
                     <a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
-                    <span class="breadcrumb-item active">Pendaftaran Rawat Inap</span>
+                    <span class="breadcrumb-item active">Penyakit</span>
                 </div>
 
                 <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -97,17 +97,15 @@
                                 <tr>                                
                                     <th data-toggle="true" class="footable-visible footable-first-column">ID Penyakit</th>
                                     <th data-toggle="true" class="footable-visible footable-first-column">Nama Penyakit</th>
-                                    <th data-hide="phone" class="footable-visible">Dosis</th>
-                                    <th data-hide="phone,tablet" class="footable-visible">Harga</th>
+                                    <th data-hide="phone" class="footable-visible">Jenis</th>
                                     <th class="text-center footable-visible footable-last-column" style="width: 30px;"><i class="icon-menu-open2"></i></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>P001</td>
-                                    <td class="footable-visible"><a href="#">Paracetamol</a></td>
-                                    <td class="footable-visible">2x sehari</td> 
-                                    <td class="footable-visible">10.000</td> 
+                                    <td class="footable-visible"><a href="#">Panu</a></td>
+                                    <td class="footable-visible">Penyakit Kulit</td> 
                                     <td class="text-center footable-visible footable-last-column">
                                         <div class="list-icons">
                                             <div class="dropdown">
@@ -294,15 +292,9 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
-                                                        <label class="col-lg-3 col-form-label">Dosis Penyakit:</label>
+                                                        <label class="col-lg-3 col-form-label">Jenis Penyakit:</label>
                                                         <div class="col-lg-9">
-                                                            <input type="text" class="form-control" placeholder="Dosis Penyakit">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label class="col-lg-3 col-form-label">Harga:</label>
-                                                        <div class="col-lg-9">
-                                                            <input type="number" class="form-control" placeholder="Harga">
+                                                            <input type="text" class="form-control" placeholder="Jenis Penyakit">
                                                         </div>
                                                     </div>
                                                 

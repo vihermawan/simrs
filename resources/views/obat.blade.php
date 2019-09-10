@@ -6,7 +6,7 @@
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
             <div class="page-title d-flex">
-                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Home</span> - Rawat Inap
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Home</span> - Obat
                 </h4>
                 <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
             </div>
@@ -27,7 +27,7 @@
             <div class="d-flex">
                 <div class="breadcrumb">
                     <a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
-                    <span class="breadcrumb-item active">Pendaftaran Rawat Inap</span>
+                    <span class="breadcrumb-item active">Obat</span>
                 </div>
 
                 <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -98,15 +98,17 @@
                                     <th data-toggle="true" class="footable-visible footable-first-column">ID Obat</th>
                                     <th data-toggle="true" class="footable-visible footable-first-column">Nama Obat</th>
                                     <th data-hide="phone" class="footable-visible">Dosis</th>
+                                    <th data-hide="phone,tablet" class="footable-visible">Jenis Obat</th>
                                     <th data-hide="phone,tablet" class="footable-visible">Harga</th>
                                     <th class="text-center footable-visible footable-last-column" style="width: 30px;"><i class="icon-menu-open2"></i></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>P001</td>
+                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>O001</td>
                                     <td class="footable-visible"><a href="#">Paracetamol</a></td>
                                     <td class="footable-visible">2x sehari</td> 
+                                    <td class="footable-visible">Kapsul</td> 
                                     <td class="footable-visible">10.000</td> 
                                     <td class="text-center footable-visible footable-last-column">
                                         <div class="list-icons">
@@ -297,6 +299,18 @@
                                                         <label class="col-lg-3 col-form-label">Dosis Obat:</label>
                                                         <div class="col-lg-9">
                                                             <input type="text" class="form-control" placeholder="Dosis Obat">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-lg-3 col-form-label">Jenis Obat:</label>
+                                                        <div class="col-lg-9">
+                                                            <select type="tipeObat" class="form-control" placeholder="Jenis Obat">
+                                                            <option value="tablet">Tablet</option>
+                                                            <option value="kapsul">Kapsul</option>
+                                                            <option value="serbuk">Serbuk</option>
+                                                            <option value="pil">Pil</option>
+                                                            <option value="larutan">Larutan</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
