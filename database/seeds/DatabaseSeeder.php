@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             RawatInapTableSeeder::class,
             TransaksiPoliTableSeeder::class,
             TransaksiInapTableSeeder::class,
+            MenuTableSeeder::class,
         ]);
     }
 }
