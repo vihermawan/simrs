@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'MenuController@index')->name('main');
+
+Route::get('/dashboard', 'DashboardController@tampilan');
+
+Route::get('/signin', function () {
+    return view('signin');
+})->name('signin');
+Route::get('/pendaftaran', function () {
+    return view('pendaftaran');
+})->name('pendaftaran');
+
+Route::get('/tes', 'MenuController@tes');
