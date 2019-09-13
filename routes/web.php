@@ -11,6 +11,7 @@
 |
 */
 
+<<<<<<< HEAD
 Route::get('/', 'MenuController@index')->name('main');
 
 Route::get('/dashboard', 'DashboardController@tampilan');
@@ -23,3 +24,13 @@ Route::get('/pendaftaran', function () {
 })->name('pendaftaran');
 
 Route::get('/tes', 'MenuController@tes');
+=======
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+>>>>>>> ea25a2d0bbe5f78f0e31fb734b7d8ebadf5df5a1
