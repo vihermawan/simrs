@@ -25,7 +25,7 @@ class MenuController extends Controller
             // if($checkModul){
                 if(count($child) == 0 ){
                     $modul .= '<li class="nav-item">'.
-                                    '<a href="" class="nav-link" onclick="changeMenu('."'".$menus[$i]->url."'".')">'.
+                                    '<a href="#" class="nav-link" onclick="changeMenu('."'".$menus[$i]->url."'".')">'.
                                         '<i class="'.$menus[$i]->icon.'"></i>'.
                                         '<span>'.$menus[$i]->name.'</span>'.
                                     '</a>'.

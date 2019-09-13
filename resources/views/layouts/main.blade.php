@@ -162,12 +162,8 @@
 
 
         <!-- content area -->
-        <div class="content" id="div-content">
-            <div class="isi" style="background:red; widht:200px; height:20px;">
-                <div id="tes">
-                      asa
-                </div>
-            </div>
+        <div id="div-content">
+           cek
         </div>
         <!-- /content area -->
 
@@ -219,14 +215,12 @@
       });
 
       function changeMenu(url) {
-          $('.content-wrapper').hide();
-
           $.ajax({
               type : 'GET',
               url : url,
               success : function (data) {
-                  // $('#content-wrapper').show();
-                  $('#tes').replaceWith('data');
+                  $('#content-wrapper').show();
+                  $('#div-content').html(data);
               }
           })
       }

@@ -1,7 +1,3 @@
-@extends('layouts.home')
-@section('content')
-<div class="content-wrapper">
-
     <!-- Page header -->
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
@@ -409,8 +405,6 @@
         <!--End Modal Pendaftaran-->
 
     </div>
-    <!-- /content area -->
-    @endsection
 
   
 

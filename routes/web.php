@@ -11,26 +11,23 @@
 |
 */
 
-<<<<<<< HEAD
 Route::get('/', 'MenuController@index')->name('main');
 
-Route::get('/dashboard', 'DashboardController@tampilan');
+Route::get('/dashboard', 'DashboardController@index');
 
 Route::get('/signin', function () {
     return view('signin');
 })->name('signin');
-Route::get('/pendaftaran', function () {
-    return view('pendaftaran');
-})->name('pendaftaran');
+
+Route::get('/pendaftaran', 'PendaftaranController@index');
+
+Route::get('/penyakit','PenyakitController@index');
+
+Route::get('/obat', 'ObatController@index');
 
 Route::get('/tes', 'MenuController@tes');
-=======
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
->>>>>>> ea25a2d0bbe5f78f0e31fb734b7d8ebadf5df5a1

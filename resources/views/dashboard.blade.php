@@ -1,6 +1,4 @@
-@extends('layouts.main')
-@section('content')
-<!-- Page header -->
+
 <div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
@@ -232,4 +230,4 @@
 
 			</div>
 			<!-- /content area -->
-@endsection
+			</div>
