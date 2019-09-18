@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+@extends('layouts.home')
+@section('content')
+<div class="content-wrapper">
+
+>>>>>>> 5c8ff6de20da6cce888e23292b534e0385ddba4f
+>>>>>>> e2ca2c53c149bc97e0e6ff82c384553d8bbaf48b
     <!-- Page header -->
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
@@ -292,6 +302,16 @@
                                                         <div class="col-lg-9">
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+                                                            <input type="text" class="form-control" placeholder="Jenis Penyakit">
+                                                        </div>
+                                                    </div>
+                                                           
+                                                </form>  
+                                            </div>
+=======
+>>>>>>> e2ca2c53c149bc97e0e6ff82c384553d8bbaf48b
+<<<<<<< HEAD
                                                             <input type="text" class="form-control" placeholder="Jenis Penyakit">
                                                         </div>
                                                     </div>
@@ -301,6 +321,7 @@
                                                     </div>
 
 >>>>>>> 9bc3cf4fb97911471eb0722d2462c682bc3d34d5
+<<<<<<< HEAD
 
 =======
                                                             <input type="text" class="form-control" placeholder="Jenis Penyakit">
@@ -310,6 +331,10 @@
                                                 </form>
                                             </div>
 >>>>>>> 383ae1c1d2001cfe5e8b20df263cd21dcbc3dd8b
+=======
+                                                
+>>>>>>> 5c8ff6de20da6cce888e23292b534e0385ddba4f
+>>>>>>> e2ca2c53c149bc97e0e6ff82c384553d8bbaf48b
                                     <!-- /Form -->
                                 </div>
 							</div>
@@ -321,6 +346,15 @@
 						</div>
 					</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                </div>
+        
+        <!--End Modal Pendaftaran-->
+
+    </div>
+=======
+>>>>>>> e2ca2c53c149bc97e0e6ff82c384553d8bbaf48b
 				</div>
         <!--End Modal Pendaftaran-->
 
@@ -328,6 +362,7 @@
     <!-- /content area -->
     @endsection
 
+<<<<<<< HEAD
 =======
                 </div>
 
@@ -335,3 +370,8 @@
 
     </div>
 >>>>>>> 383ae1c1d2001cfe5e8b20df263cd21dcbc3dd8b
+=======
+>>>>>>> 5c8ff6de20da6cce888e23292b534e0385ddba4f
+  
+
+>>>>>>> e2ca2c53c149bc97e0e6ff82c384553d8bbaf48b

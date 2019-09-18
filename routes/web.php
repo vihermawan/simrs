@@ -30,3 +30,17 @@ Route::get('/tes', 'MenuController@tes');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/inap', function () {
+    return view('inap');
+})->name('inap');
+Route::get('/jalan', function () {
+    return view('jalan');
+})->name('jalan');
+Route::get('/obat', function () {
+    return view('obat');
+})->name('obat');
+Route::get('/penyakit', function () {
+    return view('penyakit');
+})->name('penyakit');
+
+Route::get('/transaksi-inap', 'Keuangan\RawatInapController@index');

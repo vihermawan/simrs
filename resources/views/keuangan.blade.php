@@ -4,7 +4,8 @@
 <div class="content-wrapper">
 
 =======
->>>>>>> 383ae1c1d2001cfe5e8b20df263cd21dcbc3dd8b
+>>>>>>> 5c8ff6de20da6cce888e23292b534e0385ddba4f
+>>>>>>> e2ca2c53c149bc97e0e6ff82c384553d8bbaf48b
     <!-- Page header -->
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
@@ -88,13 +89,13 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="card-body">
                             <div class="col-lg-4">
                                 <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Pasien</button>
                             </div>
                         </div>
-    
+
                         <table class="table table-togglable table-hover footable-loaded footable default">
                             <thead>
                                 <tr>
@@ -115,8 +116,8 @@
                         </table>
                     </div>
                 <!--/Tabel-->
-               
-               
+
+
             </div>
 
             <!-- <div class="col-xl-4"> -->
@@ -377,7 +378,7 @@
                                                     </div>
                                                 </form>
                                             </div>
-                                       
+
                                     <!-- /Form -->
                                 </div>
 							</div>
@@ -397,7 +398,9 @@
     @endsection
 =======
 </div>
->>>>>>> 383ae1c1d2001cfe5e8b20df263cd21dcbc3dd8b
-
-  
-
+=======
+    </div>
+    <!-- /content area -->
+    @endsection
+>>>>>>> 5c8ff6de20da6cce888e23292b534e0385ddba4f
+>>>>>>> e2ca2c53c149bc97e0e6ff82c384553d8bbaf48b
