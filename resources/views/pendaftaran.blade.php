@@ -1,7 +1,3 @@
-@extends('layouts.home')
-@section('content')
-<div class="content-wrapper">
-
     <!-- Page header -->
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
@@ -85,13 +81,13 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="card-body">
                             <div class="col-lg-4">
                                 <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Pasien</button>
                             </div>
                         </div>
-    
+
                         <table class="table table-togglable table-hover footable-loaded footable default">
                             <thead>
                                 <tr>
@@ -118,7 +114,7 @@
                                                 <a href="#" class="list-icons-item" data-toggle="dropdown">
                                                     <i class="icon-menu9"></i>
                                                 </a>
-    
+
                                                 <div class="dropdown-menu dropdown-menu-right">
                                                     <a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
                                                     <a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
@@ -132,8 +128,8 @@
                         </table>
                     </div>
                 <!--/Tabel-->
-               
-               
+
+
             </div>
 
             <!-- <div class="col-xl-4"> -->
@@ -394,7 +390,7 @@
                                                     </div>
                                                 </form>
                                             </div>
-                                       
+
                                     <!-- /Form -->
                                 </div>
 							</div>
@@ -409,8 +405,8 @@
         <!--End Modal Pendaftaran-->
 
     </div>
+<<<<<<< HEAD
     <!-- /content area -->
     @endsection
-
-  
-
+=======
+>>>>>>> 383ae1c1d2001cfe5e8b20df263cd21dcbc3dd8b
