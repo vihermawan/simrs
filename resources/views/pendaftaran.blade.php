@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+@extends('layouts.home')
+@section('content')
+<div class="content-wrapper">
+
+>>>>>>> 5c8ff6de20da6cce888e23292b534e0385ddba4f
     <!-- Page header -->
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
@@ -405,6 +412,11 @@
         <!--End Modal Pendaftaran-->
 
     </div>
+<<<<<<< HEAD
+=======
+    <!-- /content area -->
+    @endsection
+>>>>>>> 5c8ff6de20da6cce888e23292b534e0385ddba4f
 
   
 

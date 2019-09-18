@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+@extends('layouts.home')
+@section('content')
+<div class="content-wrapper">
+
+>>>>>>> 5c8ff6de20da6cce888e23292b534e0385ddba4f
     <!-- Page header -->
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
@@ -290,12 +297,26 @@
                                                     <div class="form-group row">
                                                         <label class="col-lg-3 col-form-label">Jenis Penyakit:</label>
                                                         <div class="col-lg-9">
+<<<<<<< HEAD
                                                             <input type="text" class="form-control" placeholder="Jenis Penyakit">
                                                         </div>
                                                     </div>
                                                            
                                                 </form>  
                                             </div>
+=======
+<<<<<<< HEAD
+                                                            <input type="text" class="form-control" placeholder="Jenis Penyakit">
+                                                        </div>
+                                                    </div>
+=======
+                                                            <input type="text" class="form-control" placeholder="Dosis Penyakit">
+                                                        </div>
+                                                    </div>
+                                                    
+>>>>>>> 9bc3cf4fb97911471eb0722d2462c682bc3d34d5
+                                                
+>>>>>>> 5c8ff6de20da6cce888e23292b534e0385ddba4f
                                     <!-- /Form -->
                                 </div>
 							</div>
@@ -306,10 +327,20 @@
 							</div>
 						</div>
 					</div>
+<<<<<<< HEAD
                 </div>
         
         <!--End Modal Pendaftaran-->
 
     </div>
+=======
+				</div>
+        <!--End Modal Pendaftaran-->
+
+    </div>
+    <!-- /content area -->
+    @endsection
+
+>>>>>>> 5c8ff6de20da6cce888e23292b534e0385ddba4f
   
 
