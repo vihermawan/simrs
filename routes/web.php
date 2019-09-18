@@ -13,7 +13,6 @@
 
 Route::get('/', function () {
     return view('welcome');
-
 })->name('home');
 Route::get('/login', function () {
     return view('login');
@@ -24,17 +23,17 @@ Route::get('/signin', function () {
 Route::get('/pendaftaran', function () {
     return view('pendaftaran');
 })->name('pendaftaran');
-<<<<<<< HEAD
+// <<<<<<< HEAD
 
 Route::get('/keuangan',function(){
     return view('keuangan');
 })->name('keuangan');
-=======
+// =======
 Route::get('/keuangan',function(){
     return view('keuangan');
 })->name('keuangan');
 
->>>>>>> 9bc3cf4fb97911471eb0722d2462c682bc3d34d5
+// >>>>>>> 9bc3cf4fb97911471eb0722d2462c682bc3d34d5
 Route::get('/inap', function () {
     return view('inap');
 })->name('inap');
