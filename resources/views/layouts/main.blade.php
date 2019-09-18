@@ -34,7 +34,6 @@
   <script src="{{url('/')}}/template/global_assets/js/demo_pages/dashboard.js"></script>
   <!-- /theme JS files -->
 
-    @yield('js')
 </head>
 
 <body>
@@ -42,7 +41,7 @@
   <!-- Main navbar -->
   <div class="navbar navbar-expand-md navbar-dark">
 		<div class="navbar-brand">
-			<a href="index.html" class="d-inline-block">
+			<a href="{{('/')}}" class="d-inline-block">
 				<img src="{{URL::asset('logo.png')}}" alt="" style="width:50%; height:70%">
 			</a>
 		</div>
@@ -139,7 +138,7 @@
 
         <!-- Main navigation -->
         <div class="card card-sidebar-mobile">
-          <ul class="nav nav-sidebar" data-nav-type="accordion">
+          <ul id="dynamic-navbar" class="nav nav-sidebar" data-nav-type="accordion">
 
             <!-- Main -->
             <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
@@ -207,9 +206,9 @@
       $(document).ready(function() {
           $.ajax({
               type : 'GET',
-              url : '/dashboard',
+              url : '/',
               success : function(response){
-                  $('#nav nav-sidebar').html(response.menu);
+                  $('#dynamic-navbar').html(response.menu);
               }
           });
       });
@@ -219,7 +218,6 @@
               type : 'GET',
               url : url,
               success : function (data) {
-                  $('#content-wrapper').show();
                   $('#div-content').html(data);
               }
           })

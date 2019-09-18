@@ -1,5 +1,5 @@
-
-<div class="page-header page-header-light">
+<div id="div-content">
+	<div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
 						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Home</span> - Dashboard</h4>
@@ -199,7 +199,7 @@
                         <!--- /Pie Chart -->
                     </div>
                     <div class="col-xl-6">
-                    
+
 					</div>
                 </div>
                 <div class="row">
@@ -216,7 +216,7 @@
 		                	</div>
 	                	</div>
 					</div>
-					
+
 					<div class="card-body">
 						<p class="mb-3">FullCalendar is a jQuery plugin that provides a full-sized, drag &amp; drop event calendar like the one below. It uses AJAX to fetch events on-the-fly and is easily configured to use your own feed format. It is visually customizable with a rich API. Example below demonstrates a default view of the calendar with a basic setup: draggable and editable events, and starting date.</p>
 

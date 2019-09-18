@@ -1,4 +1,5 @@
-    <!-- Page header -->
+<div id="div-content">
+<!-- Page header -->
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
             <div class="page-title d-flex">
@@ -81,13 +82,13 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="card-body">
                             <div class="col-lg-4">
                                 <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Rawat Inap</button>
                             </div>
                         </div>
-    
+
                         <table class="table table-togglable table-hover footable-loaded footable default">
                             <thead>
                                 <tr>
@@ -112,7 +113,7 @@
                                                 <a href="#" class="list-icons-item" data-toggle="dropdown">
                                                     <i class="icon-menu9"></i>
                                                 </a>
-    
+
                                                 <div class="dropdown-menu dropdown-menu-right">
                                                     <a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
                                                     <a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
@@ -126,8 +127,8 @@
                         </table>
                     </div>
                 <!--/Tabel-->
-               
-               
+
+
             </div>
 
             <!-- <div class="col-xl-4"> -->
@@ -322,7 +323,7 @@
                                                             <input type="number" class="form-control" placeholder="ID Pemeriksaan Harian">
                                                         </div>
                                                     </div>
-                                                
+
                                     <!-- /Form -->
                                 </div>
 							</div>
@@ -338,6 +339,4 @@
 
     </div>
     <!-- /content area -->
-
-  
-
+</div>
