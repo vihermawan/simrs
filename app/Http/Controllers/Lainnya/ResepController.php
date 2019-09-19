@@ -14,7 +14,7 @@ class ResepController extends Controller
      */
     public function index()
     {
-        //
+        return view('lainnya.resep');
     }
 
     /**

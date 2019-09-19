@@ -14,7 +14,7 @@ class TransaksiJalanController extends Controller
      */
     public function index()
     {
-        //
+        return view('keuangan.transaksijalan');
     }
 
     /**

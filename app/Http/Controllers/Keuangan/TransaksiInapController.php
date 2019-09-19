@@ -14,7 +14,7 @@ class TransaksiInapController extends Controller
      */
     public function index()
     {
-        //
+        return view('keuangan.transaksiinap');
     }
 
     /**

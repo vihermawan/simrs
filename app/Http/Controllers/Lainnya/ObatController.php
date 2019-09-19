@@ -14,7 +14,7 @@ class ObatController extends Controller
      */
     public function index()
     {
-        //
+        return view('lainnya.obat');
     }
 
     /**

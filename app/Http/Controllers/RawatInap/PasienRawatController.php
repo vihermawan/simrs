@@ -14,7 +14,7 @@ class PasienRawatController extends Controller
      */
     public function index()
     {
-        //
+        return view('rawatinap.pasienrawat');
     }
 
     /**

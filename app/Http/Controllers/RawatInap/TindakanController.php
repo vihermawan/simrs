@@ -14,7 +14,7 @@ class TindakanController extends Controller
      */
     public function index()
     {
-        //
+        return view('rawatinap.tindakan');
     }
 
     /**

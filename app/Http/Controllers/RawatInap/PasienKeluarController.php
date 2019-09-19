@@ -14,7 +14,7 @@ class PasienKeluarController extends Controller
      */
     public function index()
     {
-        //
+        return view('rawatinap.pasienkeluar');
     }
 
     /**
