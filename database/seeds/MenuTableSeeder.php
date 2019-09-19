@@ -84,7 +84,7 @@ class MenuTableSeeder extends Seeder
         DB::table('menu')->insert([
             'parent_id' => 3,
             'name' => 'Tindakan',
-            'url' => '/tindakan',
+            'url' => '/rawat-inap/tindakan',
             'icon' => 'icon-select2',
         ]);
 
@@ -105,14 +105,14 @@ class MenuTableSeeder extends Seeder
         DB::table('menu')->insert([
             'parent_id' => 5,
             'name' => 'Rawat Inap',
-            'url' => '/transaksi/rawat-inap',
+            'url' => '/transaksi-inap',
             'icon' => '',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 5,
             'name' => 'Rawat Jalan',
-            'url' => '/transaksi/rawat-jalan',
+            'url' => '/transaksi-jalan',
             'icon' => '',
         ]);
 

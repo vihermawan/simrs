@@ -1,19 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\RawatInap;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class TransaksiController extends Controller
+class TindakanController extends Controller
 {
-      /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-       
+        //
     }
 
     /**

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Keuangan;
+namespace App\Http\Controllers\Dashboard;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class RawatInapController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class RawatInapController extends Controller
      */
     public function index()
     {
-        return view('keuangan.rawatinap');
+        //
     }
 
     /**

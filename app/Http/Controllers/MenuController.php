@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class MenuController extends Controller
 {
     public function index(){
-       
+
         $menus = Menu::where('parent_id', 0)->get();
 
         $html = '';
@@ -44,58 +44,13 @@ class MenuController extends Controller
                                 // if($checkMenu){
                                     $menu .= '<ul class="nav nav-group-sub" data-submenu-title="Layouts"><li class="nav-item"><a href="#" class="nav-link" onclick="changeMenu('."'".$child[$j]->url."'".')">'.$child[$j]->name.'</a></li></ul>';
                                 // }
-                        }                        
+                        }
                     $view .= $modul.$menu.'</li>';
                 }
                 $html .= $view;
             // }
         }
-        
+
         return view('layouts.main',['html' => $html]);
-    }
-
-    public function tes(){
-       
-        $menus = Menu::where('parent_id', 0)->get();
-
-        $html = '';
-
-        for($i=0; $i< count($menus); $i++){
-            $child = Menu::where('parent_id',$menus[$i]->id)->get();
-            $modul = '';
-            $menu ='';
-            $view = '';
-
-            // $checkModul = FunctionHelper::checkMenu($menus[$i]->url);
-            // if($checkModul){
-                if(count($child) == 0 ){
-                    $modul .= '<li class="nav-item">'.
-                                    '<a href="#" class="nav-link" onclick="changeMenu('."'".$menus[$i]->url."'".')">'.
-                                        // '<i class="'.$menus[$i]->icon.'"></i>'.
-                                        '<span>'.$menus[$i]->name.'</span>'.
-                                    '</a>'.
-                                '</li>';
-                    $view .= $modul;
-                }
-                if (count($child) > 0){
-                    $modul .='<li class="nav-item nav-item-submenu">'.
-                                '<a href="#" class="nav-link ">'.
-                                    // '<i class="'.$menus[$i]->icon.'"></i>'.
-                                    '<span>'.$menus[$i]->name.'</span>'.
-                                '</a>';
-
-                            for($j=0; $j< count($child); $j++){
-                                // $checkMenu = FunctionHelper::checkMenu($child($j)->$url);
-                                // if($checkMenu){
-                                    $menu .= '<ul class="nav nav-group-sub" data-submenu-title="Layouts"><li class="nav-item"><a href="#" class="nav-link" onclick="changeMenu('."'".$child[$j]->url."'".')">'.$child[$j]->name.'</a></li></ul>';
-                                // }
-                        }                        
-                    $view .= $modul.$menu.'</li>';
-                }
-                $html .= $view;
-            // }
-        }
-        
-        return $html;
     }
 }

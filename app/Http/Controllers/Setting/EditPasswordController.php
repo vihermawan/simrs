@@ -1,19 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Setting;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class PenyakitController extends Controller
+class EditPasswordController extends Controller
 {
-   /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-       return view('penyakit');
+        //
     }
 
     /**

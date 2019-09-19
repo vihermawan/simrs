@@ -11,36 +11,47 @@
 |
 */
 
-Route::get('/', 'MenuController@index')->name('main');
-
-Route::get('/dashboard', 'DashboardController@index');
-
-Route::get('/signin', function () {
-    return view('signin');
-})->name('signin');
-
-Route::get('/pendaftaran', 'PendaftaranController@index');
-
-Route::get('/penyakit','PenyakitController@index');
-
-Route::get('/obat', 'ObatController@index');
-
-Route::get('/tes', 'MenuController@tes');
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/inap', function () {
-    return view('inap');
-})->name('inap');
-Route::get('/jalan', function () {
-    return view('jalan');
-})->name('jalan');
-Route::get('/obat', function () {
-    return view('obat');
-})->name('obat');
-Route::get('/penyakit', function () {
-    return view('penyakit');
-})->name('penyakit');
+Route::middleware(['guest'])->group(function () {
+  Route::get('/', 'MenuController@index');
 
-Route::get('/transaksi-inap', 'Keuangan\RawatInapController@index');
+  // modul dashboard
+  Route::get('dashboard', 'Dashboard\DashboardController@index');
+
+  // modul pendaftaran
+  Route::get('pendaftaran', 'Pendaftaran\PendaftaranController@index');
+
+  // modul rawat inap
+  Route::get('pasien-rawat', 'RawatInap\PasienRawatController@index');
+
+  Route::get('pasien-keluar', 'RawatInap\PasienKeluarController@index');
+
+  Route::get('ruang', 'RawatInap\PasienRawatController@index');
+
+  Route::get('rawat-inap/tindakan', 'RawatInap\TindakanController@index');
+
+  // modul rawat jalan
+  Route::get('pasien', 'RawatJalan\PasienController@index');
+
+  Route::get('rawat-jalan/tindakan', 'RawatJalan\TindakanController@index');
+
+  // modul keuangan
+  Route::get('transaksi-inap', 'Keuangan\TransaksiInapController@index');
+
+  Route::get('transaksi-jalan', 'Keuangan\TransaksiJalanController@index');
+
+  // modul lainnya
+  Route::get('penyakit', 'Lainnya\PenyakitController@index');
+
+  Route::get('obat', 'Lainnya\ObatController@index');
+
+  Route::get('resep', 'Lainnya\ResepController@index');
+
+  // modul setting
+  Route::get('role', 'Setting\RoleController@index');
+
+  Route::get('user', 'Setting\UserController@index');
+
+  Route::get('edit-password', 'Setting\EditPasswordController@index');
+});
