@@ -269,7 +269,7 @@
         <!-- /dashboard content -->
 
         <!--Modal Form Pendaftaran -->
-        <div id="modal_theme_success" class="modal fade" tabindex="-1">
+        <div id="modal_theme_success" class="modal fade" tabindex="-2">
 					<div class="modal-dialog modal-full">
 						<div class="modal-content">
 							<div class="modal-header bg-success">
@@ -278,6 +278,283 @@
 							</div>
 
 							<div class="modal-body">
+                            <div class="row">
+					           <!-- 2 columns form -->
+				<div class="card">
+					<div class="card-header header-elements-inline">
+						<h5 class="card-title">Entri Data Pasien - Tambah Pasien</h5>
+						<div class="header-elements">
+							<div class="list-icons">
+		                		<a class="list-icons-item" data-action="collapse"></a>
+		                		<a class="list-icons-item" data-action="reload"></a>
+		                		<a class="list-icons-item" data-action="remove"></a>
+		                	</div>
+	                	</div>
+					</div>
+
+					<div class="card-body">
+						<form action="#">
+							<div class="row">
+								<div class="col-md-4">
+									<fieldset>
+										<legend class="text-uppercase font-size-sm font-weight-bold"><i class="icon-reading mr-2"></i> IDENTITAS PASIEN</legend>
+
+										<div class="form-group row">
+											<label class="col-lg-4 col-form-label">Nama Pasien :</label>
+											<div class="col-lg-8">
+												<input type="text" class="form-control" placeholder="Eugene Kopyov">
+											</div>
+										</div>
+
+                                        <div class="form-group row">
+                                                        <label class="col-lg-4 col-form-label">Jenis Kelamin:</label>
+                                                        <div class="col-lg-8">
+                                                            <div class="form-check form-check-inline">
+                                                                <label class="form-check-label">
+                                                                    <div class="uniform-choice"><span class="checked"><input type="radio" class="form-input-styled" name="gender" checked="" data-fouc=""></span></div>
+                                                                    Laki - laki
+                                                                </label>
+                                                            </div>
+
+                                                            <div class="form-check form-check-inline">
+                                                                <label class="form-check-label">
+                                                                    <div class="uniform-choice"><span><input type="radio" class="form-input-styled" name="gender" data-fouc=""></span></div>
+                                                                    Perempuan
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                         <div class="form-group row">
+									            <label class="col-form-label col-lg-4">Alamat Pasien:</label>
+									                <div class="col-lg-8">
+										                    <textarea rows="3" cols="3" class="form-control" placeholder="Default textarea"></textarea>
+									                </div>
+								         </div>
+                                         <div class="form-group row">
+										<label class="col-lg-3 col-form-label">Provinsi</label>
+										<div class="col-lg-9">
+											<select class="form-control form-control-select2" data-fouc>
+												<optgroup label="Alaskan/Hawaiian Time Zone">
+													<option value="AK">Alaska</option>
+													<option value="HI">Hawaii</option>
+												</optgroup>
+												<optgroup label="Pacific Time Zone">
+													<option value="CA">California</option>
+													<option value="NV">Nevada</option>
+													<option value="WA">Washington</option>
+												</optgroup>
+												<optgroup label="Mountain Time Zone">
+													<option value="AZ">Arizona</option>
+													<option value="CO">Colorado</option>
+													<option value="WY">Wyoming</option>
+												</optgroup>
+												<optgroup label="Central Time Zone">
+													<option value="AL">Alabama</option>
+													<option value="AR">Arkansas</option>
+													<option value="KY">Kentucky</option>
+												</optgroup>
+												<optgroup label="Eastern Time Zone">
+													<option value="CT">Connecticut</option>
+													<option value="DE">Delaware</option>
+													<option value="FL">Florida</option>
+												</optgroup>
+											</select>
+										</div>
+									</div>
+
+                                        
+
+                                        
+
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Enter your password:</label>
+											<div class="col-lg-9">
+												<input type="password" class="form-control" placeholder="Your strong password">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Select your state:</label>
+											<div class="col-lg-9">
+												<select data-placeholder="Select your state" class="form-control form-control-select2" data-fouc>
+													<option></option>
+													<optgroup label="Alaskan/Hawaiian Time Zone">
+														<option value="AK">Alaska</option>
+														<option value="HI">Hawaii</option>
+													</optgroup>
+													<optgroup label="Pacific Time Zone">
+														<option value="CA">California</option>
+														<option value="NV">Nevada</option>
+														<option value="WA">Washington</option>
+													</optgroup>
+													<optgroup label="Mountain Time Zone">
+														<option value="AZ">Arizona</option>
+														<option value="CO">Colorado</option>
+														<option value="WY">Wyoming</option>
+													</optgroup>
+													<optgroup label="Central Time Zone">
+														<option value="AL">Alabama</option>
+														<option value="AR">Arkansas</option>
+														<option value="KY">Kentucky</option>
+													</optgroup>
+													<optgroup label="Eastern Time Zone">
+														<option value="CT">Connecticut</option>
+														<option value="DE">Delaware</option>
+														<option value="WV">West Virginia</option>
+													</optgroup>
+												</select>
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Attach screenshot:</label>
+											<div class="col-lg-9">
+												<input type="file" class="form-input-styled" data-fouc>
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Your message:</label>
+											<div class="col-lg-9">
+												<textarea rows="5" cols="5" class="form-control" placeholder="Enter your message here"></textarea>
+											</div>
+										</div>
+									</fieldset>
+								</div>
+
+								<div class="col-md-4">
+									<fieldset>
+					                	<legend class="font-weight-semibold"><i class="icon-truck mr-2"></i> PENANGGUNGJAWAB</legend>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Nama :</label>
+													<div class="col-md-9">
+														<input type="text" placeholder="Nama Penanggungjawab" class="form-control">
+													</div>
+										</div>
+
+                                        <div class="form-group row">
+											<label class="col-lg-3 col-form-label">Alamat:</label>
+											<div class="col-lg-9">
+												<textarea rows="5" cols="5" class="form-control" placeholder="Alamat"></textarea>
+											</div>
+										</div>
+
+                                        <div class="form-group row">
+											<label class="col-lg-3 col-form-label">Telp :</label>
+													<div class="col-md-9">
+														<input type="text" placeholder="Nama Penanggungjawab" class="form-control">
+													</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Pekerjaan</label>
+											<div class="col-lg-9">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="mb-3">
+								                            <select data-placeholder="Select your country" class="form-control form-control-select2" data-fouc>
+								                                <option value="1">Canada</option> 
+								                                <option value="2">USA</option> 
+								                                <option value="3">Australia</option> 
+								                                <option value="4">Germany</option> 
+								                            </select>
+							                            </div>
+													</div>
+
+													
+												</div>
+											</div>
+										</div>
+									</fieldset>
+								</div>
+
+                                <div class="col-md-4">
+									<fieldset>
+					                	<legend class="font-weight-semibold"><i class="icon-truck mr-2"></i> REGISTRASI/KUNJUNGAN</legend>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Nama PPK I: </label>
+											<div class="col-lg-9">
+														<input type="text" placeholder="First name" class="form-control">
+											
+												</div>
+											</div>
+										</div>
+
+                                    <div class="form-group row">
+									    <label class="col-form-label col-md-3">Tanggal PPK:</label>
+									    <div class="col-md-18">
+										    <input class="form-control" type="datetime-local" name="datetime-local">
+									    </div>
+								</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Email:</label>
+											<div class="col-lg-9">
+												<input type="text" placeholder="eugene@kopyov.com" class="form-control">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Phone #:</label>
+											<div class="col-lg-9">
+												<input type="text" placeholder="+99-99-9999-9999" class="form-control">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Location:</label>
+											<div class="col-lg-9">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="mb-3">
+								                            <select data-placeholder="Select your country" class="form-control form-control-select2" data-fouc>
+								                            	<option></option>
+								                                <option value="1">Canada</option> 
+								                                <option value="2">USA</option> 
+								                                <option value="3">Australia</option> 
+								                                <option value="4">Germany</option> 
+								                            </select>
+							                            </div>
+
+							                            <input type="text" placeholder="ZIP code" class="form-control">
+													</div>
+
+													<div class="col-md-6">
+														<input type="text" placeholder="State/Province" class="form-control mb-3">
+														<input type="text" placeholder="City" class="form-control">
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Address:</label>
+											<div class="col-lg-9">
+												<input type="text" placeholder="Your address of living" class="form-control">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Additional message:</label>
+											<div class="col-lg-9">
+												<textarea rows="5" cols="5" class="form-control" placeholder="Enter your message here"></textarea>
+											</div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+
+							<div class="text-right">
+								<button type="submit" class="btn btn-primary">Submit form <i class="icon-paperplane ml-2"></i></button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- /2 columns form -->
+
 								 <div class="col-xl-12">
                                     <!-- Form -->
                                             <div class="card-body">
@@ -392,15 +669,18 @@
                                                 </form>
                                             </div>
 
+                                    
+
                                     <!-- /Form -->
                                 </div>
 							</div>
-
 							<div class="modal-footer">
 								<button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
 								<button type="button" class="btn bg-success">Save changes</button>
 							</div>
 						</div>
+                       
+
 					</div>
 				</div>
         <!--End Modal Pendaftaran-->

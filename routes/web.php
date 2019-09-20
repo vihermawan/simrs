@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('/', 'MenuController@index')->name('main');
 Auth::routes();
 
 Route::middleware(['guest'])->group(function () {
