@@ -29,5 +29,4 @@ Route::get('/tes', 'MenuController@tes');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
