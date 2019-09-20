@@ -92,20 +92,16 @@
                             <thead>
                                 <tr>                                
                                     <th data-toggle="true" class="footable-visible footable-first-column">ID Resep</th>
-                                    <th data-toggle="true" class="footable-visible footable-first-column">Nama Resep</th>
-                                    <th data-hide="phone" class="footable-visible">Dosis</th>
-                                    <th data-hide="phone,tablet" class="footable-visible">Jenis Resep</th>
-                                    <th data-hide="phone,tablet" class="footable-visible">Harga</th>
+                                    <th data-toggle="true" class="footable-visible footable-first-column">ID Obat</th>
+                                    <th data-toggle="true" class="footable-visible">Jumlah</th>
                                     <th class="text-center footable-visible footable-last-column" style="width: 30px;"><i class="icon-menu-open2"></i></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>O001</td>
-                                    <td class="footable-visible"><a href="#">Paracetamol</a></td>
-                                    <td class="footable-visible">2x sehari</td> 
-                                    <td class="footable-visible">Kapsul</td> 
-                                    <td class="footable-visible">10.000</td> 
+                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>R001</td>
+                                    <td class="footable-visible">O001</td> 
+                                    <td class="footable-visible">2</td> 
                                     <td class="text-center footable-visible footable-last-column">
                                         <div class="list-icons">
                                             <div class="dropdown">
@@ -288,13 +284,13 @@
                                                     <div class="form-group row">
                                                         <label class="col-lg-3 col-form-label">ID Obat:</label>
                                                         <div class="col-lg-9">
-                                                            <input type="text" class="form-control" placeholder="Nama Resep">
+                                                            <input type="text" class="form-control" placeholder="ID Obat">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label class="col-lg-3 col-form-label">Jumlah</label>
                                                         <div class="col-lg-9">
-                                                            <input type="number" class="form-control" placeholder="Dosis Resep">
+                                                            <input type="number" class="form-control" placeholder="Jumlah">
                                                         </div>
                                                     </div>
                                                     
