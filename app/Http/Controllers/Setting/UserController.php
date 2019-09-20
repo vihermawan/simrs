@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Setting;
 
+use App\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class DashboardController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-       return view('dashboard');
+        $users = User::orderBy('name', 'asc')->get();
+        return view('setting.user', [
+            'users' => $users,
+        ]);
     }
 
     /**

@@ -1,19 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\RawatInap;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class RawatJalanController extends Controller
+class PasienRawatController extends Controller
 {
-      /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-       return view('rawatjalan');
+        return view('rawatinap.pasienrawat');
     }
 
     /**

@@ -13,7 +13,7 @@
   <link href="{{url('/')}}/template/layout_1/LTR/default/full/assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
   <link href="{{url('/')}}/template/layout_1/LTR/default/full/assets/css/layout.min.css" rel="stylesheet" type="text/css">
   <link href="{{url('/')}}/template/layout_1/LTR/default/full/assets/css/components.min.css" rel="stylesheet" type="text/css">
-  <link href="{{url('/')}}/template/layout_1/LTR/default/full/ssets/css/colors.min.css" rel="stylesheet" type="text/css">
+  {{-- <link href="{{url('/')}}/template/layout_1/LTR/default/full/ssets/css/colors.min.css" rel="stylesheet" type="text/css"> --}}
   <!-- /global stylesheets -->
 
   <!-- Core JS files -->
@@ -34,7 +34,6 @@
   <script src="{{url('/')}}/template/global_assets/js/demo_pages/dashboard.js"></script>
   <!-- /theme JS files -->
 
-    @yield('js')
 </head>
 
 <body>
@@ -42,7 +41,7 @@
   <!-- Main navbar -->
   <div class="navbar navbar-expand-md navbar-dark">
 		<div class="navbar-brand">
-			<a href="index.html" class="d-inline-block">
+			<a href="{{('/')}}" class="d-inline-block">
 				<img src="{{URL::asset('logo.png')}}" alt="" style="width:50%; height:70%">
 			</a>
 		</div>
@@ -67,16 +66,15 @@
 			<span class="badge bg-success ml-md-3 mr-md-auto">Online</span>
 			<ul class="navbar-nav">
 				<li class="nav-item dropdown">
-					
-					
+
+
 				</li>
 				<li class="nav-item dropdown dropdown-user">
 					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
-						<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle mr-2" height="34" alt="">
-						<span>Victoria</span>
+					  <span>Victoria</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right">
-						<a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
+						<a href="#" class="dropdown-item" onclick="showProfile()"><i class="icon-user-plus"></i> My profile</a>
 						<a href="#" class="dropdown-item"><i class="icon-coins"></i> My balance</a>
 						<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Messages <span class="badge badge-pill bg-blue ml-auto">58</span></a>
 						<div class="dropdown-divider"></div>
@@ -117,9 +115,6 @@
         <div class="sidebar-user">
           <div class="card-body">
             <div class="media">
-              <div class="mr-3">
-                <a href="#"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" width="38" height="38" class="rounded-circle" alt=""></a>
-              </div>
 
               <div class="media-body">
                 <div class="media-title font-weight-semibold">Victoria Baker</div>
@@ -135,15 +130,15 @@
           </div>
         </div>
         <!-- /user menu -->
-        
+
 
         <!-- Main navigation -->
         <div class="card card-sidebar-mobile">
-          <ul class="nav nav-sidebar" data-nav-type="accordion">
-         
+          <ul id="dynamic-navbar" class="nav nav-sidebar" data-nav-type="accordion">
+
             <!-- Main -->
             <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
-      
+
 
             {!! $html !!}
 
@@ -163,7 +158,25 @@
 
         <!-- content area -->
         <div id="div-content">
-           cek
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">Dashboard</div>
+
+                            <div class="card-body">
+                                @if (session('status'))
+                                    <div class="alert alert-success" role="alert">
+                                        {{ session('status') }}
+                                    </div>
+                                @endif
+
+                                You are logged in!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /content area -->
 
@@ -202,14 +215,13 @@
 
     </div>
     <!-- /page content -->
-    @yield('script')
     <script type="text/javascript">
       $(document).ready(function() {
           $.ajax({
               type : 'GET',
-              url : '/dashboard',
+              url : '/',
               success : function(response){
-                  $('#nav nav-sidebar').html(response.menu);
+                  $('#dynamic-navbar').html(response.menu);
               }
           });
       });
@@ -219,28 +231,20 @@
               type : 'GET',
               url : url,
               success : function (data) {
-                  $('#content-wrapper').show();
                   $('#div-content').html(data);
               }
           })
       }
 
       function showProfile() {
-          $('#content-wrapper').hide();
-
           $.ajax({
               type : 'GET',
               url : '/profile',
               success : function (data) {
-                  $('#content-wrapper').show();
-                  $('#content-wrapper').replaceWith(data);
+                  $('#div-content').html(data);
               }
           })
       }
     </script>
-
-    
-    
-
 </body>
 </html>

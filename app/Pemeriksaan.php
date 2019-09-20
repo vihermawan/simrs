@@ -28,12 +28,12 @@ class Pemeriksaan extends Model
         return $this->hasOne(Resep::class, 'id', 'id_resep');
     }
 
-    public function tindakan
+    public function tindakan()
     {
         return $this->hasOne(Tindakan::class, 'id', 'id_tindakan');
     }
 
-    public function transaksiPoli
+    public function transaksiPoli()
     {
         return $this->belongsTo(TransaksiPoli::class, 'id_pemeriksaan');
     }
