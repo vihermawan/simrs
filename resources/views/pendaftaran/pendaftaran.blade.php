@@ -149,7 +149,7 @@
 							<div class="modal-body">
                             <div class="row">
 					           <!-- 2 columns form -->
-				<div class="card">
+				
 					<div class="card-header header-elements-inline">
 					
 						
@@ -262,25 +262,15 @@
 
                                     <div class="form-group row">
 									    <label class="col-form-label col-lg-2">Umur (Th)</label>
-									        <div class="col-lg-10">
-										        <div class="row">
-											        <div class="col-3">
-												        <input type="text" class="form-control">
-											        </div>
-
-                                    <div class="form-group row"> 
-                                            <div class="form-group row">
-                                                <label class="col-form-label col-md-5">Tgl Lahir</label>
-                                                <div class="col-md-6">
-                                                    <input class="form-control" type="datetime-local" name="datetime-local">  
-                                                </div>
-                                            </div>
+									        <div class="col-lg-3">
+								                <input type="text" class="form-control">
 											</div>
-										</div>
-									</div>
-								</div>
-
-                                <div class="form-group row">
+                                            <label class="col-form-label col-md-3">Tgl Lahir</label>
+                                                <div class="col-md-4">
+                                                    <input class="form-control" type="datetime-local" name="datetime-local">  
+                                            </div>
+                                    </div>
+                                    <div class="form-group row">
 											<label class="col-lg-4 col-form-label">Pekerjaan:</label>
 											<div class="col-lg-8">
 												<input type="text" class="form-control">
@@ -309,6 +299,7 @@
                                
 					                	
 									</fieldset>
+                                   
 								</div>
 
                                 <div class="col-md-4">
@@ -344,11 +335,6 @@
 											        </select>
 										        </div>
 									    </div>
-
-									
-
-
-										
 									</fieldset>
 								</div>
 							</div>
@@ -358,7 +344,7 @@
 							</div>
 						</form>
 					</div>
-				</div>
+			
 				<!-- /2 columns form -->
 
         <!--End Modal Pendaftaran-->
