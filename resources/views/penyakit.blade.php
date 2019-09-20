@@ -2,7 +2,7 @@
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
             <div class="page-title d-flex">
-                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Lainnya</span> - Resep
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Lainnya</span> - Penyakit
                 </h4>
                 <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
             </div>
@@ -23,7 +23,7 @@
             <div class="d-flex">
                 <div class="breadcrumb">
                     <a href="index.html" class="breadcrumb-item"><i class="icon-Lainnya2 mr-2"></i> Lainnya</a>
-                    <span class="breadcrumb-item active">Resep</span>
+                    <span class="breadcrumb-item active">Penyakit</span>
                 </div>
 
                 <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -72,7 +72,7 @@
                 <!--Tabel -->
                 <div class="card">
                         <div class="card-header header-elements-inline">
-                            <h5 class="card-title">Tabel Resep</h5>
+                            <h5 class="card-title">Tabel Penyakit</h5>
                             <div class="header-elements">
                                 <div class="list-icons">
                                     <a class="list-icons-item" data-action="collapse"></a>
@@ -84,28 +84,24 @@
     
                         <div class="card-body">
                             <div class="col-lg-4">
-                                <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Resep</button>
+                                <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Penyakit</button>
                             </div>
                         </div>
     
                         <table class="table table-togglable table-hover footable-loaded footable default">
                             <thead>
                                 <tr>                                
-                                    <th data-toggle="true" class="footable-visible footable-first-column">ID Resep</th>
-                                    <th data-toggle="true" class="footable-visible footable-first-column">Nama Resep</th>
-                                    <th data-hide="phone" class="footable-visible">Dosis</th>
-                                    <th data-hide="phone,tablet" class="footable-visible">Jenis Resep</th>
-                                    <th data-hide="phone,tablet" class="footable-visible">Harga</th>
+                                    <th data-toggle="true" class="footable-visible footable-first-column">ID Penyakit</th>
+                                    <th data-toggle="true" class="footable-visible footable-first-column">Nama Penyakit</th>
+                                    <th data-hide="phone" class="footable-visible">Jenis</th>
                                     <th class="text-center footable-visible footable-last-column" style="width: 30px;"><i class="icon-menu-open2"></i></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>O001</td>
-                                    <td class="footable-visible"><a href="#">Paracetamol</a></td>
-                                    <td class="footable-visible">2x sehari</td> 
-                                    <td class="footable-visible">Kapsul</td> 
-                                    <td class="footable-visible">10.000</td> 
+                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>P001</td>
+                                    <td class="footable-visible"><a href="#">Panu</a></td>
+                                    <td class="footable-visible">Penyakit Kulit</td> 
                                     <td class="text-center footable-visible footable-last-column">
                                         <div class="list-icons">
                                             <div class="dropdown">
@@ -270,7 +266,7 @@
 					<div class="modal-dialog modal-lg">
 						<div class="modal-content">
 							<div class="modal-header bg-success">
-								<h6 class="modal-title">Form Resep</h6>
+								<h6 class="modal-title">Form Penyakit</h6>
 								<button type="button" class="close" data-dismiss="modal">&times;</button>
 							</div>
 
@@ -280,24 +276,27 @@
                                             <div class="card-body">
                                                 <form action="#">
                                                     <div class="form-group row">
-                                                        <label class="col-lg-3 col-form-label">ID Resep:</label>
+                                                        <label class="col-lg-3 col-form-label">ID Penyakit:</label>
                                                         <div class="col-lg-9">
-                                                            <input type="text" class="form-control" placeholder="ID Resep ">
+                                                            <input type="type" class="form-control" placeholder="ID Penyakit ">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
-                                                        <label class="col-lg-3 col-form-label">ID Obat:</label>
+                                                        <label class="col-lg-3 col-form-label">Nama Penyakit:</label>
                                                         <div class="col-lg-9">
-                                                            <input type="text" class="form-control" placeholder="Nama Resep">
+                                                            <input type="text" class="form-control" placeholder="Nama Penyakit">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
-                                                        <label class="col-lg-3 col-form-label">Jumlah</label>
+                                                        <label class="col-lg-3 col-form-label">Jenis Penyakit:</label>
                                                         <div class="col-lg-9">
-                                                            <input type="number" class="form-control" placeholder="Dosis Resep">
+                                                            <input type="text" class="form-control" placeholder="Jenis Penyakit">
                                                         </div>
                                                     </div>
-                                                    
+                                                           
+                                                </form>  
+                                            </div>
+                                                
                                     <!-- /Form -->
                                 </div>
 							</div>
@@ -308,10 +307,10 @@
 							</div>
 						</div>
 					</div>
-				</div>
+                </div>
+        
         <!--End Modal Pendaftaran-->
 
     </div>
-
   
 

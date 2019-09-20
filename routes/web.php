@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('/', 'MenuController@index')->name('main');
 Auth::routes();
 
 Route::middleware(['guest'])->group(function () {
@@ -53,10 +54,7 @@ Route::middleware(['guest'])->group(function () {
 
   Route::get('user', 'Setting\UserController@index');
 
-<<<<<<< HEAD
-=======
   Route::get('edit-password', 'Setting\EditPasswordController@index');
->>>>>>> f7da1d188e6c87c0fac7dab57f3180ab555c5ddb
 
   Route::get('profile', 'Setting\ProfileController@index');
 });
