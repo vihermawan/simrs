@@ -13,7 +13,7 @@
   <link href="{{url('/')}}/template/layout_1/LTR/default/full/assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
   <link href="{{url('/')}}/template/layout_1/LTR/default/full/assets/css/layout.min.css" rel="stylesheet" type="text/css">
   <link href="{{url('/')}}/template/layout_1/LTR/default/full/assets/css/components.min.css" rel="stylesheet" type="text/css">
-  <link href="{{url('/')}}/template/layout_1/LTR/default/full/ssets/css/colors.min.css" rel="stylesheet" type="text/css">
+  {{-- <link href="{{url('/')}}/template/layout_1/LTR/default/full/ssets/css/colors.min.css" rel="stylesheet" type="text/css"> --}}
   <!-- /global stylesheets -->
 
   <!-- Core JS files -->
@@ -71,11 +71,10 @@
 				</li>
 				<li class="nav-item dropdown dropdown-user">
 					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
-						<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle mr-2" height="34" alt="">
-						<span>Victoria</span>
+					  <span>Victoria</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right">
-						<a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
+						<a href="#" class="dropdown-item" onclick="showProfile()"><i class="icon-user-plus"></i> My profile</a>
 						<a href="#" class="dropdown-item"><i class="icon-coins"></i> My balance</a>
 						<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Messages <span class="badge badge-pill bg-blue ml-auto">58</span></a>
 						<div class="dropdown-divider"></div>
@@ -116,9 +115,6 @@
         <div class="sidebar-user">
           <div class="card-body">
             <div class="media">
-              <div class="mr-3">
-                <a href="#"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" width="38" height="38" class="rounded-circle" alt=""></a>
-              </div>
 
               <div class="media-body">
                 <div class="media-title font-weight-semibold">Victoria Baker</div>
@@ -219,7 +215,6 @@
 
     </div>
     <!-- /page content -->
-    @yield('script')
     <script type="text/javascript">
       $(document).ready(function() {
           $.ajax({
@@ -242,14 +237,11 @@
       }
 
       function showProfile() {
-          $('#content-wrapper').hide();
-
           $.ajax({
               type : 'GET',
               url : '/profile',
               success : function (data) {
-                  $('#content-wrapper').show();
-                  $('#content-wrapper').replaceWith(data);
+                  $('#div-content').html(data);
               }
           })
       }

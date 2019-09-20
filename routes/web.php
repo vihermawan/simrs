@@ -54,4 +54,6 @@ Route::middleware(['guest'])->group(function () {
   Route::get('user', 'Setting\UserController@index');
 
   Route::get('edit-password', 'Setting\EditPasswordController@index');
+
+  Route::get('profile', 'Setting\ProfileController@index');
 });
