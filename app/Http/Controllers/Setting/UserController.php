@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Setting;
 
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('setting.user');
+        $users = User::orderBy('name', 'asc')->get();
+        return view('setting.user', [
+            'users' => $users,
+        ]);
     }
 
     /**
