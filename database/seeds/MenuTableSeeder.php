@@ -104,14 +104,14 @@ class MenuTableSeeder extends Seeder
 
         DB::table('menu')->insert([
             'parent_id' => 5,
-            'name' => 'Rawat Inap',
+            'name' => 'Transaksi Inap',
             'url' => '/transaksi-inap',
             'icon' => '',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 5,
-            'name' => 'Rawat Jalan',
+            'name' => 'Transaksi Jalan',
             'url' => '/transaksi-jalan',
             'icon' => '',
         ]);
