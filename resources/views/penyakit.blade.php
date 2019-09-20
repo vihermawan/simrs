@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-=======
-@extends('layouts.home')
-@section('content')
-<div class="content-wrapper">
-
->>>>>>> 5c8ff6de20da6cce888e23292b534e0385ddba4f
     <!-- Page header -->
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
             <div class="page-title d-flex">
-                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Home</span> - Penyakit
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Lainnya</span> - Penyakit
                 </h4>
                 <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
             </div>
@@ -29,7 +22,7 @@
         <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
             <div class="d-flex">
                 <div class="breadcrumb">
-                    <a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+                    <a href="index.html" class="breadcrumb-item"><i class="icon-Lainnya2 mr-2"></i> Lainnya</a>
                     <span class="breadcrumb-item active">Penyakit</span>
                 </div>
 
@@ -270,7 +263,7 @@
 
         <!--Modal Form Pendaftaran -->
         <div id="modal_theme_success" class="modal fade" tabindex="-1">
-					<div class="modal-dialog modal-full">
+					<div class="modal-dialog modal-lg">
 						<div class="modal-content">
 							<div class="modal-header bg-success">
 								<h6 class="modal-title">Form Penyakit</h6>
@@ -285,7 +278,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-lg-3 col-form-label">ID Penyakit:</label>
                                                         <div class="col-lg-9">
-                                                            <input type="number" class="form-control" placeholder="ID Penyakit ">
+                                                            <input type="type" class="form-control" placeholder="ID Penyakit ">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
@@ -297,50 +290,27 @@
                                                     <div class="form-group row">
                                                         <label class="col-lg-3 col-form-label">Jenis Penyakit:</label>
                                                         <div class="col-lg-9">
-<<<<<<< HEAD
                                                             <input type="text" class="form-control" placeholder="Jenis Penyakit">
                                                         </div>
                                                     </div>
                                                            
                                                 </form>  
                                             </div>
-=======
-<<<<<<< HEAD
-                                                            <input type="text" class="form-control" placeholder="Jenis Penyakit">
-                                                        </div>
-                                                    </div>
-=======
-                                                            <input type="text" class="form-control" placeholder="Dosis Penyakit">
-                                                        </div>
-                                                    </div>
-                                                    
->>>>>>> 9bc3cf4fb97911471eb0722d2462c682bc3d34d5
                                                 
->>>>>>> 5c8ff6de20da6cce888e23292b534e0385ddba4f
                                     <!-- /Form -->
                                 </div>
 							</div>
 
 							<div class="modal-footer">
-								<button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-								<button type="button" class="btn bg-success">Save changes</button>
+								<button type="button" class="btn btn-link" data-dismiss="modal">Tutup</button>
+								<button type="button" class="btn bg-success">Simpan</button>
 							</div>
 						</div>
 					</div>
-<<<<<<< HEAD
                 </div>
         
         <!--End Modal Pendaftaran-->
 
     </div>
-=======
-				</div>
-        <!--End Modal Pendaftaran-->
-
-    </div>
-    <!-- /content area -->
-    @endsection
-
->>>>>>> 5c8ff6de20da6cce888e23292b534e0385ddba4f
   
 
