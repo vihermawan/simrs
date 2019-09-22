@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Pasien;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Pasien;
 
 class PasienController extends Controller
 {
@@ -14,7 +15,8 @@ class PasienController extends Controller
      */
     public function index()
     {
-        return view('pasien.pasien');
+        $pasien = Pasien::orderBy('id', 'asc')->get();
+        return view('pasien.pasien', ['pasien' => $pasien]);
     }
 
     /**
