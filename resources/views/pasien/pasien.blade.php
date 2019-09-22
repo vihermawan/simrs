@@ -100,6 +100,7 @@
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Goldar</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Asuransi</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Tempat Lahir</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -114,6 +115,7 @@
                                     <td class="footable-visible">{{$data->pendidikan}}</td>
                                     <td class="footable-visible">{{$data->asuransi}}</td>
                                     <td class="footable-visible">{{$data->tempat_lahir}}</td>
+                                    <td class="footable-visible">Action</td>
                                 </tr>
                             @endforeach
                         </tbody>
