@@ -15,7 +15,7 @@ class CreateTindakanTable extends Migration
     {
         Schema::create('tindakan', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama');
+            $table->string('nama_tindakan');
             $table->string('harga');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();

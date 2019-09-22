@@ -12,12 +12,12 @@ class TindakanTableSeeder extends Seeder
     public function run()
     {
         DB::table('tindakan')->insert([
-            'nama' => 'Operasi Plastik',
+            'nama_tindakan' => 'Operasi Plastik',
             'harga' => 99999999,
         ]);
 
         DB::table('tindakan')->insert([
-            'nama' => 'Periksa Tekanan Darah',
+            'nama_tindakan' => 'Periksa Tekanan Darah',
             'harga' => 20000,
         ]);
     }

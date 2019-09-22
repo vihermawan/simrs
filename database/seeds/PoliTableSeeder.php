@@ -12,7 +12,7 @@ class PoliTableSeeder extends Seeder
     public function run()
     {
         DB::table('poli')->insert([
-            'nama' => 'Poliklinik Tong Feng',
+            'nama_poli' => 'Poliklinik Tong Feng',
             'id_user' => 1,
         ]);
     }

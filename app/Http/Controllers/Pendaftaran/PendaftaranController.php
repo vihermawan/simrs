@@ -3,7 +3,12 @@
 namespace App\Http\Controllers\Pendaftaran;
 
 use Illuminate\Http\Request;
+use App\Pasien;
+use App\Daftar;
+use App\RolePembayaran;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+
 
 class PendaftaranController extends Controller
 {
@@ -14,7 +19,15 @@ class PendaftaranController extends Controller
      */
     public function index()
     {
-        return view('pendaftaran.pendaftaran');
+
+        $daftar = DB::table('daftar')
+                       ->join('poli','daftar.id_poli','=','poli.id')
+                       ->join('role_pembayaran','daftar.id_role_pembayaran', '=', 'role_pembayaran.id')
+                       ->join('pasien','daftar.id_pasien','=','pasien.id')
+                       ->select('daftar.*','poli.*','role_pembayaran.*','pasien.*')
+                       ->get();
+                        
+        return view('pendaftaran.pendaftaran',['daftar' => $daftar]);
     }
 
     /**
