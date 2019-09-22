@@ -28,7 +28,7 @@ Route::middleware(['guest'])->group(function () {
 
   Route::get('pasien-keluar', 'RawatInap\PasienKeluarController@index');
 
-  Route::get('ruang', 'RawatInap\PasienRawatController@index');
+  Route::get('ruang', 'RawatInap\RuangController@index');
 
   Route::get('rawat-inap/tindakan', 'RawatInap\TindakanController@index');
 
