@@ -23,6 +23,9 @@ Route::middleware(['guest'])->group(function () {
   // modul pendaftaran
   Route::get('pendaftaran', 'Pendaftaran\PendaftaranController@index');
 
+  // modul pasien
+  Route::get('pasien', 'Pasien\PasienController@index');
+
   // modul rawat inap
   Route::get('pasien-rawat', 'RawatInap\PasienRawatController@index');
 
@@ -33,7 +36,7 @@ Route::middleware(['guest'])->group(function () {
   Route::get('rawat-inap/tindakan', 'RawatInap\TindakanController@index');
 
   // modul rawat jalan
-  Route::get('pasien', 'RawatJalan\PasienController@index');
+  Route::get('rawat-jalan/pasien', 'RawatJalan\PasienController@index');
 
   Route::get('rawat-jalan/tindakan', 'RawatJalan\TindakanController@index');
 
