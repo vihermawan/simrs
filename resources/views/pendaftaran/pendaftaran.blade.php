@@ -87,20 +87,13 @@
                         </div>
                     </div>
 
-<<<<<<< HEAD
                         <div class="card-body">
                             <div class="col-lg-8">
                                 <button type="button" class="btn bg-success btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Pasien Baru</button>
                                 <button type="button" class="btn bg-primary btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_primary"><b><i class="icon-reading"></i></b> Tambah Pendaftaran Baru</button>
                             </div>
                             
-=======
-                    <div class="card-body">
-                        <div class="col-lg-4">
-                            <button type="button" class="btn bg-primary btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Pasien</button>
->>>>>>> 3fe5cd2f851be6fcacc43bcff0448e0490f01eb3
                         </div>
-                    </div>
 
                     <table class="table table-togglable table-hover footable-loaded footable default">
                         <thead>
@@ -135,7 +128,8 @@
             </div>
         </div>
         <!-- /dashboard content -->
-
+  </div>
+                    </div>
         <!--Modal Form Pendaftaran -->
         <div id="modal_theme_success" class="modal fade" tabindex="-2">
   			<div class="modal-dialog modal-full">
@@ -161,7 +155,6 @@
 
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label">Jenis Kelamin:</label>
-<<<<<<< HEAD
                                                 <div class="col-lg-8">
                                                     <div class="form-check form-check-inline">
                                                         <label class="form-check-label">
@@ -177,31 +170,6 @@
                                                         </label>
                                                     </div>
                                                 </div>
-=======
-                                            <div class="col-lg-8">
-                                                <div class="form-check form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <div class="uniform-choice">
-                                                            <span class="checked">
-                                                                <input type="radio" class="form-input-styled" name="gender" checked="" data-fouc="">
-                                                            </span>
-                                                        </div>
-                                                        Laki - laki
-                                                    </label>
-                                                </div>
-
-                                                <div class="form-check form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <div class="uniform-choice">
-                                                            <span>
-                                                                <input type="radio" class="form-input-styled" name="gender" data-fouc="">
-                                                            </span>
-                                                        </div>
-                                                        Perempuan
-                                                    </label>
-                                                </div>
-                                            </div>
->>>>>>> 3fe5cd2f851be6fcacc43bcff0448e0490f01eb3
                                          </div>
 
                                          <div class="form-group row">
@@ -355,7 +323,6 @@
                                 <button type="button" class="btn btn-primary">Simpan Data</button>
 							</div>
 						</form>
-<<<<<<< HEAD
 					</div>  
                 </div>
 				<!-- /2 columns form -->
@@ -457,14 +424,6 @@
 
         <!--End Modal Pendaftaran-->
 
-=======
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--End Modal Pendaftaran-->
-    </div>
->>>>>>> 3fe5cd2f851be6fcacc43bcff0448e0490f01eb3
 </div>
 
  
