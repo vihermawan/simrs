@@ -94,16 +94,15 @@
                     <table class="table table-togglable table-hover footable-loaded footable default">
                         <thead>
                             <tr>
-                                <th data-hide="phone" class="footable-visible">Tanggal Kunjungan</th>
+                                <th data-hide="phone" class="footable-visible">No.</th>
                                 <th data-toggle="true" class="footable-visible footable-first-column">Nama Pasien</th>
-                                <th data-hide="phone,tablet" class="footable-visible">Alamat</th>
-                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Desa
+                                <th data-hide="phone,tablet" class="footable-visible">Poli</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Petugas
                                 </th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">
-                                    Kecamatan</th>
-                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Jenis
-                                    Kelamin</th>
-                                <th data-hide="phone" data-ignore="true" class="footable-visible">Status</th>
+                                    Pemeriksaan</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Resep</th>
+                                <th data-hide="phone" data-ignore="true" class="footable-visible">Tanggal Pemeriksaan</th>
                                 <th class="text-center footable-visible footable-last-column" style="width: 30px;"><i
                                         class="icon-menu-open2"></i></th>
                             </tr>

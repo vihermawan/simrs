@@ -95,14 +95,13 @@
                     <table class="table table-togglable table-hover footable-loaded footable default">
                         <thead>
                             <tr>
-                                <th data-toggle="true" class="footable-visible footable-first-column">ID Tindakan</th>
-                                <th data-hide="phone,tablet" class="footable-visible">Nama</th>
-                                <th data-hide="phone,tablet" data-name="harga-tindakan" class="footable-visible">Harga
+                                <th data-toggle="true" class="footable-visible footable-first-column">No</th>
+                                <th data-hide="phone,tablet" class="footable-visible">Nama Pasien</th>
+                                <th data-hide="phone,tablet" data-name="harga-tindakan" class="footable-visible">Petugas
                                 </th>
-                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Dibuat
-                                    pada</th>
-                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Diubah
-                                    pada</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Tanggal
+                                    Pemeriksaan</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Deskripsi</th>
                                 <th class="text-center footable-visible footable-last-column" style="width: 30px;"><i
                                         class="icon-menu-open2"></i></th>
                             </tr>
