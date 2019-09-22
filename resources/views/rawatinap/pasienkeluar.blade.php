@@ -102,7 +102,7 @@
                             <tbody>
                                 <tr>
                                     <td class="footable-visible footable-first-column"><span
-                                            class="footable-toggle"></span>Marth</td>
+                                    class="footable-toggle"></span>Marth</td>
                                     <td class="footable-visible">Traffic Court Referee</td>
                                     <td class="footable-visible">22 Jun 1972</td>
                                     <td class="footable-visible"><span class="badge badge-success">Active</span></td>

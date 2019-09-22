@@ -12,15 +12,15 @@ class KelasTableSeeder extends Seeder
     public function run()
     {
         DB::table('kelas')->insert([
-            'nama' => 'Reguler',
+            'nama_kelas' => 'Reguler',
         ]);
 
         DB::table('kelas')->insert([
-            'nama' => 'BPJS',
+            'nama_kelas' => 'BPJS',
         ]);
 
         DB::table('kelas')->insert([
-            'nama' => 'VVIP',
+            'nama_kelas' => 'VVIP',
         ]);
     }
 }
