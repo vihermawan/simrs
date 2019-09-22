@@ -13,8 +13,6 @@ class PasienTableSeeder extends Seeder
     {
         DB::table('pasien')->insert([
             'nama' => 'Eby',
-            'tanggal_kunjungan' => '2019-09-08',
-            'jam' => '09:56:00',
             'jenis_kelamin' => 'L',
             'alamat' => 'Jakarta',
             'desa' => 'Kemang',
@@ -30,8 +28,6 @@ class PasienTableSeeder extends Seeder
 
         DB::table('pasien')->insert([
             'nama' => 'Angel',
-            'tanggal_kunjungan' => '2019-09-08',
-            'jam' => '09:56:00',
             'jenis_kelamin' => 'P',
             'alamat' => 'Jakarta',
             'desa' => 'Kemang',
