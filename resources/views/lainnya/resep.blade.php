@@ -84,16 +84,17 @@
     
                         <div class="card-body">
                             <div class="col-lg-4">
-                                <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Resep</button>
+                                <button type="button" class="btn bg-success btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Resep</button>
                             </div>
                         </div>
     
                         <table class="table table-togglable table-hover footable-loaded footable default">
                             <thead>
                                 <tr>                                
-                                    <th data-toggle="true" class="footable-visible footable-first-column">ID Resep</th>
-                                    <th data-toggle="true" class="footable-visible footable-first-column">ID Obat</th>
-                                    <th data-toggle="true" class="footable-visible">Jumlah</th>
+                                    <th data-toggle="true" class="footable-visible footable-first-column">No</th>
+                                    <th data-toggle="true" class="footable-visible footable-first-column">Nama Resep</th>
+                                    <th data-toggle="true" class="footable-visible footable-first-column">Nama Obat</th>
+                                    <th data-toggle="true" class="footable-visible">Harga</th>
                                     <th class="text-center footable-visible footable-last-column" style="width: 30px;"><i class="icon-menu-open2"></i></th>
                                 </tr>
                             </thead>
@@ -101,6 +102,7 @@
                                 <tr>
                                     <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>R001</td>
                                     <td class="footable-visible">O001</td> 
+                                    <td class="footable-visible">2</td> 
                                     <td class="footable-visible">2</td> 
                                     <td class="text-center footable-visible footable-last-column">
                                         <div class="list-icons">
