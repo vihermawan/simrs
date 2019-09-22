@@ -85,16 +85,16 @@
     
                         <div class="card-body">
                             <div class="col-lg-4">
-                                <button type="button" class="btn bg-success btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Rawat Inap</button>
+                                <button type="button" class="btn bg-success btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Ruangan</button>
                             </div>
                         </div>
     
                         <table class="table table-togglable table-hover footable-loaded footable default">
                             <thead>
                                 <tr>
-                                    <th data-toggle="true" class="footable-visible footable-first-column">ID Kelas</th>
-                                    <th data-hide="phone,tablet" class="footable-visible">Dibuat Pada</th>
-                                    <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Diubah Pada</th>
+                                    <th data-toggle="true" class="footable-visible footable-first-column">No.</th>
+                                    <th data-hide="phone,tablet" class="footable-visible">Nama Ruang</th>
+                                    <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Kelas</th>
                                     <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Status</th>
                                     <th class="text-center footable-visible footable-last-column" style="width: 30px;"><i class="icon-menu-open2"></i></th>
                                 </tr>
