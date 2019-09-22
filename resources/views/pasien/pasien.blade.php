@@ -33,7 +33,7 @@
                         <i class="icon-home2 mr-2"></i>
                         Home
                     </a>
-                    <span class="breadcrumb-item active">Pasien</span>
+                    <span class="breadcrumb-item active">Pendaftaran</span>
                 </div>
 
                 <a href="#" class="header-elements-toggle text-default d-md-none">
@@ -87,15 +87,17 @@
                         </div>
                     </div>
 
+                        <div class="card-body">                
+                        </div>
+                    
+
                     <table class="table table-togglable table-hover footable-loaded footable default">
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th data-hide="phone" class="footable-visible">Nama Lengkap</th>
-                                <th data-toggle="true" class="footable-visible footable-first-column">Jenis-Kelamin</th>
+                                <th data-toggle="true" class="footable-visible footable-first-column">Nama Pasien</th>
                                 <th data-hide="phone,tablet" class="footable-visible">Alamat</th>
-                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Gol. Darah</th>
-                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Pendidikan</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Goldar</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Asuransi</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Tempat Lahir</th>
                             </tr>
@@ -119,6 +121,7 @@
                 </div>
                 <!--/Tabel-->
             </div>
+        </div>
         </div>
         <!-- /dashboard content -->
 
@@ -147,29 +150,21 @@
 
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label">Jenis Kelamin:</label>
-                                            <div class="col-lg-8">
-                                                <div class="form-check form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <div class="uniform-choice">
-                                                            <span class="checked">
-                                                                <input type="radio" class="form-input-styled" name="gender" checked="" data-fouc="">
-                                                            </span>
-                                                        </div>
-                                                        Laki - laki
-                                                    </label>
-                                                </div>
+                                                <div class="col-lg-8">
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label">
+                                                            <div class="uniform-choice"><span class="checked"><input type="radio" class="form-input-styled" name="gender" checked="" data-fouc=""></span></div>
+                                                                Laki - laki
+                                                        </label>
+                                                    </div>
 
-                                                <div class="form-check form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <div class="uniform-choice">
-                                                            <span>
-                                                                <input type="radio" class="form-input-styled" name="gender" data-fouc="">
-                                                            </span>
-                                                        </div>
-                                                        Perempuan
-                                                    </label>
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label">
+                                                            <div class="uniform-choice"><span><input type="radio" class="form-input-styled" name="gender" data-fouc=""></span></div>
+                                                                Perempuan
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </div>
                                          </div>
 
                                          <div class="form-group row">
@@ -323,10 +318,14 @@
                                 <button type="button" class="btn btn-primary">Simpan Data</button>
 							</div>
 						</form>
-                    </div>
+					</div>  
                 </div>
-            </div>
-        </div>
+				<!-- /2 columns form -->
+
         <!--End Modal Pendaftaran-->
     </div>
+    
+
 </div>
+
+ 

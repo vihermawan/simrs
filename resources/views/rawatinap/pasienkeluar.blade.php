@@ -106,8 +106,7 @@
                                     <td class="footable-visible">Traffic Court Referee</td>
                                     <td class="footable-visible">22 Jun 1972</td>
                                     <td class="footable-visible"><span class="badge badge-success">Active</span></td>
-                                        teess
-                                    </td>
+                                    
                                 </tr>
                             </tbody>
                         </table>

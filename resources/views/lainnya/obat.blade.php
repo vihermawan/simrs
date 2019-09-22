@@ -9,8 +9,7 @@
 
             <div class="header-elements d-none">
                 <div class="d-flex justify-content-center">
-                    <a href="#" class="btn btn-link btn-float text-default"><i
-                            class="icon-bars-alt text-primary"></i><span>Statistics</span></a>
+                    <a href="#" class="btn btn-link btn-float text-default"><i class="icon-bars-alt text-primary"></i><span>Statistics</span></a>
                     <a href="#" class="btn btn-link btn-float text-default"><i class="icon-calculator text-primary"></i>
                         <span>Invoices</span></a>
                     <a href="#" class="btn btn-link btn-float text-default"><i class="icon-calendar5 text-primary"></i>
@@ -64,8 +63,6 @@
         <div class="row">
         </div>
         <!-- /main charts -->
-
-
         <!-- Dashboard content -->
         <div class="row">
             <div class="col-xl-12">
@@ -84,16 +81,15 @@
     
                         <div class="card-body">
                             <div class="col-lg-4">
-                                <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Obat</button>
+                                <button type="button" class="btn bg-success btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Obat</button>
                             </div>
                         </div>
     
                         <table class="table table-togglable table-hover footable-loaded footable default">
                             <thead>
                                 <tr>                                
-                                    <th data-toggle="true" class="footable-visible footable-first-column">ID Obat</th>
+                                    <th data-toggle="true" class="footable-visible footable-first-column">No</th>
                                     <th data-toggle="true" class="footable-visible footable-first-column">Nama Obat</th>
-                                    <th data-hide="phone" class="footable-visible">Dosis</th>
                                     <th data-hide="phone,tablet" class="footable-visible">Jenis Obat</th>
                                     <th data-hide="phone,tablet" class="footable-visible">Harga</th>
                                     <th class="text-center footable-visible footable-last-column" style="width: 30px;"><i class="icon-menu-open2"></i></th>
@@ -103,7 +99,6 @@
                                 <tr>
                                     <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>O001</td>
                                     <td class="footable-visible"><a href="#">Paracetamol</a></td>
-                                    <td class="footable-visible">2x sehari</td> 
                                     <td class="footable-visible">Kapsul</td> 
                                     <td class="footable-visible">10.000</td> 
                                     <td class="text-center footable-visible footable-last-column">
