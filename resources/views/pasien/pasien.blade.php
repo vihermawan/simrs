@@ -115,7 +115,7 @@
                                     <td class="footable-visible">{{$data->pendidikan}}</td>
                                     <td class="footable-visible">{{$data->asuransi}}</td>
                                     <td class="footable-visible">{{$data->tempat_lahir}}</td>
-                                    <td class="footable-visible">Action</td>
+                                    <td class="footable-visible"><button disabled="disabled">Action</button></td>
                                 </tr>
                             @endforeach
                         </tbody>
