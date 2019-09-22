@@ -279,15 +279,13 @@
     <script src="{{URL::asset('template/global_assets/js/plugins/ui/moment/moment.min.js')}}"></script>
     <script src="{{URL::asset('template/global_assets/js/plugins/pickers/daterangepicker.js')}}"></script>
     <script src="{{URL::asset('template/global_assets/js/plugins/visualization/echarts/echarts.min.js')}}"></script>
-	<script src="{{URL::asset('template/assets/js/app.js')}}"></script>
-	<script src="{{URL::asset('template/global_assets/js/demo_pages/charts/echarts/lines.js')}}"></script>
+	  <script src="{{URL::asset('template/assets/js/app.js')}}"></script>
+	  <script src="{{URL::asset('template/global_assets/js/demo_pages/charts/echarts/lines.js')}}"></script>
     <script src="{{URL::asset('template/layout_1/LTR/default/full/assets/js/app.js')}}"></script>
     <script src="{{URL::asset('template//global_assets/js/demo_pages/dashboard.js')}}"></script>
     <script src="{{URL::asset('template/global_assets/js/demo_pages/charts/echarts/pies_donuts.js')}}"></script>
     <!-- /theme JS files -->
 
 </head>
-<body>
-    @yield('wrapper')
-</body>
+
 </html>

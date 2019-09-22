@@ -84,9 +84,11 @@
                         </div>
 
                         <div class="card-body">
-                            <div class="col-lg-4">
-                                <button type="button" class="btn bg-primary btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Pasien</button>
+                            <div class="col-lg-8">
+                                <button type="button" class="btn bg-primary btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Pasien Baru</button>
+                                <button type="button" class="btn bg-primary btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Pendaftaran Baru</button>
                             </div>
+                            
                         </div>
 
                         <table class="table table-togglable table-hover footable-loaded footable default">
