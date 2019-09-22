@@ -97,22 +97,23 @@
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Gol. Darah</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Pendidikan</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Asuransi</th>
-                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Tanggal Lahir</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Tempat Lahir</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>1.</td>
-                                <td class="footable-visible"><a href="#">Enright</a></td>
-                                <td class="footable-visible">Traffic Court Referee</td>
-                                <td class="footable-visible">22 Jun 1972</td>
-                                <td class="footable-visible"><span class="badge badge-success">Active</span></td>
-                                <td class="text-center footable-visible footable-last-column">
-                                  BPJS
-                                </td>
-                                <td>laki</td>
-                                <td>admin</td>
-                            </tr>
+                            @php $no = 1; @endphp
+                            @foreach ($pasien as $data)            
+                                <tr>
+                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$no++}}</td>
+                                    <td class="footable-visible"><a href="#">{{$data->nama}}</a></td>
+                                    <td class="footable-visible">{{$data->jenis_kelamin}}</td>
+                                    <td class="footable-visible">{{$data->alamat}}</td>
+                                    <td class="footable-visible">{{$data->golongan_darah}}</td>
+                                    <td class="footable-visible">{{$data->pendidikan}}</td>
+                                    <td class="footable-visible">{{$data->asuransi}}</td>
+                                    <td class="footable-visible">{{$data->tempat_lahir}}</td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
