@@ -15,10 +15,10 @@ class CreateUserAksesTable extends Migration
     {
         Schema::create('user_akses', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_role')->unsigned()->default(1);
-            $table->bigInteger('id_menu')->unsigned()->default(0);
+            $table->bigInteger('id_role')->unsigned();
+            $table->bigInteger('id_menu')->unsigned();
             $table->string('aksi')->nullable();
-            $table->bigInteger('status_menu')->default(1);
+            $table->bigInteger('status_menu');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });
