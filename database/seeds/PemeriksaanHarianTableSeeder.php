@@ -13,7 +13,7 @@ class PemeriksaanHarianTableSeeder extends Seeder
     {
         DB::table('pemeriksaan_harian')->insert([
             'deskripsi' => 'ganti infus',
-            'tanggal' => '2019-09-08',
+            'tanggal_periksa_harian' => '2019-09-08',
         ]);
     }
 }

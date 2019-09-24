@@ -12,7 +12,7 @@ class PasienTableSeeder extends Seeder
     public function run()
     {
         DB::table('pasien')->insert([
-            'nama' => 'Eby',
+            'nama_pasien' => 'Eby',
             'jenis_kelamin' => 'L',
             'alamat' => 'Jakarta',
             'desa' => 'Kemang',
@@ -27,7 +27,7 @@ class PasienTableSeeder extends Seeder
         ]);
 
         DB::table('pasien')->insert([
-            'nama' => 'Angel',
+            'nama_pasien' => 'Angel',
             'jenis_kelamin' => 'P',
             'alamat' => 'Jakarta',
             'desa' => 'Kemang',

@@ -12,17 +12,17 @@ class ObatTableSeeder extends Seeder
     public function run()
     {
         DB::table('obat')->insert([
-            'nama' => 'Dekongestan',
+            'nama_obat' => 'Dekongestan',
             'jenis_obat' => 'tablet',
-            'dosis' => '5-7 kali sehari',
-            'harga' => 5000,
+            'dosis_obat' => '5-7 kali sehari',
+            'harga_obat' => 5000,
         ]);
 
         DB::table('obat')->insert([
-            'nama' => 'Naproxen',
+            'nama_obat' => 'Naproxen',
             'jenis_obat' => 'sirup',
-            'dosis' => '3-4 kali sehari',
-            'harga' => 25000,
+            'dosis_obat' => '3-4 kali sehari',
+            'harga_obat' => 25000,
         ]);
     }
 }

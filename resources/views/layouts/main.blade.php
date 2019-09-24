@@ -214,7 +214,6 @@
     </div>
     <!-- /page content -->
 </head>
-
 </html>
 
 <!-- Core JS files -->

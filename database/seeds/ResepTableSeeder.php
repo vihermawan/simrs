@@ -13,12 +13,12 @@ class ResepTableSeeder extends Seeder
     {
         DB::table('resep')->insert([
             'id_obat' => 1,
-            'jumlah' => 1,
+            'jumlah_resep' => 1,
         ]);
 
         DB::table('resep')->insert([
             'id_obat' => 2,
-            'jumlah' => 2,
+            'jumlah_resep' => 2,
         ]);
     }
 }

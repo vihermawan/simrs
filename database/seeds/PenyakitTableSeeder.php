@@ -12,8 +12,8 @@ class PenyakitTableSeeder extends Seeder
     public function run()
     {
         DB::table('penyakit')->insert([
-            'nama' => 'Sinusitis',
-            'jenis' => 'penyakit dalam',
+            'nama_penyakit' => 'Sinusitis',
+            'jenis_penyakit' => 'penyakit dalam',
         ]);
     }
 }

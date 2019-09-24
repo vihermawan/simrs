@@ -15,9 +15,9 @@ class CreateObatTable extends Migration
     {
         Schema::create('obat', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama');
-            $table->string('dosis');
-            $table->string('harga');
+            $table->string('nama_obat');
+            $table->string('dosis_obat');
+            $table->string('harga_obat');
             $table->string('jenis_obat');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();

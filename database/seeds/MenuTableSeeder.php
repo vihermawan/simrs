@@ -13,154 +13,154 @@ class MenuTableSeeder extends Seeder
     {
         DB::table('menu')->insert([
             'parent_id' => 0,
-            'name' => 'Dashboard',
+            'nama_menu' => 'Dashboard',
             'url' => '/dashboard',
             'icon' => 'icon-home2',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 0,
-            'name' => 'Pendaftaran',
+            'nama_menu' => 'Pendaftaran',
             'url' => '/pendaftaran',
             'icon' => 'icon-pencil5',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 0,
-            'name' => 'Pasien',
+            'nama_menu' => 'Pasien',
             'url' => '/pasien',
             'icon' => 'icon-pencil5',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 0,
-            'name' => 'Rawat Inap',
+            'nama_menu' => 'Rawat Inap',
             'url' => '#',
             'icon' => ' icon-bed2',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 0,
-            'name' => 'Rawat Jalan',
+            'nama_menu' => 'Rawat Jalan',
             'url' => '#',
             'icon' => 'icon-accessibility2',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 0,
-            'name' => 'Keuangan',
+            'nama_menu' => 'Keuangan',
             'url' => '#',
             'icon' => 'icon-coins',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 0,
-            'name' => 'Lainnya',
+            'nama_menu' => 'Lainnya',
             'url' => '#',
             'icon' => 'icon-list-unordered',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 0,
-            'name' => 'Setting',
+            'nama_menu' => 'Setting',
             'url' => '#',
             'icon' => 'icon-cog',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 4,
-            'name' => 'Pasien Rawat',
+            'nama_menu' => 'Pasien Rawat',
             'url' => '/pasien-rawat',
             'icon' => 'icon-enter3 ',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 4,
-            'name' => 'Pasien Keluar',
+            'nama_menu' => 'Pasien Keluar',
             'url' => '/pasien-keluar',
             'icon' => 'icon-exit3',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 4,
-            'name' => 'Ruang',
+            'nama_menu' => 'Ruang',
             'url' => '/ruang',
             'icon' => 'icon-map',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 4,
-            'name' => 'Pemeriksaan Harian',
+            'nama_menu' => 'Pemeriksaan Harian',
             'url' => '/pemeriksaan-harian',
             'icon' => 'icon-select2',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 5,
-            'name' => 'Pasien',
+            'nama_menu' => 'Pasien',
             'url' => '/rawat-jalan/pasien',
             'icon' => '',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 5,
-            'name' => 'Tindakan',
+            'nama_menu' => 'Tindakan',
             'url' => '/rawat-jalan/tindakan',
             'icon' => '',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 6,
-            'name' => 'Transaksi Inap',
+            'nama_menu' => 'Transaksi Inap',
             'url' => '/transaksi-inap',
             'icon' => '',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 6,
-            'name' => 'Transaksi Jalan',
+            'nama_menu' => 'Transaksi Jalan',
             'url' => '/transaksi-jalan',
             'icon' => '',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 7,
-            'name' => 'Penyakit',
+            'nama_menu' => 'Penyakit',
             'url' => '/penyakit',
             'icon' => 'icon-snowflake ',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 7,
-            'name' => 'Obat',
+            'nama_menu' => 'Obat',
             'url' => '/obat',
             'icon' => 'icon-aid-kit',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 7,
-            'name' => 'Resep',
+            'nama_menu' => 'Resep',
             'url' => '/resep',
             'icon' => 'icon-clipboard3 ',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 8,
-            'name' => 'Role',
+            'nama_menu' => 'Role',
             'url' => '/role',
             'icon' => ' icon-file-media ',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 8,
-            'name' => 'User',
+            'nama_menu' => 'User',
             'url' => '/user',
             'icon' => ' icon-user ',
         ]);
 
         DB::table('menu')->insert([
             'parent_id' => 8,
-            'name' => 'Edit Password',
+            'nama_menu' => 'Edit Password',
             'url' => '/edit-password',
             'icon' => 'icon-lock',
         ]);

@@ -15,7 +15,7 @@ class DaftarTableSeeder extends Seeder
             'id_pasien' => 1,
             'id_poli' => 1,
             'id_role_pembayaran' => 2,
-            'kategori' => 'kategori 1',
+            'kategori_daftar' => 'kategori 1',
         ]);
     }
 }
