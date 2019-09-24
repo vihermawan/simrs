@@ -91,13 +91,15 @@
                         </div>
                     
 
-                    <table class="table table-togglable table-hover footable-loaded footable default">
+                    <table id="pasien-table" class="table table-togglable table-hover footable-loaded footable default">
                         <thead>
                             <tr>
                                 <th>No</th>
                                 <th data-toggle="true" class="footable-visible footable-first-column">Nama Pasien</th>
+                                <th data-hide="phone,tablet" class="footable-visible">Jenis Kelamin</th>
                                 <th data-hide="phone,tablet" class="footable-visible">Alamat</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Goldar</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Pendidikan</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Asuransi</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Tempat Lahir</th>
                                 <th>Action</th>
@@ -330,4 +332,10 @@
 
 </div>
 
- 
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#pasien-table').DataTable();
+    });
+</script>

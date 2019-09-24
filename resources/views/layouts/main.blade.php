@@ -16,23 +16,21 @@
   {{-- <link href="{{url('/')}}/template/layout_1/LTR/default/full/ssets/css/colors.min.css" rel="stylesheet" type="text/css"> --}}
   <!-- /global stylesheets -->
 
+  {{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"> --}}
   <!-- Core JS files -->
-  <script src="{{url('/')}}/template/global_assets/js/main/jquery.min.js"></script>
-  <script src="{{url('/')}}/template/global_assets/js/main/bootstrap.bundle.min.js"></script>
-  <script src="{{url('/')}}/template/global_assets/js/plugins/loaders/blockui.min.js"></script>
-  <!-- /core JS files -->
+	<script src="{{url('/')}}/global_assets/js/main/jquery.min.js"></script>
+	<script src="{{url('/')}}/global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="{{url('/')}}/global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
 
-  <!-- Theme JS files -->
-  <script src="{{url('/')}}/template/global_assets/js/plugins/visualization/d3/d3.min.js"></script>
-  <script src="{{url('/')}}/template/global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
-  <script src="{{url('/')}}/template/global_assets/js/plugins/forms/styling/switchery.min.js"></script>
-  <script src="{{url('/')}}/template/global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
-  <script src="{{url('/')}}/template/global_assets/js/plugins/ui/moment/moment.min.js"></script>
-  <script src="{{url('/')}}/template/global_assets/js/plugins/pickers/daterangepicker.js"></script>
+	<!-- Theme JS files -->
+	<script src="{{url('/')}}/global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script src="{{url('/')}}/global_assets/js/plugins/tables/datatables/extensions/responsive.min.js"></script>
+	<script src="{{url('/')}}/global_assets/js/plugins/forms/selects/select2.min.js"></script>
 
-  <script src="{{url('/')}}/template/layout_3/LTR/default/full/assets/js/app.js"></script>
-  <script src="{{url('/')}}/template/global_assets/js/demo_pages/dashboard.js"></script>
-  <!-- /theme JS files -->
+	<script src="assets/js/app.js"></script>
+	<script src="{{url('/')}}/global_assets/js/demo_pages/datatables_responsive.js"></script>
+	<!-- /theme JS files -->
 
 </head>
 
@@ -215,69 +213,58 @@
 
     </div>
     <!-- /page content -->
-    <script type="text/javascript">
-      $(document).ready(function() {
-          $.ajax({
-              type : 'GET',
-              url : '/',
-              success : function(response){
-                  $('#dynamic-navbar').html(response.menu);
-              }
-          });
-      });
-
-      function changeMenu(url) {
-          $.ajax({
-              type : 'GET',
-              url : url,
-              success : function (data) {
-                  $('#div-content').html(data);
-              }
-          })
-      }
-
-      function showProfile() {
-          $.ajax({
-              type : 'GET',
-              url : '/profile',
-              success : function (data) {
-                  $('#div-content').html(data);
-              }
-          })
-      }
-    </script>
-
-
-    <!-- Core JS files -->
-    <!-- <script src="{{URL::asset('template/global_assets/js/main/jquery.min.js')}}"></script>
-    <script src="{{URL::asset('template/global_assets/js/main/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{URL::asset('template/global_assets/js/plugins/loaders/blockui.min.js')}}"></script> -->
-    <!-- /core JS files -->
-
-    <!-- Theme JS files -->
-    <!-- <script src="{{URL::asset('template/global_assets/js/plugins/visualization/d3/d3.min.js')}}"></script>
-    <script src="{{URL::asset('template/global_assets/js/plugins/visualization/d3/d3_tooltip.js')}}"></script>
-    <script src="{{URL::asset('template/global_assets/js/plugins/forms/styling/switchery.min.js')}}"></script>
-    <script src="{{URL::asset('template/global_assets/js/plugins/forms/selects/bootstrap_multiselect.js')}}"></script>
-    <script src="{{URL::asset('template/global_assets/js/plugins/ui/moment/moment.min.js')}}"></script>
-    <script src="{{URL::asset('template/global_assets/js/plugins/pickers/daterangepicker.js')}}"></script>
-    <script src="{{URL::asset('template/global_assets/js/plugins/visualization/echarts/echarts.min.js')}}"></script>
-<<<<<<< HEAD
-	  <script src="{{URL::asset('template/assets/js/app.js')}}"></script>
-	  <script src="{{URL::asset('template/global_assets/js/demo_pages/charts/echarts/lines.js')}}"></script>
-=======
-    <script src="{{URL::asset('template/assets/js/app.js')}}"></script>
-    <script src="{{URL::asset('template/global_assets/js/demo_pages/charts/echarts/lines.js')}}"></script>
->>>>>>> 3fe5cd2f851be6fcacc43bcff0448e0490f01eb3
-    <script src="{{URL::asset('template/layout_1/LTR/default/full/assets/js/app.js')}}"></script>
-    <script src="{{URL::asset('template//global_assets/js/demo_pages/dashboard.js')}}"></script>
-    <script src="{{URL::asset('template/global_assets/js/demo_pages/charts/echarts/pies_donuts.js')}}"></script> -->
-    <!-- /theme JS files -->
-
-<<<<<<< HEAD
 </head>
 
-=======
-</body>
->>>>>>> 3fe5cd2f851be6fcacc43bcff0448e0490f01eb3
 </html>
+
+<!-- Core JS files -->
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+{{-- <script src="{{url('/')}}/template/global_assets/js/main/jquery.min.js"></script> --}}
+<script src="{{url('/')}}/template/global_assets/js/main/bootstrap.bundle.min.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/plugins/loaders/blockui.min.js"></script>
+<!-- /core JS files -->
+
+<!-- Theme JS files -->
+<script src="{{url('/')}}/template/global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/plugins/ui/moment/moment.min.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/plugins/pickers/daterangepicker.js"></script>
+
+<script src="{{url('/')}}/template/layout_3/LTR/default/full/assets/js/app.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/demo_pages/dashboard.js"></script>
+<!-- /theme JS files -->
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      $.ajax({
+          type : 'GET',
+          url : '/',
+          success : function(response){
+              $('#dynamic-navbar').html(response.menu);
+          }
+      });
+  });
+
+  function changeMenu(url) {
+      $.ajax({
+          type : 'GET',
+          url : url,
+          success : function (data) {
+              $('#div-content').html(data);
+          }
+      })
+  }
+
+  function showProfile() {
+      $.ajax({
+          type : 'GET',
+          url : '/profile',
+          success : function (data) {
+              $('#div-content').html(data);
+          }
+      })
+  }
+</script>
