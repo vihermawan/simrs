@@ -22,8 +22,7 @@ class CreateRawatInapTable extends Migration
             $table->bigInteger('id_ruang')->unsigned();
             $table->bigInteger('id_pemeriksaan')->unsigned();
             $table->bigInteger('id_pemeriksaanharian')->unsigned();
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamps();
         });
     }
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Lainnya;
 
+use App\Obat;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,9 @@ class ObatController extends Controller
      */
     public function index()
     {
-        return view('lainnya.obat');
+        $obat = Obat::orderBy('nama_obat', 'asc')->get();
+        return view('lainnya.obat', ['obat' => $obat]);
+        // return $obat;
     }
 
     /**

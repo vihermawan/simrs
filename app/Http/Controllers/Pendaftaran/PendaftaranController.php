@@ -28,6 +28,7 @@ class PendaftaranController extends Controller
                        ->get();
                         
         return view('pendaftaran.pendaftaran',['daftar' => $daftar]);
+        // return $daftar;
     }
 
     /**

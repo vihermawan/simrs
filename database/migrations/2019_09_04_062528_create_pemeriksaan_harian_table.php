@@ -17,8 +17,7 @@ class CreatePemeriksaanHarianTable extends Migration
             $table->bigIncrements('id');
             $table->string('deskripsi');
             $table->dateTime('tanggal_periksa_harian');
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamps();
         });
     }
 

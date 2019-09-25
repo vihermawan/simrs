@@ -27,8 +27,7 @@ class CreatePasienTable extends Migration
             $table->string('pendidikan');
             $table->string('asuransi')->nullable();
             $table->string('tempat_lahir');
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamps();
         });
     }
 
