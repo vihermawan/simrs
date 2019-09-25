@@ -16,8 +16,7 @@ class CreateRolePembayaranTable extends Migration
         Schema::create('role_pembayaran', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('jenis_pembayaran');
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamps();
         });
     }
 

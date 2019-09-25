@@ -17,8 +17,7 @@ class CreateTindakanTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama_tindakan');
             $table->string('harga_tindakan');
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamps();
         });
     }
 

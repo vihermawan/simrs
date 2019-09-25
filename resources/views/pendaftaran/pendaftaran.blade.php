@@ -1,3 +1,11 @@
+<!-- Theme JS files -->
+<script src="{{url('/')}}/template/global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/plugins/tables/datatables/extensions/responsive.min.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/plugins/forms/selects/select2.min.js"></script>
+
+<script src="{{url('/')}}/template/assets/js/app.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/demo_pages/datatables_responsive.js"></script>
+<!-- /theme JS files -->
 <div id="div-content">
     <!-- Page header -->
     <div class="page-header page-header-light">
@@ -95,7 +103,7 @@
                             
                         </div>
 
-                    <table class="table table-togglable table-hover footable-loaded footable default">
+                    <table id="tabel_pendaftaran" class="table table-togglable table-hover footable-loaded footable default">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -114,12 +122,12 @@
                             <tr>
                                 <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$no++}}</td>
                                 <td class="footable-visible"><a href="#">{{$data->created_at}}</a></td>
-                                <td class="footable-visible">{{$data->nama}}</td>
+                                <td class="footable-visible">{{$data->nama_pasien}}</td>
                                 <td class="footable-visible">{{$data->alamat}}</td>
                                 <td class="footable-visible"><span class="badge badge-success"></span>{{$data->nama_poli}}</td>
                                 <td >{{$data->jenis_pembayaran}}</td>
                                 <td>{{$data->jenis_kelamin}}</td>
-                                <td>{{$data->nama}}</td>
+                                <td>{{$data->nama_pasien}}</td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -427,4 +435,8 @@
 
 </div>
 
- 
+ <script>
+    $(document).ready(function() {
+        $('#tabel_pendaftaran').DataTable();
+    });
+ </script>

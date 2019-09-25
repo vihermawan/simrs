@@ -19,8 +19,7 @@ class CreateUserAksesTable extends Migration
             $table->bigInteger('id_menu')->unsigned();
             $table->string('aksi')->nullable();
             $table->bigInteger('status_menu');
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamps();
         });
     }
 

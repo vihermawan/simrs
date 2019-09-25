@@ -1,3 +1,11 @@
+<!-- Theme JS files -->
+<script src="{{url('/')}}/template/global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/plugins/tables/datatables/extensions/responsive.min.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/plugins/forms/selects/select2.min.js"></script>
+
+<script src="{{url('/')}}/template/assets/js/app.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/demo_pages/datatables_responsive.js"></script>
+<!-- /theme JS files -->
 <div id="div-content">
     <!-- Page header -->
     <div class="page-header page-header-light">
@@ -87,11 +95,11 @@
                         </div>
                     </div>
 
-                        <div class="card-body">                
+                        <div class="card-body">
                         </div>
                     
 
-                    <table id="pasien-table" class="table table-togglable table-hover footable-loaded footable default">
+                    <table id="tabel_pasien" class="table table-togglable table-hover footable-loaded footable default">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -110,7 +118,7 @@
                             @foreach ($pasien as $data)            
                                 <tr>
                                     <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$no++}}</td>
-                                    <td class="footable-visible"><a href="#">{{$data->nama}}</a></td>
+                                    <td class="footable-visible">{{$data->nama_pasien}}</td>
                                     <td class="footable-visible">{{$data->jenis_kelamin}}</td>
                                     <td class="footable-visible">{{$data->alamat}}</td>
                                     <td class="footable-visible">{{$data->golongan_darah}}</td>
@@ -332,10 +340,8 @@
 
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('#pasien-table').DataTable();
+        $('#tabel_pasien').DataTable();
     });
 </script>

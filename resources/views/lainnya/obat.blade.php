@@ -1,3 +1,4 @@
+<div id="div-content">
     <!-- Page header -->
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
@@ -96,11 +97,13 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            @php $no = 1; @endphp
+                            @foreach ($obat as $data)
                                 <tr>
-                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>O001</td>
-                                    <td class="footable-visible"><a href="#">Paracetamol</a></td>
-                                    <td class="footable-visible">Kapsul</td> 
-                                    <td class="footable-visible">10.000</td> 
+                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$no++}}</td>
+                                    <td class="footable-visible"><a href="#">{{$data->nama_obat}}</a></td>
+                                    <td class="footable-visible">{{$data->jenis_obat}}</td> 
+                                    <td class="footable-visible">{{$data->harga_obat}}</td> 
                                     <td class="text-center footable-visible footable-last-column">
                                         <div class="list-icons">
                                             <div class="dropdown">
@@ -117,29 +120,30 @@
                                         </div>
                                     </td>
                                 </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
                 <!--/Tabel-->
-               
-               
+                
+                
             </div>
 
-           
+            
         </div>
         <!-- /dashboard content -->
 
         <!--Modal Form Pendaftaran -->
         <div id="modal_theme_success" class="modal fade" tabindex="-1">
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header bg-success">
-								<h6 class="modal-title">Form Obat</h6>
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-							</div>
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header bg-success">
+                                <h6 class="modal-title">Form Obat</h6>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
 
-							<div class="modal-body">
-								 <div class="col-xl-12">
+                            <div class="modal-body">
+                                    <div class="col-xl-12">
                                     <!-- Form -->
                                             <div class="card-body">
                                                 <form action="#">
@@ -182,18 +186,16 @@
                                                 
                                     <!-- /Form -->
                                 </div>
-							</div>
+                            </div>
 
-							<div class="modal-footer">
-								<button type="button" class="btn btn-link" data-dismiss="modal">Tutup</button>
-								<button type="button" class="btn bg-success">Simpan</button>
-							</div>
-						</div>
-					</div>
-				</div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-link" data-dismiss="modal">Tutup</button>
+                                <button type="button" class="btn bg-success">Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         <!--End Modal Pendaftaran-->
 
-    </div>
-
-  
-
+    </div>    
+</div>
