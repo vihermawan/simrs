@@ -114,6 +114,7 @@
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Asuransi</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Jenis Kelamin</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Petugas</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
