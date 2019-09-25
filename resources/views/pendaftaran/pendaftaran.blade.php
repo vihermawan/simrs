@@ -114,7 +114,7 @@
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Asuransi</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Jenis Kelamin</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Petugas</th>
-                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Aksi</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -129,6 +129,20 @@
                                 <td >{{$data->jenis_pembayaran}}</td>
                                 <td>{{$data->jenis_kelamin}}</td>
                                 <td>{{$data->nama_pasien}}</td>
+                                <td class="text-center footable-visible footable-last-column">
+                                        <div class="list-icons">
+                                            <div class="dropdown">
+                                                <a href="#" class="list-icons-item" data-toggle="dropdown">
+                                                    <i class="icon-menu9"></i>
+                                                </a>
+    
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item"><i class="icon-file-pdf"></i>Update</a>
+                                                    <a href="{{route('pendaftaran.destroy', $data->id )}}" class="dropdown-item"><i class="icon-file-excel"></i>Delete</a>     
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -437,7 +451,7 @@
 </div>
 
  <script>
-    $(document).ready(function() {
-        $('#tabel_pendaftaran').DataTable();
-    });
+    // $(document).ready(function() {
+    //     $('#tabel_pendaftaran').DataTable();
+    // });
  </script>
