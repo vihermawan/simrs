@@ -1,3 +1,5 @@
+
+
 <div id="div-content">
     <!-- Page header -->
     <div class="page-header page-header-light">
@@ -95,17 +97,17 @@
                             
                         </div>
 
-                    <table class="table table-togglable table-hover footable-loaded footable default">
+                    <table class="table datatable-responsive" id="tabel_pendaftaran">
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th data-hide="phone" class="footable-visible">Tanggal Kunjungan</th>
-                                <th data-toggle="true" class="footable-visible footable-first-column">Nama Pasien</th>
-                                <th data-hide="phone,tablet" class="footable-visible">Alamat</th>
-                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Poli</th>
-                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Asuransi</th>
-                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Jenis Kelamin</th>
-                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Petugas</th>
+                                <th>Tanggal Kunjungan</th>
+                                <th>Nama Pasien</th>
+                                <th>Alamat</th>
+                                <th>Poli</th>
+                                <th>Asuransi</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Petugas</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -114,12 +116,12 @@
                             <tr>
                                 <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$no++}}</td>
                                 <td class="footable-visible"><a href="#">{{$data->created_at}}</a></td>
-                                <td class="footable-visible">{{$data->nama}}</td>
+                                <td class="footable-visible">{{$data->nama_pasien}}</td>
                                 <td class="footable-visible">{{$data->alamat}}</td>
                                 <td class="footable-visible"><span class="badge badge-success"></span>{{$data->nama_poli}}</td>
                                 <td >{{$data->jenis_pembayaran}}</td>
                                 <td>{{$data->jenis_kelamin}}</td>
-                                <td>{{$data->nama}}</td>
+                                <td>{{$data->nama_pasien}}</td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -427,4 +429,9 @@
 
 </div>
 
- 
+
+ <script>
+    $(document).ready(function() {
+        $('#tabel_pendaftaran').DataTable();
+    } );
+ </script>

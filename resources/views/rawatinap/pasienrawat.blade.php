@@ -95,27 +95,29 @@
                             </div>
                         </div>
 
-                        <table class="table table-togglable table-hover footable-loaded footable default">
+                        <table class="table datatable-responsive" id="tabel_pendaftaran">
                             <thead>
                                 <tr>
-                                    <th data-toggle="true" class="footable-visible footable-first-column">No.</th>
-                                    <th data-hide="phone,tablet" class="footable-visible">Nama Pasien</th>
-                                    <th data-hide="phone,tablet" class="footable-visible">Tanggal Masuk</th>
-                                    <th data-hide="phone,tablet" class="footable-visible">Ruang</th>
-                                    <th data-hide="phone,tablet" class="footable-visible">Petugas</th>
+                                    <th>No.</th>
+                                    <th>Nama Pasien</th>
+                                    <th>Tanggal Masuk</th>
+                                    <th>Ruang</th>
+                                    <th>Petugas</th>
                                     <th class="text-center footable-visible footable-last-column" style="width: 30px;">
                                         <i class="icon-menu-open2"></i></th>
                                 </tr>
                             </thead>
                             <tbody>
+                            @php $no = 1; @endphp
+                            @foreach ($pasienrawat as $data) 
                                 <tr>
-                                    <td class="footable-visible footable-first-column"><span
-                                            class="footable-toggle"></span>Marth</td>
-                                    <td class="footable-visible">Traffic Court Referee</td>
-                                    <td class="footable-visible">22 Jun 1972</td>
-                                    <td class="footable-visible">Traffic Court Referee</td>
-                                    <td class="footable-visible">22 Jun 1972</td>
+                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$no++}}</td>
+                                    <td class="footable-visible">{{$data->nama_pasien}}</td>
+                                    <td class="footable-visible">{{$data->tanggal_masuk}}</td>
+                                    <td class="footable-visible">{{$data->nama_kelas}}</td>
+                                    <td class="footable-visible">{{$data->nama_user}}</td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -212,3 +214,9 @@
         </div>
 
     </div>
+
+    <script>
+    $(document).ready(function() {
+        $('#tabel_pendaftaran').DataTable();
+    } );
+ </script>

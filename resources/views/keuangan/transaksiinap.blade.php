@@ -92,6 +92,7 @@
                         <table class="table table-togglable table-hover footable-loaded footable default">
                             <thead>
                                 <tr>
+                                    <th>No</th>
                                     <th data-toggle="true" class="footable-visible footable-first-column">Nama Pasien</th>
                                     <th data-hide="true" class="footable-visible">Status</th>
                                     <th data-hide="true" class="footable-visible">Dokter yang menangani</th>
@@ -103,16 +104,20 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            @php $no = 1; @endphp
+                            @foreach ($transaksiinap as $data) 
                                 <tr>
-                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>Marth</td>
-                                    <td class="footable-visible">Isi status</a></td>
-                                    <td class="footable-visible">dr. Mawar Nirmalasari</td>
-                                    <td class="footable-visible">22 Jun 2019</td>
-                                    <td class="footable-visible">30 Jun 2019</td>
+                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$no++}}</td>
+                                    <td class="footable-visible">{{$data->nama_pasien}}</a></td>
+                                    <td class="footable-visible"></a>Belum Membayar</td>
+                                    <td class="footable-visible">{{$data->nama_user}}</td>
+                                    <td class="footable-visible">{{$data->tanggal_masuk}}</td>
+                                    <td class="footable-visible">{{$data->tanggal_keluar}}</td>
                                     <td class="footable-visible">9 Hari</td>
-                                    <td class="footable-visible">III </td>
-                                    <td class="footable-visible">Rp 2.000.000,00 </td>
+                                    <td class="footable-visible">{{$data->nama_ruang}}</td>
+                                    <td class="footable-visible"></td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

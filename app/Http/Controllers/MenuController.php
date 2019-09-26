@@ -27,7 +27,7 @@ class MenuController extends Controller
                     $modul .= '<li class="nav-item">'.
                                     '<a href="#" class="nav-link" onclick="changeMenu('."'".$menus[$i]->url."'".')">'.
                                         '<i class="'.$menus[$i]->icon.'"></i>'.
-                                        '<span>'.$menus[$i]->name.'</span>'.
+                                        '<span>'.$menus[$i]->nama_menu.'</span>'.
                                     '</a>'.
                                 '</li>';
                     $view .= $modul;
@@ -36,13 +36,13 @@ class MenuController extends Controller
                     $modul .='<li class="nav-item nav-item-submenu">'.
                                 '<a href="#" class="nav-link ">'.
                                     '<i class="'.$menus[$i]->icon.'"></i>'.
-                                    '<span>'.$menus[$i]->name.'</span>'.
+                                    '<span>'.$menus[$i]->nama_menu.'</span>'.
                                 '</a>';
 
                             for($j=0; $j< count($child); $j++){
                                 // $checkMenu = FunctionHelper::checkMenu($child($j)->$url);
                                 // if($checkMenu){
-                                    $menu .= '<ul class="nav nav-group-sub" data-submenu-title="Layouts"><li class="nav-item"><a href="#" class="nav-link" onclick="changeMenu('."'".$child[$j]->url."'".')">'.$child[$j]->name.'</a></li></ul>';
+                                    $menu .= '<ul class="nav nav-group-sub" data-submenu-title="Layouts"><li class="nav-item"><a href="#" class="nav-link" onclick="changeMenu('."'".$child[$j]->url."'".')">'.$child[$j]->nama_menu.'</a></li></ul>';
                                 // }
                         }
                     $view .= $modul.$menu.'</li>';

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\RawatInap;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+use App\Ruang;
 
 class RuangController extends Controller
 {
@@ -13,8 +15,12 @@ class RuangController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('rawatinap.ruang');
+    {   
+        $ruang = DB::table('ruang')
+                ->join('kelas','ruang.id_kelas','=','kelas.id')
+                ->select('ruang.*','kelas.*')
+                ->get();  
+        return view('rawatinap.ruang',['ruang' => $ruang]);
     }
 
     /**
