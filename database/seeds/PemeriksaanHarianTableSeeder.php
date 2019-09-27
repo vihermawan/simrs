@@ -12,7 +12,9 @@ class PemeriksaanHarianTableSeeder extends Seeder
     public function run()
     {
         DB::table('pemeriksaan_harian')->insert([
-            'deskripsi' => 'ganti infus',
+            'id_pasien' => 1,
+            'id_user' => 2,
+            'id_tindakan' => 1,
             'tanggal_periksa_harian' => '2019-09-08',
         ]);
     }

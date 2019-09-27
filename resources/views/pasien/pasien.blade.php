@@ -118,6 +118,7 @@
                             @foreach ($pasien as $data)            
                                 <tr>
                                     <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$no++}}</td>
+                                    <td class="footable-visible"><a href="#">{{$data->nama_pasien}}</a></td>
                                     <td class="footable-visible">{{$data->nama_pasien}}</td>
                                     <td class="footable-visible">{{$data->jenis_kelamin}}</td>
                                     <td class="footable-visible">{{$data->alamat}}</td>
@@ -125,7 +126,14 @@
                                     <td class="footable-visible">{{$data->pendidikan}}</td>
                                     <td class="footable-visible">{{$data->asuransi}}</td>
                                     <td class="footable-visible">{{$data->tempat_lahir}}</td>
-                                    <td class="footable-visible"><button disabled="disabled">Action</button></td>
+                                    <td class="footable-visible">
+                                        <form method="POST" action="{{route('pasien.destroy', $data->id )}}" class="dropdown-item">                            
+                                             {{ csrf_field() }}
+                                            {{ method_field('DELETE') }}
+                                        <button><i class="icon-file-excel"></i>Delete</button>
+                                    </form> 
+
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

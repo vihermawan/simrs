@@ -92,20 +92,27 @@
                       <table class="table table-togglable table-hover footable-loaded footable default">
                           <thead>
                               <tr>
+                                  <th>No</th>
                                   <th data-toggle="true" class="footable-visible footable-first-column">Nama Pasien</th>
                                   <th data-hide="true" class="footable-visible">Transaksi/Asuransi</th>
+                                  <th data-hide="true" class="footable-visible">Poli</th>
                                   <th data-hide="true" class="footable-visible">Dokter yang menangani</th>
                                   <th data-hide="true" class="footable-visible">Total Pembayaran</th>
                             </tr>
                           </thead>
                           <tbody>
+                            @php $no = 1; @endphp
+                            @foreach ($transaksijalan as $data)
                               <tr>
-                                  <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>Marth</td>
+                                  <td>{{$no++}}</td>
+                                  <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$data->nama_pasien}}</td>
                                   <td class="footable-visible">BPJS</a></td>
-                                  <td class="footable-visible">dr. Mawar Nirmalasari</td>
+                                  <td class="footable-visible">{{$data->nama_poli}}</a></td>
+                                  <td class="footable-visible">{{$data->nama_user}}</td>
                                   <td class="footable-visible">Rp 150.000,00</td>
                               </tr>
                           </tbody>
+                          @endforeach
                       </table>
                   </div>
               <!--/Tabel-->

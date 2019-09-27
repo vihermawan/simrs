@@ -15,7 +15,9 @@ class CreatePemeriksaanHarianTable extends Migration
     {
         Schema::create('pemeriksaan_harian', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('deskripsi');
+            $table->bigInteger('id_tindakan')->unsigned();
+            $table->bigInteger('id_pasien')->unsigned();
+            $table->bigInteger('id_user')->unsigned();
             $table->dateTime('tanggal_periksa_harian');
             $table->timestamps();
         });

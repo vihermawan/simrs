@@ -103,6 +103,18 @@
                             
                         </div>
 
+
+                    <table class="table datatable-responsive" id="tabel_pendaftaran">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Tanggal Kunjungan</th>
+                                <th>Nama Pasien</th>
+                                <th>Alamat</th>
+                                <th>Poli</th>
+                                <th>Asuransi</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Petugas</th>
                     <table id="tabel_pendaftaran" class="table table-togglable table-hover footable-loaded footable default">
                         <thead>
                             <tr>
@@ -138,7 +150,11 @@
     
                                                 <div class="dropdown-menu dropdown-menu-right">
                                                     <a href="#" class="dropdown-item"><i class="icon-file-pdf"></i>Update</a>
-                                                    <a href="{{route('pendaftaran.destroy', $data->id )}}" class="dropdown-item"><i class="icon-file-excel"></i>Delete</a>     
+                                                    <form method="POST" action="{{route('pendaftaran.destroy', $data->id_daftar )}}" class="dropdown-item">                            
+                                                        {{ csrf_field() }}
+                                                        {{ method_field('DELETE') }}
+                                                        <button><i class="icon-file-excel"></i>Delete</button>
+                                                    </form> 
                                                 </div>
                                             </div>
                                         </div>
@@ -450,6 +466,12 @@
 
 </div>
 
+
+
+ <script>
+    $(document).ready(function() {
+        $('#tabel_pendaftaran').DataTable();
+    } );
  <script>
     // $(document).ready(function() {
     //     $('#tabel_pendaftaran').DataTable();
