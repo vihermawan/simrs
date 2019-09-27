@@ -4,6 +4,9 @@ namespace App\Http\Controllers\RawatJalan;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+use App\Pemeriksaan;
+use App\RawatJalan;
 
 class PasienController extends Controller
 {
@@ -14,7 +17,16 @@ class PasienController extends Controller
      */
     public function index()
     {
-        return view('rawatjalan.pasien');
+        $rawatjalan = DB::table('rawat_jalan')
+                        ->join('pasien','rawat_jalan.id_pasien','=','pasien.id')
+                        ->join('users','rawat_jalan.id_user', '=', 'users.id')
+                        ->join('pemeriksaan','rawat_jalan.id_pemeriksaan','=','pemeriksaan.id')
+                        ->join('poli','pemeriksaan.id_poli','=','poli.id')
+                        ->join('tindakan','pemeriksaan.id_tindakan','=','tindakan.id')
+                        ->join('resep','pemeriksaan.id_resep','=','resep.id')
+                        ->select('pasien.*','pemeriksaan.*','users.*','rawat_jalan.*','poli.*','tindakan.*','resep.*')
+                        ->get();   
+        return view('rawatjalan.pasien',['rawatjalan' => $rawatjalan]);
     }
 
     /**

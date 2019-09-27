@@ -74,7 +74,7 @@
                 <!--Tabel -->
                 <div class="card">
                     <div class="card-header header-elements-inline">
-                        <h5 class="card-title">Tabel Tindakan</h5>
+                        <h5 class="card-title">Tabel Pemeriksaan Harian</h5>
                         <div class="header-elements">
                             <div class="list-icons">
                                 <a class="list-icons-item" data-action="collapse"></a>
@@ -99,27 +99,26 @@
                                 <th data-hide="phone,tablet" class="footable-visible">Nama Pasien</th>
                                 <th data-hide="phone,tablet" data-name="harga-tindakan" class="footable-visible">Petugas
                                 </th>
-                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Tanggal
-                                    Pemeriksaan</th>
-                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Deskripsi</th>
-                                <th class="text-center footable-visible footable-last-column" style="width: 30px;"><i
-                                        class="icon-menu-open2"></i></th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Tanggal Pemeriksaan</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Tindakan</th>
+                                <th class="text-center footable-visible footable-last-column" style="width: 30px;"><i class="icon-menu-open2"></i></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="footable-visible footable-first-column"><span
-                                        class="footable-toggle"></span>Marth</td>
-                                <td class="footable-visible">Traffic Court Referee</td>
-                                <td class="footable-visible">22 Jun 1972</td>
-                                <td class="footable-visible"><span class="badge badge-success">Active</span></td>
+                            @php $no = 1; @endphp
+                            @foreach ($pemeriksaanharian as $data)
+                                <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$no++}}</td>
+                                <td class="footable-visible">{{$data->nama_pasien}}</td>
+                                <td class="footable-visible">{{$data->nama_user}}</td>
+                                <td class="footable-visible"><span class="badge badge-success">{{$data->tanggal_periksa_harian}}</span></td>
+                                <td class="footable-visible"><span class="badge badge-success">{{$data->nama_tindakan}}</span></td>
                                 <td class="text-center footable-visible footable-last-column">
                                     <div class="list-icons">
                                         <div class="dropdown">
                                             <a href="#" class="list-icons-item" data-toggle="dropdown">
                                                 <i class="icon-menu9"></i>
                                             </a>
-
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export
                                                     to .pdf</a>
@@ -132,6 +131,7 @@
                                     </div>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

@@ -103,6 +103,18 @@
                             
                         </div>
 
+
+                    <table class="table datatable-responsive" id="tabel_pendaftaran">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Tanggal Kunjungan</th>
+                                <th>Nama Pasien</th>
+                                <th>Alamat</th>
+                                <th>Poli</th>
+                                <th>Asuransi</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Petugas</th>
                     <table id="tabel_pendaftaran" class="table table-togglable table-hover footable-loaded footable default">
                         <thead>
                             <tr>
@@ -454,6 +466,12 @@
 
 </div>
 
+
+
+ <script>
+    $(document).ready(function() {
+        $('#tabel_pendaftaran').DataTable();
+    } );
  <script>
     // $(document).ready(function() {
     //     $('#tabel_pendaftaran').DataTable();

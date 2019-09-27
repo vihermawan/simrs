@@ -4,8 +4,10 @@ namespace App\Http\Controllers\RawatInap;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+use App\PemeriksaanHarian;
 
-class TindakanController extends Controller
+class PemeriksaanHarianController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +15,14 @@ class TindakanController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('rawatinap.tindakan');
+    {   
+        $pemeriksaanharian = DB::table('pemeriksaan_harian')
+                            ->join('pasien','pemeriksaan_harian.id_pasien','=','pasien.id')
+                            ->join('users','pemeriksaan_harian.id_user','=','users.id')
+                            ->join('tindakan','pemeriksaan_harian.id_tindakan','=','tindakan.id')
+                            ->select('pasien.*','users.*','tindakan.*','pemeriksaan_harian.*')
+                            ->get();  
+        return view('rawatinap.pemeriksaanharian',['pemeriksaanharian' => $pemeriksaanharian]);
     }
 
     /**

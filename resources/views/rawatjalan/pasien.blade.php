@@ -73,7 +73,7 @@
                 <!--Tabel -->
                 <div class="card">
                     <div class="card-header header-elements-inline">
-                        <h5 class="card-title">Tabel Pendaftaran</h5>
+                        <h5 class="card-title">Tabel Pasien Rawat Inap</h5>
                         <div class="header-elements">
                             <div class="list-icons">
                                 <a class="list-icons-item" data-action="collapse"></a>
@@ -99,8 +99,7 @@
                                 <th data-hide="phone,tablet" class="footable-visible">Poli</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Petugas
                                 </th>
-                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">
-                                    Pemeriksaan</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Pemeriksaan</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Resep</th>
                                 <th data-hide="phone" data-ignore="true" class="footable-visible">Tanggal Pemeriksaan</th>
                                 <th class="text-center footable-visible footable-last-column" style="width: 30px;"><i
@@ -109,12 +108,15 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="footable-visible footable-first-column"><span
-                                        class="footable-toggle"></span>Marth</td>
-                                <td class="footable-visible"><a href="#">Enright</a></td>
-                                <td class="footable-visible">Traffic Court Referee</td>
-                                <td class="footable-visible">tessss</td>
-                                <td class="footable-visible"><span class="badge badge-success">Active</span></td>
+                            @php $no = 1; @endphp
+                            @foreach ($rawatjalan as $data)
+                                <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$no++}}</td>
+                                <td class="footable-visible"><a href="#">{{$data->nama_pasien}}</a></td>
+                                <td class="footable-visible">{{$data->nama_poli}}</td>
+                                <td class="footable-visible">{{$data->nama_user}}</td>
+                                <td class="footable-visible"><span class="badge badge-success">{{$data->nama_tindakan}}</span></td>
+                                <td class="footable-visible"><span class="badge badge-success">{{$data->jumlah_resep}}</span></td>
+                                <td class="footable-visible"><span class="badge badge-success">{{$data->tanggal_masuk}}</span></td>
                                 <td class="text-center footable-visible footable-last-column">
                                     <div class="list-icons">
                                         <div class="dropdown">
@@ -134,6 +136,7 @@
                                     </div>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
