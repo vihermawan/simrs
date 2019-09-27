@@ -15,10 +15,14 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::orderBy('name', 'asc')->get();
-        return view('setting.user', [
-            'users' => $users,
-        ]);
+        $users = User::with('role')->orderBy('nama_user', 'asc')->get();
+
+        $users->each(function($user){
+            return view('setting.user', [
+                'users' => $user,
+            ]);
+        });
+        // return $users->role;
     }
 
     /**
