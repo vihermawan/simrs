@@ -17,8 +17,7 @@ class CreateResepTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('id_obat')->unsigned();
             $table->string('jumlah_resep');
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamps();
         });
     }
 

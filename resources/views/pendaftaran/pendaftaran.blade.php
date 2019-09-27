@@ -1,5 +1,11 @@
+<!-- Theme JS files -->
+<script src="{{url('/')}}/template/global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/plugins/tables/datatables/extensions/responsive.min.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/plugins/forms/selects/select2.min.js"></script>
 
-
+<script src="{{url('/')}}/template/assets/js/app.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/demo_pages/datatables_responsive.js"></script>
+<!-- /theme JS files -->
 <div id="div-content">
     <!-- Page header -->
     <div class="page-header page-header-light">
@@ -97,6 +103,7 @@
                             
                         </div>
 
+
                     <table class="table datatable-responsive" id="tabel_pendaftaran">
                         <thead>
                             <tr>
@@ -108,6 +115,18 @@
                                 <th>Asuransi</th>
                                 <th>Jenis Kelamin</th>
                                 <th>Petugas</th>
+                    <table id="tabel_pendaftaran" class="table table-togglable table-hover footable-loaded footable default">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th data-hide="phone" class="footable-visible">Tanggal Kunjungan</th>
+                                <th data-toggle="true" class="footable-visible footable-first-column">Nama Pasien</th>
+                                <th data-hide="phone,tablet" class="footable-visible">Alamat</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Poli</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Asuransi</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Jenis Kelamin</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Petugas</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -122,6 +141,20 @@
                                 <td >{{$data->jenis_pembayaran}}</td>
                                 <td>{{$data->jenis_kelamin}}</td>
                                 <td>{{$data->nama_pasien}}</td>
+                                <td class="text-center footable-visible footable-last-column">
+                                        <div class="list-icons">
+                                            <div class="dropdown">
+                                                <a href="#" class="list-icons-item" data-toggle="dropdown">
+                                                    <i class="icon-menu9"></i>
+                                                </a>
+    
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item"><i class="icon-file-pdf"></i>Update</a>
+                                                    <a href="{{route('pendaftaran.destroy', $data->id )}}" class="dropdown-item"><i class="icon-file-excel"></i>Delete</a>     
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -430,8 +463,13 @@
 </div>
 
 
+
  <script>
     $(document).ready(function() {
         $('#tabel_pendaftaran').DataTable();
     } );
+ <script>
+    // $(document).ready(function() {
+    //     $('#tabel_pendaftaran').DataTable();
+    // });
  </script>

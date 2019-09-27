@@ -18,8 +18,7 @@ class CreateRuangTable extends Migration
             $table->bigInteger('id_kelas')->unsigned();
             $table->string('nama_ruang');
             $table->integer('status_ruang');
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamps();
         });
     }
 

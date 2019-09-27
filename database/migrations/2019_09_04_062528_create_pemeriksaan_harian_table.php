@@ -19,8 +19,7 @@ class CreatePemeriksaanHarianTable extends Migration
             $table->bigInteger('id_pasien')->unsigned();
             $table->bigInteger('id_user')->unsigned();
             $table->dateTime('tanggal_periksa_harian');
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamps();
         });
     }
 
