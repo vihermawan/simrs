@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Pasien;
 use App\Daftar;
 use App\RolePembayaran;
+use Redirect;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
@@ -24,7 +25,7 @@ class PendaftaranController extends Controller
                        ->join('poli','daftar.id_poli','=','poli.id')
                        ->join('role_pembayaran','daftar.id_role_pembayaran', '=', 'role_pembayaran.id')
                        ->join('pasien','daftar.id_pasien','=','pasien.id')
-                       ->select('daftar.*','poli.*','role_pembayaran.*','pasien.*')
+                       ->select('daftar.id as id_daftar','poli.*','role_pembayaran.*','pasien.*')
                        ->get();
                         
         return view('pendaftaran.pendaftaran',['daftar' => $daftar]);
@@ -93,10 +94,9 @@ class PendaftaranController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        echo "bangsat destroy";
-        // $data = Daftar::find($id);
-        // $data->delete();
-        // return Redirect::back();
+    {   
+        $data = Daftar::find($id);
+        $data->delete();
+        return Redirect::back();
     }
 }

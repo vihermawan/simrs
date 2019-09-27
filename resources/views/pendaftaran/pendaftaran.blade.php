@@ -138,7 +138,11 @@
     
                                                 <div class="dropdown-menu dropdown-menu-right">
                                                     <a href="#" class="dropdown-item"><i class="icon-file-pdf"></i>Update</a>
-                                                    <a href="{{route('pendaftaran.destroy', $data->id )}}" class="dropdown-item"><i class="icon-file-excel"></i>Delete</a>     
+                                                    <form method="POST" action="{{route('pendaftaran.destroy', $data->id_daftar )}}" class="dropdown-item">                            
+                                                        {{ csrf_field() }}
+                                                        {{ method_field('DELETE') }}
+                                                        <button><i class="icon-file-excel"></i>Delete</button>
+                                                    </form> 
                                                 </div>
                                             </div>
                                         </div>
