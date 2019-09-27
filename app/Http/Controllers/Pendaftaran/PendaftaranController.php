@@ -38,7 +38,7 @@ class PendaftaranController extends Controller
      */
     public function create()
     {
-        //
+        echo "bangsat create";
     }
 
     /**
@@ -49,7 +49,7 @@ class PendaftaranController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        echo "bangsat store";
     }
 
     /**
@@ -60,7 +60,7 @@ class PendaftaranController extends Controller
      */
     public function show($id)
     {
-        //
+        echo "bangsat show";
     }
 
     /**
@@ -71,7 +71,7 @@ class PendaftaranController extends Controller
      */
     public function edit($id)
     {
-        //
+        echo "bangsat edit";
     }
 
     /**
@@ -83,7 +83,7 @@ class PendaftaranController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        echo "bangsat update";
     }
 
     /**
@@ -94,6 +94,9 @@ class PendaftaranController extends Controller
      */
     public function destroy($id)
     {
-        //
+        echo "bangsat destroy";
+        // $data = Daftar::find($id);
+        // $data->delete();
+        // return Redirect::back();
     }
 }
