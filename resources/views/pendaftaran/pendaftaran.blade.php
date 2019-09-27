@@ -103,6 +103,18 @@
                             
                         </div>
 
+
+                    <table class="table datatable-responsive" id="tabel_pendaftaran">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Tanggal Kunjungan</th>
+                                <th>Nama Pasien</th>
+                                <th>Alamat</th>
+                                <th>Poli</th>
+                                <th>Asuransi</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Petugas</th>
                     <table id="tabel_pendaftaran" class="table table-togglable table-hover footable-loaded footable default">
                         <thead>
                             <tr>
@@ -114,6 +126,7 @@
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Asuransi</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Jenis Kelamin</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Petugas</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth" class="footable-visible">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -128,6 +141,24 @@
                                 <td >{{$data->jenis_pembayaran}}</td>
                                 <td>{{$data->jenis_kelamin}}</td>
                                 <td>{{$data->nama_pasien}}</td>
+                                <td class="text-center footable-visible footable-last-column">
+                                        <div class="list-icons">
+                                            <div class="dropdown">
+                                                <a href="#" class="list-icons-item" data-toggle="dropdown">
+                                                    <i class="icon-menu9"></i>
+                                                </a>
+    
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item"><i class="icon-file-pdf"></i>Update</a>
+                                                    <form method="POST" action="{{route('pendaftaran.destroy', $data->id_daftar )}}" class="dropdown-item">                            
+                                                        {{ csrf_field() }}
+                                                        {{ method_field('DELETE') }}
+                                                        <button><i class="icon-file-excel"></i>Delete</button>
+                                                    </form> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -435,8 +466,14 @@
 
 </div>
 
+
+
  <script>
     $(document).ready(function() {
         $('#tabel_pendaftaran').DataTable();
-    });
+    } );
+ <script>
+    // $(document).ready(function() {
+    //     $('#tabel_pendaftaran').DataTable();
+    // });
  </script>

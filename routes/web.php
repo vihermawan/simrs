@@ -15,16 +15,18 @@ Route::get('/', 'MenuController@index')->name('main');
 Auth::routes();
 
 Route::middleware(['guest'])->group(function () {
-  Route::get('/', 'MenuController@index');
+Route::get('/', 'MenuController@index');
 
   // modul dashboard
-  Route::get('dashboard', 'Dashboard\DashboardController@index');
+  Route::get('dashboard', 'Dashboard\DashboardController@index')->name('hello');
 
   // modul pendaftaran
   Route::get('pendaftaran', 'Pendaftaran\PendaftaranController@index');
+  Route::delete('pendaftaran/{id}', 'Pendaftaran\PendaftaranController@destroy')->name('pendaftaran.destroy');
 
   // modul pasien
   Route::get('pasien', 'Pasien\PasienController@index');
+  Route::delete('pasien/{id}', 'Pasien\PasienController@destroy')->name('pasien.destroy');
 
   // modul rawat inap
   Route::get('pasien-rawat', 'RawatInap\PasienRawatController@index');
@@ -33,7 +35,7 @@ Route::middleware(['guest'])->group(function () {
 
   Route::get('ruang', 'RawatInap\RuangController@index');
 
-  Route::get('rawat-inap/tindakan', 'RawatInap\TindakanController@index');
+  Route::get('pemeriksaan-harian', 'RawatInap\PemeriksaanHarianController@index');
 
   // modul rawat jalan
   Route::get('rawat-jalan/pasien', 'RawatJalan\PasienController@index');

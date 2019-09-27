@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Pasien;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Pasien;
+use Redirect;
 
 class PasienController extends Controller
 {
@@ -82,6 +83,8 @@ class PasienController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Pasien::find($id);
+        $data->delete();
+        return Redirect::back();
     }
 }

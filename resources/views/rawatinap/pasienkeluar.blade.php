@@ -100,14 +100,16 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            @php $no = 1; @endphp
+                            @foreach ($pasienkeluar as $data) 
                                 <tr>
-                                    <td class="footable-visible footable-first-column"><span
-                                    class="footable-toggle"></span>Marth</td>
-                                    <td class="footable-visible">Traffic Court Referee</td>
-                                    <td class="footable-visible">22 Jun 1972</td>
-                                    <td class="footable-visible"><span class="badge badge-success">Active</span></td>
-                                    
+                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$no++}}</td>
+                                    <td class="footable-visible">{{$data->nama_pasien}}</td>
+                                    <td class="footable-visible">{{$data->tanggal_masuk}}</td>
+                                    <td class="footable-visible">{{$data->tanggal_keluar}}</td>
+                                    <td class="footable-visible"><span class="badge badge-success">{{$data->nama_user}}</span></td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
