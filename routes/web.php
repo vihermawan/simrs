@@ -26,6 +26,7 @@ Route::get('/', 'MenuController@index');
 
   // modul pasien
   Route::get('pasien', 'Pasien\PasienController@index');
+  Route::delete('pasien/{id}', 'Pasien\PasienController@destroy')->name('pasien.destroy');
 
   // modul rawat inap
   Route::get('pasien-rawat', 'RawatInap\PasienRawatController@index');

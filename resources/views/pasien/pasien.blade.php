@@ -126,7 +126,14 @@
                                     <td class="footable-visible">{{$data->pendidikan}}</td>
                                     <td class="footable-visible">{{$data->asuransi}}</td>
                                     <td class="footable-visible">{{$data->tempat_lahir}}</td>
-                                    <td class="footable-visible"><button disabled="disabled">Action</button></td>
+                                    <td class="footable-visible">
+                                        <form method="POST" action="{{route('pasien.destroy', $data->id )}}" class="dropdown-item">                            
+                                             {{ csrf_field() }}
+                                            {{ method_field('DELETE') }}
+                                        <button><i class="icon-file-excel"></i>Delete</button>
+                                    </form> 
+
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
