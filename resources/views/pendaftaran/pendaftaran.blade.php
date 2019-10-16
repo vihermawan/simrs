@@ -371,20 +371,12 @@
     </div>
     <!--Modal Form Pendaftaran Baru -->
     <div id="modal_theme_primary" class="modal fade" tabindex="-2">
-					<div class="modal-dialog modal-full">
-						<div class="modal-content">
-							<div class="modal-header bg-primary">
-								<h6 class="modal-title">Form Pendaftaran Baru</h6>
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-							</div>
-
-							<div class="modal-body">
-                            <div class="row">
-					           <!-- 2 columns form -->
-				
-					<div class="card-header header-elements-inline">
-	
-					</div>
+  			<div class="modal-dialog modal-full">
+    			<div class="modal-content">
+                    <div class="modal-header bg-success">
+                        <h6 class="modal-title">Form Pendaftaran</h6>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
 
 					<div class="card-body">
 						<form action="#">
@@ -401,70 +393,181 @@
 										</div>
 
                                         <div class="form-group row">
-                                                        <label class="col-lg-4 col-form-label">Jenis Kelamin:</label>
-                                                        <div class="col-lg-8">
-                                                            <div class="form-check form-check-inline">
-                                                                <label class="form-check-label">
-                                                                    <div class="uniform-choice"><span class="checked"><input type="radio" class="form-input-styled" name="gender" checked="" data-fouc=""></span></div>
-                                                                    Laki - laki
-                                                                </label>
-                                                            </div>
+                                            <label class="col-lg-4 col-form-label">Jenis Kelamin:</label>
+                                                <div class="col-lg-8">
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label">
+                                                            <div class="uniform-choice"><span class="checked"><input type="radio" class="form-input-styled" name="gender" checked="" data-fouc=""></span></div>
+                                                                Laki - laki
+                                                        </label>
+                                                    </div>
 
-                                                            <div class="form-check form-check-inline">
-                                                                <label class="form-check-label">
-                                                                    <div class="uniform-choice"><span><input type="radio" class="form-input-styled" name="gender" data-fouc=""></span></div>
-                                                                    Perempuan
-                                                                </label>
-                                                            </div>
-                                                        </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label">
+                                                            <div class="uniform-choice"><span><input type="radio" class="form-input-styled" name="gender" data-fouc=""></span></div>
+                                                                Perempuan
+                                                        </label>
+                                                    </div>
+                                                </div>
                                          </div>
+
                                          <div class="form-group row">
-											<label class="col-lg-4 col-form-label">Nama Petugas:</label>
+                                            <label class="col-form-label col-lg-4">Alamat Pasien:</label>
+                                            <div class="col-lg-8">
+                                                <textarea rows="3" cols="3" class="form-control"></textarea>
+                                            </div>
+                                         </div>
+                                         
+                                         <div class="form-group row">
+											<label class="col-lg-4 col-form-label">Propinsi:</label>
 											<div class="col-lg-8">
-														<input type="text" class="form-control">
+												<input type="text" class="form-control">
 											</div>
 										</div>
-                                   
+
+                                        <div class="form-group row">
+											<label class="col-lg-4 col-form-label">Kabupaten:</label>
+											<div class="col-lg-8">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+
+                                        <div class="form-group row">
+											<label class="col-lg-4 col-form-label">Kecamatan:</label>
+											<div class="col-lg-8">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+
+                                        <div class="form-group row">
+											<label class="col-lg-4 col-form-label">Desa:</label>
+											<div class="col-lg-8">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+									</fieldset>
+								</div>
+
+
+								<div class="col-md-4">
+									<fieldset>
+                                    <legend class="font-weight-semibold"><i class="icon-truck mr-2"></i> IDENTITAS PASIEN</legend>
+                                    <div class="form-group row">
+										<label class="col-lg-4 col-form-label">Golongan Darah:</label>
+										<div class="col-lg-8">
+											<select class="form-control form-control-select">
+                                                <option value="AK">A</option>
+                                                <option value="HI">B</option>
+                                                <option value="HI">O</option>
+                                                <option value="HI">AB</option>
+											</select>
+										</div>
+									</div>
+
+                                    <div class="form-group row">
+										<label class="col-lg-4 col-form-label">Status:</label>
+										<div class="col-lg-8">
+											<select class="form-control form-control-select">
+                                                <option value="AK">Menikah</option>
+                                                <option value="HI">Belum Menikah</option>
+                                                <option value="HI">Janda</option>
+                                                <option value="HI">Duda</option>
+											</select>
+										</div>
+									</div>
+
+                                    <div class="form-group row">
+                                        <label class="col-lg-4 col-form-label">Tempat Lahir:</label>
+                                        <div class="col-lg-8">
+                                            <input type="text" class="form-control">
+                                        </div>
+									</div>
+
+                                    <div class="form-group row">
+									    <label class="col-form-label col-lg-2">Umur (Th)</label>
+                                        <div class="col-lg-3">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <label class="col-form-label col-md-3">Tgl Lahir</label>
+                                        <div class="col-md-4">
+                                            <input class="form-control" type="datetime-local" name="datetime-local">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-lg-4 col-form-label">Pekerjaan:</label>
+                                        <div class="col-lg-8">
+                                            <input type="text" class="form-control">
+                                        </div>
+									</div>
+
+                                    <div class="form-group row">
+                                        <label class="col-lg-4 col-form-label">Pendidikan:</label>
+                                        <div class="col-lg-8">
+                                            <input type="text" class="form-control">
+                                        </div>
+									</div>
+
+                                    <div class="form-group row">
+										<label class="col-lg-4 col-form-label">Agama:</label>
+										<div class="col-lg-8">
+											<select class="form-control form-control-select">
+                                                <option>A</option>
+                                                <option>B</option>
+                                                <option>O</option>
+                                                <option>AB</option>
+											</select>
+										</div>
+									</div>
+									</fieldset>
+								</div>
+
+                                <div class="col-md-4">
+									<fieldset>
+					                	<legend class="font-weight-semibold"><i class="icon-truck mr-2"></i>PEMERIKSAAN</legend>
+										<div class="form-group row">
+											<label class="col-lg-4 col-form-label">Nama Petugas:</label>
+											<div class="col-lg-8">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+
                                         <div class="form-group row">
 										    <label class="col-lg-4 col-form-label">Asuransi:</label>
-										        <div class="col-lg-8">
-											        <select class="form-control form-control-select">
-                                                        <option>BPJS</option>
-                                                        <option>Non BPJS</option>
-											        </select>
-										        </div>
+                                            <div class="col-lg-8">
+                                                <select class="form-control form-control-select">
+                                                    <option>BPJS</option>
+                                                    <option>Non BPJS</option>
+                                                </select>
+                                            </div>
 									    </div>
 
                                         <div class="form-group row">
 										    <label class="col-lg-4 col-form-label">Nama Poli:</label>
-										        <div class="col-lg-8">
-											        <select class="form-control form-control-select">
-                                                        <option>Poli Anak</option>
-                                                        <option>Poli Bedah</option>
-                                                        <option>Poli Gigi</option>
-                                                        <option>Poli THT</option>
-                                                        <option>Poli Penyakit Dalam</option>
-											        </select>
-										        </div>
+                                            <div class="col-lg-8">
+                                                <select class="form-control form-control-select">
+                                                    <option>Poli Anak</option>
+                                                    <option>Poli Bedah</option>
+                                                    <option>Poli Gigi</option>
+                                                    <option>Poli THT</option>
+                                                    <option>Poli Penyakit Dalam</option>
+                                                </select>
+                                            </div>
 									    </div>
-
-                                       
 									</fieldset>
 								</div>
-                               
 							</div>
 
 							<div class="text-right">
                                 <button type="button" class="btn btn-primary">Simpan Data</button>
 							</div>
 						</form>
-					</div>
-            </div>
+					</div>  
+                </div>
 				<!-- /2 columns form -->
 
         <!--End Modal Pendaftaran-->
-
-</div>
+    </div>
 
 
 
