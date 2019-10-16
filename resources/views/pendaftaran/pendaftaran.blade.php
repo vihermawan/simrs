@@ -132,7 +132,7 @@
         </div>
         <!-- /dashboard content -->
   </div>
-                    </div>
+</div>
         <!--Modal Form Pendaftaran -->
         <div id="modal_theme_success" class="modal fade" tabindex="-2">
   			<div class="modal-dialog modal-full">
@@ -161,7 +161,7 @@
                                                 <div class="col-lg-8">
                                                     <div class="form-check form-check-inline">
                                                         <label class="form-check-label">
-                                                            <div class="uniform-choice"><span class="checked"><input type="radio" class="form-input-styled" name="gender" checked="" data-fouc=""></span></div>
+                                                            <div class="uniform-choice"><span class=""><input type="radio" class="form-input-styled" name="gender" checked="" data-fouc=""></span></div>
                                                                 Laki - laki
                                                         </label>
                                                     </div>
@@ -323,7 +323,7 @@
 							</div>
 
 							<div class="text-right">
-                                <button type="button" class="btn btn-primary">Simpan Data</button>
+                                <button type="submit" class="btn btn-primary">Simpan Data</button>
 							</div>
 						</form>
 					</div>  

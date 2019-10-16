@@ -39,7 +39,6 @@
 <script src="{{url('/')}}/template/global_assets/js/main/bootstrap.bundle.min.js"></script>
 <script src="{{url('/')}}/template/global_assets/js/plugins/loaders/blockui.min.js"></script>
 <script src="{{url('/')}}/template/global_assets/js/main/jquery.min.js"></script>
-<script src="{{url('/')}}/template/global_assets/js/plugins/forms/selects/select2.min.js"></script>	
 <script src="{{url('/')}}/template/global_assets/js/demo_pages/datatables_responsive.js"></script>
 <!-- /core JS files -->
 
@@ -53,6 +52,9 @@
 
 <script src="{{url('/')}}/template/layout_3/LTR/default/full/assets/js/app.js"></script>
 <script src="{{url('/')}}/template/global_assets/js/demo_pages/dashboard.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/demo_pages/form_layouts.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/plugins/forms/selects/select2.min.js"></script>
+<script src="{{url('/')}}/template/global_assets/js/plugins/forms/styling/uniform.min.js"></script>
 
 <!-- /theme JS files -->
 
