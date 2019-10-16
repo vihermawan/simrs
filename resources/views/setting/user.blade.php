@@ -76,7 +76,7 @@
                                 <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$no++}}</td>
                                 <td class="footable-visible">{{$data->nama_user}}</td>
                                 <td class="footable-visible">{{$data->email}}</td>
-                                <td class="footable-visible">{{$data->role}}</td>
+                                <td class="footable-visible">{{$data->role->nama_role}}</td>
                                 <td>
                                   <button onclick="showUser({{$data->id}})" class="show-modal btn btn-info" title="Show">
                                     <span class="glyphicon glyphicon-eye-open"></span>

@@ -17,12 +17,12 @@ class UserController extends Controller
     {
         $users = User::with('role')->orderBy('nama_user', 'asc')->get();
 
-        $users->each(function($user){
-            return view('setting.user', [
-                'users' => $user,
-            ]);
-        });
-        // return $users->role;
+        // $users->each(function($user){
+            // return view('setting.user', [
+            //     'users' => $users,
+            // ]);
+        // });
+        return $users;
     }
 
     /**
