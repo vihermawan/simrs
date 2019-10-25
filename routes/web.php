@@ -54,6 +54,9 @@ Route::get('/', 'MenuController@index');
   Route::get('penyakit', 'Lainnya\PenyakitController@index');
 
   Route::get('obat', 'Lainnya\ObatController@index');
+  Route::post('obat', 'Lainnya\ObatController@store');
+  
+  
 
   Route::get('resep', 'Lainnya\ResepController@index');
 
