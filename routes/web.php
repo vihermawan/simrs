@@ -22,6 +22,9 @@ Route::get('/', 'MenuController@index');
 
   // modul pendaftaran
   Route::get('pendaftaran', 'Pendaftaran\PendaftaranController@index');
+
+  Route::get('create','Pendaftaran\PendaftaranController@create')->name('create');
+
   Route::delete('pendaftaran/{id}', 'Pendaftaran\PendaftaranController@destroy')->name('pendaftaran.destroy');
 
   // modul pasien
