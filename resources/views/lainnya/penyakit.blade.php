@@ -99,11 +99,11 @@
                             </thead>
                             <tbody>
                             @php $no = 1; @endphp
-                            @foreach($penyakit as $p)
+                            @foreach($penyakit as $e)
                                 <tr>
                                     <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$no++}}</td>
-                                    <td class="footable-visible"><a href="#">{{$p->nama_penyakit}}</a></td>
-                                    <td class="footable-visible">{{$p->jenis_penyakit}}</td> 
+                                    <td class="footable-visible"><a href="#">{{$e->nama_penyakit}}</a></td>
+                                    <td class="footable-visible">{{$e->jenis_penyakit}}</td> 
                                     <td class="text-center footable-visible footable-last-column">
                                         <div class="list-icons">
                                             <div class="dropdown">
