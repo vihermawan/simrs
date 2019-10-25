@@ -98,10 +98,12 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            @php $no = 1; @endphp
+                            @foreach($penyakit as $p)
                                 <tr>
-                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>P001</td>
-                                    <td class="footable-visible"><a href="#">Panu</a></td>
-                                    <td class="footable-visible">Penyakit Kulit</td> 
+                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$no++}}</td>
+                                    <td class="footable-visible"><a href="#">{{$p->nama_penyakit}}</a></td>
+                                    <td class="footable-visible">{{$p->jenis_penyakit}}</td> 
                                     <td class="text-center footable-visible footable-last-column">
                                         <div class="list-icons">
                                             <div class="dropdown">
@@ -118,6 +120,7 @@
                                         </div>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -143,23 +146,18 @@
 								 <div class="col-xl-12">
                                     <!-- Form -->
                                             <div class="card-body">
-                                                <form action="#">
-                                                    <div class="form-group row">
-                                                        <label class="col-lg-3 col-form-label">ID Penyakit:</label>
-                                                        <div class="col-lg-9">
-                                                            <input type="type" class="form-control" placeholder="ID Penyakit ">
-                                                        </div>
-                                                    </div>
+                                                <form id="form_penyakit">
+                                                {{ csrf_field() }}
                                                     <div class="form-group row">
                                                         <label class="col-lg-3 col-form-label">Nama Penyakit:</label>
                                                         <div class="col-lg-9">
-                                                            <input type="text" class="form-control" placeholder="Nama Penyakit">
+                                                            <input type="text" class="form-control" placeholder="Nama Penyakit" name="nama_penyakit" id="nama_penyakit">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label class="col-lg-3 col-form-label">Jenis Penyakit:</label>
                                                         <div class="col-lg-9">
-                                                            <input type="text" class="form-control" placeholder="Jenis Penyakit">
+                                                            <input type="text" class="form-control" placeholder="Jenis Penyakit" name="jenis_penyakit" id="jenis_penyakit">
                                                         </div>
                                                     </div>
                                                            
@@ -172,7 +170,7 @@
 
 							<div class="modal-footer">
 								<button type="button" class="btn btn-link" data-dismiss="modal">Tutup</button>
-								<button type="button" class="btn bg-success">Simpan</button>
+								<button type="button" id="simpan_penyakit" class="btn bg-success">Simpan</button>
 							</div>
 						</div>
 					</div>
@@ -181,6 +179,33 @@
         <!--End Modal Pendaftaran-->
 
     </div>
+
+    <script>
+    $(document).ready(function(){
+        $('#simpan_penyakit').click(function(e){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            e.preventDefault();
+
+            var penyakit = $('#form_penyakit').serialize();
+
+            $.ajax({
+                type: 'POST',
+                url : '/penyakit',
+                data: penyakit,
+                success : function(response){
+                    $('#form_penyakit').trigger('reset');
+                    $('#modal_theme_success').modal('hide');
+                }
+            })
+        })
+
+    })
+    
+</script>
   
 
 
