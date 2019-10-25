@@ -22,8 +22,10 @@ class PasienTableSeeder extends Seeder
             'agama' => 'mayoritas',
             'golongan_darah' => 'AB',
             'pendidikan' => 'Sarjana',
-            'asuransi' => null,
+            'pekerjaan' => 'teller',
             'tempat_lahir' => 'Jakarta',
+            'tanggal_lahir' => '11-10-1999',
+            'umur' => '20',
         ]);
 
         DB::table('pasien')->insert([
@@ -37,8 +39,10 @@ class PasienTableSeeder extends Seeder
             'agama' => 'minoritas',
             'golongan_darah' => 'A',
             'pendidikan' => 'Sarjana',
-            'asuransi' => null,
+            'pekerjaan' => 'Direktur',
             'tempat_lahir' => 'Jakarta',
+            'tanggal_lahir' => '21-12-1999',
+            'umur' => '19',
         ]);
     }
 }

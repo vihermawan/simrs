@@ -18,13 +18,18 @@ Route::middleware(['guest'])->group(function () {
 Route::get('/', 'MenuController@index');
 
   // modul dashboard
-  Route::get('dashboard', 'Dashboard\DashboardController@index');
+  Route::get('dashboard', 'Dashboard\DashboardController@index')->name('hello');
 
   // modul pendaftaran
   Route::get('pendaftaran', 'Pendaftaran\PendaftaranController@index');
 
+  Route::get('create','Pendaftaran\PendaftaranController@create')->name('create');
+
+  Route::delete('pendaftaran/{id}', 'Pendaftaran\PendaftaranController@destroy')->name('pendaftaran.destroy');
+
   // modul pasien
   Route::get('pasien', 'Pasien\PasienController@index');
+  Route::delete('pasien/{id}', 'Pasien\PasienController@destroy')->name('pasien.destroy');
 
   // modul rawat inap
   Route::get('pasien-rawat', 'RawatInap\PasienRawatController@index');

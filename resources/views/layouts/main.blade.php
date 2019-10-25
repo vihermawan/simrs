@@ -18,45 +18,22 @@
 
   {{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"> --}}
   <!-- Core JS files -->
-	<script src="{{url('/')}}/global_assets/js/main/jquery.min.js"></script>
-	<script src="{{url('/')}}/global_assets/js/main/bootstrap.bundle.min.js"></script>
-	<script src="{{url('/')}}/global_assets/js/plugins/loaders/blockui.min.js"></script>
-	<!-- /core JS files -->
+	<script src="{{url('/')}}/template/global_assets/js/main/jquery.min.js"></script>
+	<script src="{{url('/')}}/template/global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="{{url('/')}}/template/global_assets/js/plugins/loaders/blockui.min.js"></script>
+  <!-- /core JS files -->
+  
+  <!-- Theme JS files -->
+	<script src="{{url('/')}}/template/global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="{{url('/')}}/template/global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="{{url('/')}}/template/global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="{{url('/')}}/template/global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+	<script src="{{url('/')}}/template/global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="{{url('/')}}/template/global_assets/js/plugins/pickers/daterangepicker.js"></script>
 
-	<!-- Theme JS files -->
-	<script src="{{url('/')}}/global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
-	<script src="{{url('/')}}/global_assets/js/plugins/tables/datatables/extensions/responsive.min.js"></script>
-	<script src="{{url('/')}}/global_assets/js/plugins/forms/selects/select2.min.js"></script>
-
-	<script src="assets/js/app.js"></script>
-	<script src="{{url('/')}}/global_assets/js/demo_pages/datatables_responsive.js"></script>
+	<script src="{{url('/')}}/template/assets/js/app.js"></script>
+	<script src="{{url('/')}}/template/global_assets/js/demo_pages/dashboard.js"></script>
 	<!-- /theme JS files -->
-
-  <!-- Core JS files -->
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-{{-- <script src="{{url('/')}}/template/global_assets/js/main/jquery.min.js"></script> --}}
-<script src="{{url('/')}}/template/global_assets/js/main/bootstrap.bundle.min.js"></script>
-<script src="{{url('/')}}/template/global_assets/js/plugins/loaders/blockui.min.js"></script>
-<script src="{{url('/')}}/template/global_assets/js/main/jquery.min.js"></script>
-<script src="{{url('/')}}/template/global_assets/js/demo_pages/datatables_responsive.js"></script>
-<!-- /core JS files -->
-
-<!-- Theme JS files -->
-<script src="{{url('/')}}/template/global_assets/js/plugins/visualization/d3/d3.min.js"></script>
-<script src="{{url('/')}}/template/global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
-<script src="{{url('/')}}/template/global_assets/js/plugins/forms/styling/switchery.min.js"></script>
-<script src="{{url('/')}}/template/global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
-<script src="{{url('/')}}/template/global_assets/js/plugins/ui/moment/moment.min.js"></script>
-<script src="{{url('/')}}/template/global_assets/js/plugins/pickers/daterangepicker.js"></script>
-
-<script src="{{url('/')}}/template/layout_3/LTR/default/full/assets/js/app.js"></script>
-<script src="{{url('/')}}/template/global_assets/js/demo_pages/dashboard.js"></script>
-<script src="{{url('/')}}/template/global_assets/js/demo_pages/form_layouts.js"></script>
-<script src="{{url('/')}}/template/global_assets/js/plugins/forms/selects/select2.min.js"></script>
-<script src="{{url('/')}}/template/global_assets/js/plugins/forms/styling/uniform.min.js"></script>
-
-<!-- /theme JS files -->
 
 </head>
 
@@ -241,7 +218,6 @@
     <!-- /page content -->
 </head>
 </html>
-
 
 
 <script type="text/javascript">

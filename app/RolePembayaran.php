@@ -10,6 +10,6 @@ class RolePembayaran extends Model
 
     public function daftar()
     {
-        return $this->belongsTo(Daftar::class, 'id_rolepembayaran');
+        return $this->belongsTo(Daftar::class, 'id_role_pembayaran');
     }
 }

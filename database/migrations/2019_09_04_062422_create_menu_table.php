@@ -19,8 +19,7 @@ class CreateMenuTable extends Migration
             $table->string('nama_menu');
             $table->string('url');
             $table->string('icon');
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamps();
         });
     }
 
