@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Lainnya;
 use App\Obat;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class ObatController extends Controller
 {
@@ -15,7 +16,7 @@ class ObatController extends Controller
      */
     public function index()
     {
-        $obat = Obat::orderBy('nama_obat', 'asc')->get();
+        $obat = DB::table('obat')->get();
         return view('lainnya.obat', ['obat' => $obat]);
         // return $obat;
     }
@@ -25,9 +26,14 @@ class ObatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        // $d = new Obat();
+        // $d->nama_obat = $request->nama_obat;
+        // $d->dosis_obat = $request->dosis_obat;
+        // $d->harga_obat = $request->harga_obat;
+        // $d->jenis_obat = $request->jenis_obat;
+        // $d->save();
     }
 
     /**
@@ -38,7 +44,16 @@ class ObatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $d = new Obat();
+        $d->nama_obat = $request->nama_obat;
+        $d->dosis_obat = $request->dosis_obat;
+        $d->harga_obat = $request->harga_obat;
+        $d->jenis_obat = $request->jenis_obat;
+        $d->save();
+
+        return response()->json([
+            'data' => $d
+        ]);
     }
 
     /**
