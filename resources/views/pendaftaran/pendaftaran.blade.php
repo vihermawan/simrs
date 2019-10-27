@@ -1,12 +1,4 @@
-<!-- Theme JS files -->
-<script src="{{url('/')}}/template/global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
-<script src="{{url('/')}}/template/global_assets/js/plugins/tables/datatables/extensions/responsive.min.js"></script>
-<script src="{{url('/')}}/template/global_assets/js/plugins/forms/selects/select2.min.js"></script>
-
-<script src="{{url('/')}}/template/assets/js/app.js"></script>
-<script src="{{url('/')}}/template/global_assets/js/demo_pages/datatables_responsive.js"></script>
-<!-- /theme JS files -->
-<div id="div-content">
+<div class="content-wrapper">
     <!-- Page header -->
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">

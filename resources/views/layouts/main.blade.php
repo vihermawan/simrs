@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="csrf-token" content="{{ csrf_token() }}" />
   <title>Sistem Informasi Rumah Sakit</title>
 
   <!-- Global stylesheets -->
@@ -16,7 +17,6 @@
   {{-- <link href="{{url('/')}}/template/layout_1/LTR/default/full/ssets/css/colors.min.css" rel="stylesheet" type="text/css"> --}}
   <!-- /global stylesheets -->
 
-  {{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"> --}}
   <!-- Core JS files -->
 	<script src="{{url('/')}}/template/global_assets/js/main/jquery.min.js"></script>
 	<script src="{{url('/')}}/template/global_assets/js/main/bootstrap.bundle.min.js"></script>
@@ -33,6 +33,11 @@
 
 	<script src="{{url('/')}}/template/assets/js/app.js"></script>
 	<script src="{{url('/')}}/template/global_assets/js/demo_pages/dashboard.js"></script>
+
+  <script src="{{url('/')}}/template/global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script src="{{url('/')}}/template/global_assets/js/plugins/forms/selects/select2.min.js"></script>
+  
+	<script src="{{url('/')}}/template/global_assets/js/demo_pages/datatables_basic.js"></script>
 	<!-- /theme JS files -->
 
 </head>
@@ -236,7 +241,7 @@
           type : 'GET',
           url : url,
           success : function (data) {
-              $('#div-content').html(data);
+              $('.content-wrapper').html(data);
           }
       })
   }

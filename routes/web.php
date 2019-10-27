@@ -57,9 +57,11 @@ Route::get('/', 'MenuController@index');
   // modul setting
   Route::get('role', 'Setting\RoleController@index');
 
-  Route::get('user', 'Setting\UserController@index');
+  Route::resource('user', 'Setting\UserController');
 
   Route::get('edit-password', 'Setting\EditPasswordController@index');
+  Route::get('edit-password/get-user', 'Setting\EditPasswordController@getUser');
+  Route::post('edit-password/{id}', 'Setting\EditPasswordController@editPassword');
 
   Route::get('profile', 'Setting\ProfileController@index');
 });
