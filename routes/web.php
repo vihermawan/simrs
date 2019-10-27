@@ -22,6 +22,9 @@ Route::get('/', 'MenuController@index');
 
   // modul pendaftaran
   Route::get('pendaftaran', 'Pendaftaran\PendaftaranController@index');
+
+  Route::get('create','Pendaftaran\PendaftaranController@create')->name('create');
+
   Route::delete('pendaftaran/{id}', 'Pendaftaran\PendaftaranController@destroy')->name('pendaftaran.destroy');
 
   // modul pasien
@@ -49,8 +52,12 @@ Route::get('/', 'MenuController@index');
 
   // modul lainnya
   Route::get('penyakit', 'Lainnya\PenyakitController@index');
+  Route::post('penyakit', 'Lainnya\PenyakitController@store');
 
   Route::get('obat', 'Lainnya\ObatController@index');
+  Route::post('obat', 'Lainnya\ObatController@store');
+  
+  
 
   Route::get('resep', 'Lainnya\ResepController@index');
 

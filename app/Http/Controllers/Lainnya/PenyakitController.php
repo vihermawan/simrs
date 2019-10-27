@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Lainnya;
 
+use App\Penyakit;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class PenyakitController extends Controller
 {
@@ -14,7 +16,9 @@ class PenyakitController extends Controller
      */
     public function index()
     {
-        return view('lainnya.penyakit');
+        $penyakit = DB::table('penyakit')->get();
+        return view('lainnya.penyakit', ['penyakit' => $penyakit]);
+      
     }
 
     /**
@@ -35,7 +39,14 @@ class PenyakitController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $p = new Penyakit();
+        $p->nama_penyakit = $request->nama_penyakit;
+        $p->jenis_penyakit = $request->jenis_penyakit;
+        $p->save();
+
+        return response()->json([
+            'data' => $p
+        ]);
     }
 
     /**
