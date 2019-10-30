@@ -70,7 +70,10 @@ class PendaftaranController extends Controller
         $c->id_role_pembayaran = $request->id_role_pembayaran;
         $c->save();
 
-        return Redirect('pendaftaran');
+        return response()->json([
+            'data' => $d.$c,
+            'success' => 'Created succesfully!'
+        ],);
     }
 
     /**
