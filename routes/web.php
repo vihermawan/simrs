@@ -52,6 +52,7 @@ Route::get('/', 'MenuController@index');
 
   // modul lainnya
   Route::get('penyakit', 'Lainnya\PenyakitController@index');
+
   Route::post('penyakit', 'Lainnya\PenyakitController@store');
 
   Route::get('obat', 'Lainnya\ObatController@index');

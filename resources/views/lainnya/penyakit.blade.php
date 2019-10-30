@@ -101,6 +101,7 @@
                             <tbody>
                             @php $no = 1; @endphp
                             @foreach($penyakit as $e)
+
                                 <tr>
                                     <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$no++}}</td>
                                     <td class="footable-visible"><a href="#">{{$e->nama_penyakit}}</a></td>

@@ -18,7 +18,6 @@ class PenyakitController extends Controller
     {
         $penyakit = DB::table('penyakit')->get();
         return view('lainnya.penyakit', ['penyakit' => $penyakit]);
-      
     }
 
     /**
@@ -28,7 +27,7 @@ class PenyakitController extends Controller
      */
     public function create()
     {
-        //
+        return view('lainnya.penyakit');
     }
 
     /**
