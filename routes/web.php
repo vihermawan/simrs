@@ -22,6 +22,9 @@ Route::get('/', 'MenuController@index');
 
   // modul pendaftaran
   Route::get('pendaftaran', 'Pendaftaran\PendaftaranController@index');
+
+  Route::get('create','Pendaftaran\PendaftaranController@create')->name('create');
+
   Route::delete('pendaftaran/{id}', 'Pendaftaran\PendaftaranController@destroy')->name('pendaftaran.destroy');
 
   // modul pasien
@@ -49,19 +52,24 @@ Route::get('/', 'MenuController@index');
 
   // modul lainnya
   Route::get('penyakit', 'Lainnya\PenyakitController@index');
-  Route::get('penyakit', 'Lainnya\PenyakitController@create');
+
   Route::post('penyakit', 'Lainnya\PenyakitController@store');
 
   Route::get('obat', 'Lainnya\ObatController@index');
+  Route::post('obat', 'Lainnya\ObatController@store');
+  
+  
 
   Route::get('resep', 'Lainnya\ResepController@index');
 
   // modul setting
   Route::get('role', 'Setting\RoleController@index');
 
-  Route::get('user', 'Setting\UserController@index');
+  Route::resource('user', 'Setting\UserController');
 
   Route::get('edit-password', 'Setting\EditPasswordController@index');
+  Route::get('edit-password/get-user', 'Setting\EditPasswordController@getUser');
+  Route::post('edit-password/{id}', 'Setting\EditPasswordController@editPassword');
 
   Route::get('profile', 'Setting\ProfileController@index');
 });

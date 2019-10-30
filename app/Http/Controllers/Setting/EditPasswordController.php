@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Setting;
 
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 
 class EditPasswordController extends Controller
 {
@@ -14,39 +16,9 @@ class EditPasswordController extends Controller
      */
     public function index()
     {
-        return view('setting.editpassword');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        $users = User::with('role')->orderBy('nama_user', 'asc')->get();
+        
+        return view('setting.editpassword', ['users' => $users]);
     }
 
     /**
@@ -55,9 +27,14 @@ class EditPasswordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function getUser(Request $request)
     {
-        //
+        $userId = $request->input('user_id');
+        $user = User::find($userId);
+
+        return response()->json([
+            'user' => $user,
+        ]);
     }
 
     /**
@@ -67,19 +44,47 @@ class EditPasswordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function editPassword(Request $request, $id)
     {
-        //
+        $validator = Validator::make($request->input(), array(
+            'newpassword' => [
+                'required',
+                'string',
+                'min:8',             // must be at least 10 characters in length
+                'regex:/[a-z]/',      // must contain at least one lowercase letter
+                'regex:/[A-Z]/',      // must contain at least one uppercase letter
+                'regex:/[0-9]/',      // must contain at least one digit
+                'regex:/[@$!%*#?&]/', // must contain a special character
+            ],
+            'confirmpassword' => 'required|same:newpassword',
+        ));
+
+        $error = $validator->errors();
+
+        if ($validator->fails()) {
+            return response()->json([
+                'error'    => true,
+                'messages' => $error,
+                'data' => $request->input(),
+            ], 422);
+        }
+
+        if (!strcmp($request->newpassword, $request->confirmpassword) == 0) {
+            $msg = ['new password is not same as confirm password'];
+            return response()->json([
+                'error' => true,
+                'messages' => $msg,
+            ], 422);
+        }
+
+        $user = User::find($id);
+        $user->password = bcrypt($request->confirmpassword);
+        $user->save();
+
+        return response()->json([
+            'error' => false,
+            'messages' => 'Password berhasil disimpan!',
+        ]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

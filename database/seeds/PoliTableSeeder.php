@@ -12,7 +12,23 @@ class PoliTableSeeder extends Seeder
     public function run()
     {
         DB::table('poli')->insert([
-            'nama_poli' => 'Poliklinik Tong Feng',
+            'nama_poli' => 'Poli Anak',
+            'id_user' => 1,
+        ]);
+        DB::table('poli')->insert([
+            'nama_poli' => 'Poli Bedah',
+            'id_user' => 1,
+        ]);
+        DB::table('poli')->insert([
+            'nama_poli' => 'Poli Gigi',
+            'id_user' => 1,
+        ]);
+        DB::table('poli')->insert([
+            'nama_poli' => 'Poli THT',
+            'id_user' => 1,
+        ]);
+        DB::table('poli')->insert([
+            'nama_poli' => 'Poli Penyakit Dalam',
             'id_user' => 1,
         ]);
     }

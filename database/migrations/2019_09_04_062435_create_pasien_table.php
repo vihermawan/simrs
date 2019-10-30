@@ -23,10 +23,12 @@ class CreatePasienTable extends Migration
             $table->string('kabupaten');
             $table->string('provinsi');
             $table->string('agama');
+            $table->string('umur');
+            $table->string('tanggal_lahir');
             $table->string('golongan_darah');
             $table->string('pendidikan');
-            $table->string('asuransi')->nullable();
             $table->string('tempat_lahir');
+            $table->string('pekerjaan');
             $table->timestamps();
         });
     }

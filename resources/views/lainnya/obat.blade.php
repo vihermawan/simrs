@@ -1,4 +1,4 @@
-<div id="div-content">
+<div class="content-wrapper">
     <!-- Page header -->
     <div class="page-header page-header-light">
         <div class="page-header-content header-elements-md-inline">
@@ -91,19 +91,21 @@
                                 <tr>                                
                                     <th data-toggle="true" class="footable-visible footable-first-column">No</th>
                                     <th data-toggle="true" class="footable-visible footable-first-column">Nama Obat</th>
+                                    <th data-toggle="true" class="footable-visible footable-first-column">Dosis Obat</th>
+                                    <th data-hide="phone,tablet" class="footable-visible">Harga Obat</th>
                                     <th data-hide="phone,tablet" class="footable-visible">Jenis Obat</th>
-                                    <th data-hide="phone,tablet" class="footable-visible">Harga</th>
                                     <th class="text-center footable-visible footable-last-column" style="width: 30px;"><i class="icon-menu-open2"></i></th>
                                 </tr>
                             </thead>
                             <tbody>
                             @php $no = 1; @endphp
-                            @foreach ($obat as $data)
+                            @foreach($obat as $o)
                                 <tr>
                                     <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$no++}}</td>
-                                    <td class="footable-visible"><a href="#">{{$data->nama_obat}}</a></td>
-                                    <td class="footable-visible">{{$data->jenis_obat}}</td> 
-                                    <td class="footable-visible">{{$data->harga_obat}}</td> 
+                                    <td class="footable-visible"><a href="#">{{$o->nama_obat}}</a></td>
+                                    <td class="footable-visible">{{$o->dosis_obat}}</td> 
+                                    <td class="footable-visible">{{$o->harga_obat}}</td> 
+                                    <td class="footable-visible">{{$o->jenis_obat}}</td> 
                                     <td class="text-center footable-visible footable-last-column">
                                         <div class="list-icons">
                                             <div class="dropdown">
@@ -146,29 +148,24 @@
                                     <div class="col-xl-12">
                                     <!-- Form -->
                                             <div class="card-body">
-                                                <form action="#">
-                                                    <div class="form-group row">
-                                                        <label class="col-lg-3 col-form-label">ID Obat:</label>
-                                                        <div class="col-lg-9">
-                                                            <input type="text" class="form-control" placeholder="ID Obat ">
-                                                        </div>
-                                                    </div>
+                                                <form id="form_obat">
+                                                {{ csrf_field() }}
                                                     <div class="form-group row">
                                                         <label class="col-lg-3 col-form-label">Nama Obat:</label>
                                                         <div class="col-lg-9">
-                                                            <input type="text" class="form-control" placeholder="Nama Obat">
+                                                            <input type="text" name="nama_obat" class="form-control" placeholder="Nama Obat" id="nama_obat">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label class="col-lg-3 col-form-label">Dosis Obat:</label>
                                                         <div class="col-lg-9">
-                                                            <input type="text" class="form-control" placeholder="Dosis Obat">
+                                                            <input type="text" name="dosis_obat" class="form-control" placeholder="Dosis Obat" id="dosis_obat">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label class="col-lg-3 col-form-label">Jenis Obat:</label>
                                                         <div class="col-lg-9">
-                                                            <select class="form-control form-control-uniform" placeholder="Jenis Obat">
+                                                            <select class="form-control form-control-uniform" placeholder="Jenis Obat" name="jenis_obat" id="jenis_obat">
                                                             <option value="tablet">Tablet</option>
                                                             <option value="kapsul">Kapsul</option>
                                                             <option value="serbuk">Serbuk</option>
@@ -180,7 +177,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-lg-3 col-form-label">Harga:</label>
                                                         <div class="col-lg-9">
-                                                            <input type="text" class="form-control" placeholder="Harga">
+                                                            <input type="text" name="harga_obat" class="form-control" placeholder="Harga" id="harga_obat">
                                                         </div>
                                                     </div>
                                                 
@@ -190,7 +187,7 @@
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-link" data-dismiss="modal">Tutup</button>
-                                <button type="button" class="btn bg-success">Simpan</button>
+                                <button type="submit" id="simpan_obat" class="btn bg-success">Simpan</button>
                             </div>
                         </div>
                     </div>
@@ -199,3 +196,30 @@
 
     </div>    
 </div>
+
+<script>
+    $(document).ready(function(){
+        $('#simpan_obat').click(function(e){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            e.preventDefault();
+
+            var obat = $('#form_obat').serialize();
+
+            $.ajax({
+                type: 'POST',
+                url : '/obat',
+                data: obat,
+                success : function(response){
+                    $('#form_obat').trigger('reset');
+                    $('#modal_theme_success').modal('hide');
+                }
+            })
+        })
+
+    })
+    
+</script>

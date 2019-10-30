@@ -37,9 +37,40 @@ class PendaftaranController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        echo "bangsat create";
+
+        
+
+        $d = new Pasien();
+        $d->nama_pasien = $request->nama_pasien;
+        $d->jenis_kelamin = $request->jenis_kelamin;
+        $d->alamat = $request->alamat;
+        $d->pekerjaan = $request->pekerjaan;
+        $d->desa = $request->desa;
+        $d->kecamatan = $request->kecamatan;
+        $d->kabupaten = $request->kabupaten;
+        $d->provinsi = $request->provinsi;
+        $d->agama = $request->agama;
+        $d->golongan_darah = $request->golongan_darah;
+        $d->pendidikan = $request->golongan_darah;
+        $d->tempat_lahir = $request->tempat_lahir;
+        $d->umur = $request->umur;
+        $d->tanggal_lahir = $request->tanggal_lahir;
+        $d->save();
+
+        $e = DB::table('pasien')->get();
+
+
+        foreach($e as $data){
+            $c = new Daftar();
+            $c->id_pasien = $data->id;          
+        }
+        $c->id_poli = $request->id_poli;
+        $c->id_role_pembayaran = $request->id_role_pembayaran;
+        $c->save();
+
+        return Redirect('pendaftaran');
     }
 
     /**
