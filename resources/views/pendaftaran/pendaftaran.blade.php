@@ -451,3 +451,30 @@
         $('#tabel_pendaftaran').DataTable();
     });
 </script>
+
+<script>
+    $(document).ready(function(){
+        $('#simpan_obat').click(function(e){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            e.preventDefault();
+
+            var obat = $('#form_obat').serialize();
+
+            $.ajax({
+                type: 'POST',
+                url : '/obat',
+                data: obat,
+                success : function(response){
+                    $('#form_obat').trigger('reset');
+                    $('#modal_theme_success').modal('hide');
+                }
+            })
+        })
+
+    })
+    
+</script>
