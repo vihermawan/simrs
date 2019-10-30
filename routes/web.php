@@ -22,8 +22,7 @@ Route::get('/', 'MenuController@index');
 
   // modul pendaftaran
   Route::get('pendaftaran', 'Pendaftaran\PendaftaranController@index');
-
-  Route::get('create','Pendaftaran\PendaftaranController@create')->name('create');
+  Route::post('pendaftaran', 'Pendaftaran\PendaftaranController@create');
 
   Route::delete('pendaftaran/{id}', 'Pendaftaran\PendaftaranController@destroy')->name('pendaftaran.destroy');
 

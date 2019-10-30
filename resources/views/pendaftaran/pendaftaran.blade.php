@@ -1,3 +1,33 @@
+<script>
+    $(document).ready(function(){
+        $('#simpan_pendaftaran').click(function(e){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            e.preventDefault();
+
+            var daftar = $('#form_pendaftaran').serialize();
+
+            $.ajax({
+                type: 'POST',
+                url : '/pendaftaran',
+                data: daftar,
+                success : function(response){
+                    $('#form_pendaftaran').trigger('reset');
+                    $('#modal_theme_success').modal('hide');
+                    $('#modal_theme_primary').attr('hidden', false);
+                    $('#modal-body').show();
+                    $('#modal-body').html(response.success);
+                }
+            })
+        })
+
+    })
+    
+</script>
+
 <div class="content-wrapper">
     <!-- Page header -->
     <div class="page-header page-header-light">
@@ -91,6 +121,30 @@
                             <button type="button" class="btn bg-success btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_success"><b><i class="icon-reading"></i></b> Tambah Pasien Baru</button>
                             <button type="button" class="btn bg-primary btn-labeled btn-labeled-left" data-toggle="modal" data-target="#modal_theme_primary"><b><i class="icon-reading"></i></b> Tambah Pendaftaran Baru</button>
                         </div>
+                        <br>
+                        <div id="res_div" class="alert bg-success text-white alert-dismissible" hidden>
+                            <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+                            <span id="res_message" class="font-weight-semibold"></span>
+                            <button id="close" aria-hidden="true" class="close" data-dismiss="modal" type="button">
+                                ×
+                            </button>
+                        </div>
+                        <div id="modal_theme_primary" class="modal fade" tabindex="-1">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header bg-primary">
+										<h6 class="modal-title">Pemberitahuan</h6>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									</div>
+
+									<div class="modal-body">
+										<h6 class="font-weight-semibold"></h6>
+									</div>
+
+								</div>
+							</div>
+						</div>
+                       
                     </div>
 
                     <table id="tabel_pendaftaran" class="table table-togglable table-hover footable-loaded footable default">
@@ -157,7 +211,7 @@
                 </div>
 
                 <div class="card-body">
-                    <form action="{{Route('create')}}">
+                    <form id="form_pendaftaran">
                         <div class="row">
                             <div class="col-md-4">
                                 <fieldset>
@@ -342,7 +396,7 @@
                         </div>
 
                         <div class="text-right">
-                            <button type="submit" class="btn btn-primary">Simpan Data</button>
+                            <button type="submit" id="simpan_pendaftaran" class="btn btn-primary">Simpan Data</button>
                         </div>
                     </form>
                 </div>  
@@ -428,7 +482,7 @@
                         </div>
 
                         <div class="text-right">
-                            <button type="button" class="btn btn-primary">Simpan Data</button>
+                            <button type="submit" id="simpan_pendaftaran" class="btn btn-primary">Simpan Data</button>
                         </div>
                     </form>
                 </div>
@@ -444,29 +498,4 @@
     });
 </script>
 
-<script>
-    $(document).ready(function(){
-        $('#simpan_obat').click(function(e){
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            e.preventDefault();
 
-            var obat = $('#form_obat').serialize();
-
-            $.ajax({
-                type: 'POST',
-                url : '/obat',
-                data: obat,
-                success : function(response){
-                    $('#form_obat').trigger('reset');
-                    $('#modal_theme_success').modal('hide');
-                }
-            })
-        })
-
-    })
-    
-</script>
