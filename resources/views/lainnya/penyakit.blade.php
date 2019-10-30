@@ -98,6 +98,27 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            @foreach($penyakit as $p)
+                                <tr>
+                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>{{$p->id}}</td>
+                                    <td class="footable-visible">{{$p->nama_penyakit}}</td>
+                                    <td class="footable-visible">{{$p->jenis_penyakit}}</td>
+                                    <td class="text-center footable-visible footable-last-column">
+                                        <div class="list-icons">
+                                            <div class="dropdown">
+                                                <a href="#" class="list-icons-item" data-toggle="dropdown">
+                                                    <i class="icon-menu9"></i>
+                                                </a>
+    
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td></tr>
+                                @endforeach
                                 <tr>
                                     <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>P001</td>
                                     <td class="footable-visible"><a href="#">Panu</a></td>
